@@ -1,0 +1,70 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:'Inter',sans-serif;font-weight:700;}
+.hero{font-family:'Archivo Black',sans-serif;font-weight:400;letter-spacing:-0.02em;line-height:1.05;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#scale-src{bottom:24px;}
+#scale-k{left:0;width:1920px;text-align:center;top:110px;font-size:40px;}
+#scale-n0{left:0;width:1920px;text-align:center;top:300px;font-size:230px;}
+#scale-c0{left:0;width:1920px;text-align:center;top:570px;font-size:60px;}
+#scale-r0{left:200px;top:800px;font-size:10px;width:480px;text-align:center;}
+#scale-n1{left:0;width:1920px;text-align:center;top:300px;font-size:230px;}
+#scale-c1{left:0;width:1920px;text-align:center;top:570px;font-size:60px;}
+#scale-r1{left:720px;top:800px;font-size:10px;width:480px;text-align:center;}
+#scale-n2{left:0;width:1920px;text-align:center;top:300px;font-size:230px;}
+#scale-c2{left:0;width:1920px;text-align:center;top:570px;font-size:60px;}
+#scale-r2{left:1240px;top:800px;font-size:10px;width:480px;text-align:center;}
+#scale-src{}
+</style>
+<div id="root" data-composition-id="scale" data-width="1920" data-height="1080">
+<div id="scale-k" class="el clip kick q" data-start="1.88" data-duration="11.99" data-track-index="1" >FY26 · YEAR ENDING MARCH 2026</div>
+<div id="scale-n0" class="el clip hero up tnum" data-start="4.14" data-duration="3.02" data-track-index="2" >₹0 Cr</div>
+<div id="scale-c0" class="el clip " data-start="4.44" data-duration="2.72" data-track-index="3" >in revenue</div>
+<div id="scale-r0" class="el clip " data-start="7.11" data-duration="6.76" data-track-index="4" ><div class="hero" style="font-size:64px">₹22,600 Cr</div><div class="q" style="font-size:32px;margin-top:8px">revenue</div></div>
+<div id="scale-n1" class="el clip hero up tnum" data-start="7.59" data-duration="2.32" data-track-index="5" >0</div>
+<div id="scale-c1" class="el clip " data-start="7.89" data-duration="2.02" data-track-index="6" >dark stores</div>
+<div id="scale-r1" class="el clip " data-start="9.86" data-duration="4.01" data-track-index="7" ><div class="hero" style="font-size:64px">1,139</div><div class="q" style="font-size:32px;margin-top:8px">dark stores</div></div>
+<div id="scale-n2" class="el clip hero up tnum" data-start="10.34" data-duration="3.53" data-track-index="8" >~0M</div>
+<div id="scale-c2" class="el clip " data-start="10.64" data-duration="3.23" data-track-index="9" >people ordered at least once</div>
+<div id="scale-r2" class="el clip " data-start="12.83" data-duration="1.04" data-track-index="10" ><div class="hero" style="font-size:64px">~48M</div><div class="q" style="font-size:32px;margin-top:8px">people ordered</div></div>
+<div id="scale-src" class="el clip src" data-start="4.14" data-duration="9.73" data-track-index="11" >Sources: Free Press Journal · 5paisa</div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#scale-k",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},1.88);
+tl.to("#scale-k",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},13.65);
+const o1={v:0}, el1=document.querySelector("#scale-n0"), f1=(v)=>"₹"+(Math.round(v/100)*100).toLocaleString("en-IN")+" Cr";
+tl.fromTo("#scale-n0",{opacity:0,scale:0.94},{opacity:1,scale:1,duration:0.3,ease:"expo.out"},4.14);
+tl.fromTo(o1,{v:0},{v:22600,duration:1.4,ease:"power3.out",onUpdate:()=>{el1.textContent=f1(o1.v);}},4.14);
+tl.to("#scale-n0",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.96);
+tl.fromTo("#scale-c0",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},4.44);
+tl.to("#scale-c0",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.96);
+tl.fromTo("#scale-r0",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},7.11);
+tl.to("#scale-r0",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},13.65);
+const o4={v:0}, el4=document.querySelector("#scale-n1"), f4=(v)=>Math.round(v).toLocaleString("en-IN");
+tl.fromTo("#scale-n1",{opacity:0,scale:0.94},{opacity:1,scale:1,duration:0.3,ease:"expo.out"},7.59);
+tl.fromTo(o4,{v:0},{v:1139,duration:1.2,ease:"power3.out",onUpdate:()=>{el4.textContent=f4(o4.v);}},7.59);
+tl.to("#scale-n1",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.71);
+tl.fromTo("#scale-c1",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},7.89);
+tl.to("#scale-c1",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.71);
+tl.fromTo("#scale-r1",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},9.86);
+tl.to("#scale-r1",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},13.65);
+const o7={v:0}, el7=document.querySelector("#scale-n2"), f7=(v)=>"~"+Math.round(v)+"M";
+tl.fromTo("#scale-n2",{opacity:0,scale:0.94},{opacity:1,scale:1,duration:0.3,ease:"expo.out"},10.34);
+tl.fromTo(o7,{v:0},{v:48,duration:1.2,ease:"power3.out",onUpdate:()=>{el7.textContent=f7(o7.v);}},10.34);
+tl.to("#scale-n2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},13.65);
+tl.fromTo("#scale-c2",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},10.64);
+tl.to("#scale-c2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},13.65);
+tl.fromTo("#scale-r2",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},12.83);
+tl.to("#scale-r2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},13.65);
+tl.fromTo("#scale-src",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},4.14);
+tl.to("#scale-src",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},13.65);
+window.__timelines["scale"] = tl;
+</script>
+</template>

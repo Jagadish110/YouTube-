@@ -1,0 +1,58 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:'Inter',sans-serif;font-weight:700;}
+.hero{font-family:'Archivo Black',sans-serif;font-weight:400;letter-spacing:-0.02em;line-height:1.05;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#radius-m{left:90px;top:90px;font-size:10px;}
+#radius-st{left:390px;top:575px;font-size:30px;width:300px;text-align:center;}
+#radius-km{left:1040px;top:250px;font-size:170px;width:780px;}
+#radius-mn{left:1046px;top:450px;font-size:64px;width:780px;}
+#radius-sp{left:1040px;top:580px;font-size:92px;width:820px;}
+#radius-w1{left:1040px;top:330px;font-size:60px;width:820px;}
+#radius-w2{left:1040px;top:420px;font-size:120px;width:820px;}
+#radius-w3{left:1046px;top:710px;font-size:48px;width:820px;}
+#radius-src{}
+</style>
+<div id="root" data-composition-id="radius" data-width="1920" data-height="1080">
+<div id="radius-m" class="el clip " data-start="0.12" data-duration="15.2" data-track-index="1" ><svg width="900" height="900" viewBox="0 0 900 900"><circle id="radius-c" cx="450" cy="450" r="330" stroke="#8b3dff" stroke-width="6" fill="rgba(139,61,255,0.08)" pathLength="1" stroke-dasharray="1"/><line id="radius-l" x1="450" y1="450" x2="780" y2="450" stroke="#a7a3b8" stroke-width="5" stroke-dasharray="14 12"/><rect x="418" y="418" width="64" height="64" rx="12" fill="#8b3dff"/><circle id="radius-r" cx="450" cy="450" r="20" fill="#ffffff"/></svg></div>
+<div id="radius-st" class="el clip kick q" data-start="0.3" data-duration="15.02" data-track-index="2" >DARK STORE</div>
+<div id="radius-km" class="el clip hero" data-start="6.93" data-duration="4.15" data-track-index="3" >1.8 km</div>
+<div id="radius-mn" class="el clip q" data-start="7.72" data-duration="3.36" data-track-index="4" >in 10 minutes</div>
+<div id="radius-sp" class="el clip hero up" data-start="8.51" data-duration="2.57" data-track-index="5" >= under 15 km/h</div>
+<div id="radius-w1" class="el clip q" data-start="10.98" data-duration="4.34" data-track-index="6" >Speed comes from</div>
+<div id="radius-w2" class="el clip hero up" data-start="12.08" data-duration="3.24" data-track-index="7" >WHERE THE<br>STORE SITS</div>
+<div id="radius-w3" class="el clip q" data-start="13.24" data-duration="2.08" data-track-index="8" >not how fast the rider goes</div>
+<div id="radius-src" class="el clip src" data-start="4.57" data-duration="6.51" data-track-index="9" >Source: Aadit Palicha, via Global Indian</div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#radius-m",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.12);
+tl.to("#radius-m",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},15.1);
+tl.fromTo("#radius-st",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.3);
+tl.to("#radius-st",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},15.1);
+tl.fromTo("#radius-km",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},6.93);
+tl.to("#radius-km",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},10.88);
+tl.fromTo("#radius-mn",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},7.72);
+tl.to("#radius-mn",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},10.88);
+tl.fromTo("#radius-sp",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},8.51);
+tl.to("#radius-sp",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},10.88);
+tl.fromTo("#radius-w1",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},10.98);
+tl.to("#radius-w1",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},15.1);
+tl.fromTo("#radius-w2",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},12.08);
+tl.to("#radius-w2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},15.1);
+tl.fromTo("#radius-w3",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},13.24);
+tl.to("#radius-w3",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},15.1);
+tl.fromTo("#radius-src",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},4.57);
+tl.to("#radius-src",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},10.88);
+tl.fromTo("#radius-c",{strokeDashoffset:1},{strokeDashoffset:0,duration:1.4,ease:"power2.inOut"},0.94);
+tl.fromTo("#radius-l",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},2.15);
+tl.fromTo("#radius-r",{x:0},{x:330,duration:2.6,ease:"power1.inOut"},2.15);
+window.__timelines["radius"] = tl;
+</script>
+</template>

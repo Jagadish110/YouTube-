@@ -1,0 +1,27 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:'Inter',sans-serif;font-weight:700;}
+.hero{font-family:'Archivo Black',sans-serif;font-weight:400;letter-spacing:-0.02em;line-height:1.05;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#endcard-s{left:0;width:1920px;text-align:center;top:300px;font-size:220px;}
+#endcard-n{left:0;width:1920px;text-align:center;top:620px;font-size:72px;}
+</style>
+<div id="root" data-composition-id="endcard" data-width="1920" data-height="1080">
+<div id="endcard-s" class="el clip hero up" data-start="1.95" data-duration="3.92" data-track-index="1" >SUBSCRIBE</div>
+<div id="endcard-n" class="el clip q" data-start="2.51" data-duration="3.36" data-track-index="2" >Next breakdown: <span style='color:var(--ink)'>BLINKIT</span></div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#endcard-s",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},1.95);
+tl.to("#endcard-s",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},5.65);
+tl.fromTo("#endcard-n",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},2.51);
+tl.to("#endcard-n",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},5.65);
+window.__timelines["endcard"] = tl;
+</script>
+</template>

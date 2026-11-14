@@ -1,0 +1,45 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:'Inter',sans-serif;font-weight:700;}
+.hero{font-family:'Archivo Black',sans-serif;font-weight:400;letter-spacing:-0.02em;line-height:1.05;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#kirana-k{left:0;width:1920px;text-align:center;top:130px;font-size:40px;}
+#kirana-t{left:0;width:1920px;text-align:center;top:210px;font-size:170px;}
+#kirana-b1{left:170px;top:640px;font-size:46px;width:440px;height:170px;font-size:46px;}
+#kirana-b2{left:740px;top:640px;font-size:46px;width:440px;height:170px;font-size:46px;}
+#kirana-b3{left:1310px;top:640px;font-size:46px;width:440px;height:170px;font-size:46px;border-color:var(--up);}
+#kirana-ar{left:0px;top:695px;font-size:10px;}
+</style>
+<div id="root" data-composition-id="kirana" data-width="1920" data-height="1080">
+<div id="kirana-k" class="el clip kick q" data-start="0.15" data-duration="7.62" data-track-index="1" >STILL TEENAGERS · APP #1</div>
+<div id="kirana-t" class="el clip hero" data-start="1.85" data-duration="5.92" data-track-index="2" >KIRANAKART</div>
+<div id="kirana-b1" class="el clip box" data-start="3.65" data-duration="4.12" data-track-index="3" >KIRANA SHOP</div>
+<div id="kirana-b2" class="el clip box" data-start="5.62" data-duration="2.15" data-track-index="4" >RIDER</div>
+<div id="kirana-b3" class="el clip box" data-start="6.71" data-duration="1.06" data-track-index="5" >YOUR DOOR</div>
+<div id="kirana-ar" class="el clip " data-start="3.65" data-duration="4.12" data-track-index="6" ><svg width="1920" height="60" viewBox="0 0 1920 60"><path id="kirana-a1" d="M622 30 H728" stroke="#a7a3b8" stroke-width="8" pathLength="1" stroke-dasharray="1"/><path id="kirana-a2" d="M1192 30 H1298" stroke="#a7a3b8" stroke-width="8" pathLength="1" stroke-dasharray="1"/></svg></div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#kirana-k",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.15);
+tl.to("#kirana-k",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.55);
+tl.fromTo("#kirana-t",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},1.85);
+tl.to("#kirana-t",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.55);
+tl.fromTo("#kirana-b1",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},3.65);
+tl.to("#kirana-b1",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.55);
+tl.fromTo("#kirana-b2",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},5.62);
+tl.to("#kirana-b2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.55);
+tl.fromTo("#kirana-b3",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},6.71);
+tl.to("#kirana-b3",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.55);
+tl.fromTo("#kirana-ar",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},3.65);
+tl.to("#kirana-ar",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.55);
+tl.fromTo("#kirana-a1",{strokeDashoffset:1},{strokeDashoffset:0,duration:0.4,ease:"power2.inOut"},5.32);
+tl.fromTo("#kirana-a2",{strokeDashoffset:1},{strokeDashoffset:0,duration:0.4,ease:"power2.inOut"},6.41);
+window.__timelines["kirana"] = tl;
+</script>
+</template>

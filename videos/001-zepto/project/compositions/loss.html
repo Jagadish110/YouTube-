@@ -1,0 +1,37 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:'Inter',sans-serif;font-weight:700;}
+.hero{font-family:'Archivo Black',sans-serif;font-weight:400;letter-spacing:-0.02em;line-height:1.05;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#loss-k{left:0;width:1920px;text-align:center;top:160px;font-size:40px;}
+#loss-n{left:0;width:1920px;text-align:center;top:310px;font-size:240px;}
+#loss-c{left:0;width:1920px;text-align:center;top:640px;font-size:64px;}
+#loss-src{}
+</style>
+<div id="root" data-composition-id="loss" data-width="1920" data-height="1080">
+<div id="loss-k" class="el clip kick q" data-start="0.12" data-duration="7.16" data-track-index="1" >THE YEAR BEFORE (FY25) · NET LOSS</div>
+<div id="loss-n" class="el clip hero down tnum" data-start="2.82" data-duration="4.46" data-track-index="2" >₹0 Cr</div>
+<div id="loss-c" class="el clip " data-start="5.12" data-duration="2.16" data-track-index="3" >Burning cash every quarter</div>
+<div id="loss-src" class="el clip src" data-start="2.82" data-duration="4.46" data-track-index="4" >Source: Free Press Journal</div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#loss-k",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.12);
+tl.to("#loss-k",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.06);
+const o1={v:0}, el1=document.querySelector("#loss-n"), f1=(v)=>"₹"+Math.round(v).toLocaleString("en-IN")+" Cr";
+tl.fromTo("#loss-n",{opacity:0,scale:0.94},{opacity:1,scale:1,duration:0.3,ease:"expo.out"},2.82);
+tl.fromTo(o1,{v:0},{v:3367,duration:1.4,ease:"power3.out",onUpdate:()=>{el1.textContent=f1(o1.v);}},2.82);
+tl.to("#loss-n",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.06);
+tl.fromTo("#loss-c",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},5.12);
+tl.to("#loss-c",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.06);
+tl.fromTo("#loss-src",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},2.82);
+tl.to("#loss-src",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.06);
+window.__timelines["loss"] = tl;
+</script>
+</template>

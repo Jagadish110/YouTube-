@@ -1,0 +1,36 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:'Inter',sans-serif;font-weight:700;}
+.hero{font-family:'Archivo Black',sans-serif;font-weight:400;letter-spacing:-0.02em;line-height:1.05;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#deal-st{left:430px;top:150px;font-size:190px;width:1060px;text-align:center;}
+#deal-c{left:0;width:1920px;text-align:center;top:480px;font-size:60px;}
+#deal-i{left:0;width:1920px;text-align:center;top:580px;font-size:60px;}
+#deal-d{left:0;width:1920px;text-align:center;top:740px;font-size:120px;}
+</style>
+<div id="root" data-composition-id="deal" data-width="1920" data-height="1080">
+<div id="deal-st" class="el clip hero" data-start="0.12" data-duration="6.9" data-track-index="1" >STANFORD<span id="deal-x" style="position:absolute;left:-2%;width:104%;top:46%;height:16px;background:var(--down);transform-origin:left center;"></span></div>
+<div id="deal-c" class="el clip q" data-start="2.44" data-duration="4.58" data-track-index="2" >Investor <span style="color:var(--ink)">CONTRARY</span> offers to back them</div>
+<div id="deal-i" class="el clip " data-start="4.83" data-duration="2.19" data-track-index="3" >…if they drop out.</div>
+<div id="deal-d" class="el clip hero up" data-start="5.72" data-duration="1.3" data-track-index="4" >THEY TAKE THE DEAL.</div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#deal-st",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},0.12);
+tl.to("#deal-st",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.8);
+tl.fromTo("#deal-c",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},2.44);
+tl.to("#deal-c",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.8);
+tl.fromTo("#deal-i",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},4.83);
+tl.to("#deal-i",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.8);
+tl.fromTo("#deal-d",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},5.72);
+tl.to("#deal-d",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.8);
+tl.fromTo("#deal-x",{scaleX:0},{scaleX:1,duration:0.35,ease:"power3.inOut"},1.1);
+window.__timelines["deal"] = tl;
+</script>
+</template>

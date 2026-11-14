@@ -1,0 +1,37 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:'Inter',sans-serif;font-weight:700;}
+.hero{font-family:'Archivo Black',sans-serif;font-weight:400;letter-spacing:-0.02em;line-height:1.05;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#orders-k{left:0;width:1920px;text-align:center;top:150px;font-size:40px;}
+#orders-n{left:0;width:1920px;text-align:center;top:300px;font-size:250px;}
+#orders-c{left:0;width:1920px;text-align:center;top:600px;font-size:72px;}
+#orders-c2{left:0;width:1920px;text-align:center;top:710px;font-size:44px;}
+</style>
+<div id="root" data-composition-id="orders" data-width="1920" data-height="1080">
+<div id="orders-k" class="el clip kick q" data-start="0.12" data-duration="4.34" data-track-index="1" >LAST QUARTER OF FY26</div>
+<div id="orders-n" class="el clip hero up tnum" data-start="2.66" data-duration="1.8" data-track-index="2" >0 LAKH+</div>
+<div id="orders-c" class="el clip " data-start="2.91" data-duration="1.55" data-track-index="3" >orders a day</div>
+<div id="orders-c2" class="el clip q" data-start="3.36" data-duration="1.1" data-track-index="4" >(2.3 million)</div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#orders-k",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.12);
+tl.to("#orders-k",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},4.24);
+const o1={v:0}, el1=document.querySelector("#orders-n"), f1=(v)=>Math.round(v)+" LAKH+";
+tl.fromTo("#orders-n",{opacity:0,scale:0.94},{opacity:1,scale:1,duration:0.3,ease:"expo.out"},2.66);
+tl.fromTo(o1,{v:0},{v:23,duration:1.0,ease:"power3.out",onUpdate:()=>{el1.textContent=f1(o1.v);}},2.66);
+tl.to("#orders-n",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},4.24);
+tl.fromTo("#orders-c",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},2.91);
+tl.to("#orders-c",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},4.24);
+tl.fromTo("#orders-c2",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},3.36);
+tl.to("#orders-c2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},4.24);
+window.__timelines["orders"] = tl;
+</script>
+</template>

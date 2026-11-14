@@ -1,0 +1,71 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:'Inter',sans-serif;font-weight:700;}
+.hero{font-family:'Archivo Black',sans-serif;font-weight:400;letter-spacing:-0.02em;line-height:1.05;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#chart-src{left:auto;right:96px;bottom:24px;}
+#chart-ch{left:0px;top:0px;font-size:10px;}
+#chart-k{left:260px;top:90px;font-size:40px;}
+#chart-h{left:260px;top:150px;font-size:72px;}
+#chart-l0{left:266px;top:650px;font-size:52px;width:300px;}
+#chart-l1{left:838px;top:607px;font-size:64px;width:300px;}
+#chart-l1b{left:842px;top:685px;font-size:30px;width:400px;font-weight:400;}
+#chart-l2{left:866px;top:362px;font-size:64px;width:300px;}
+#chart-l2b{left:1016px;top:394px;font-size:30px;width:400px;font-weight:400;}
+#chart-l3{left:1330px;top:148px;font-size:150px;width:400px;text-align:right;}
+#chart-l3b{left:790px;top:308px;font-size:32px;width:820px;text-align:right;font-weight:400;}
+#chart-src{}
+</style>
+<div id="root" data-composition-id="chart" data-width="1920" data-height="1080">
+<div id="chart-ch" class="el clip " data-start="0.12" data-duration="20.92" data-track-index="1" ><svg width="1920" height="1080" viewBox="0 0 1920 1080"><line x1="260" x2="1700" y1="725" y2="725" stroke="#221f33" stroke-width="2"/><text x="236" y="735" text-anchor="end" font-size="28" fill="#a7a3b8" font-family="Inter" font-weight="700">$2B</text><line x1="260" x2="1700" y1="570" y2="570" stroke="#221f33" stroke-width="2"/><text x="236" y="580" text-anchor="end" font-size="28" fill="#a7a3b8" font-family="Inter" font-weight="700">$4B</text><line x1="260" x2="1700" y1="415" y2="415" stroke="#221f33" stroke-width="2"/><text x="236" y="425" text-anchor="end" font-size="28" fill="#a7a3b8" font-family="Inter" font-weight="700">$6B</text><line x1="260" x2="1700" y1="260" y2="260" stroke="#221f33" stroke-width="2"/><text x="236" y="270" text-anchor="end" font-size="28" fill="#a7a3b8" font-family="Inter" font-weight="700">$8B</text><line x1="260" x2="1700" y1="880" y2="880" stroke="#a7a3b8" stroke-width="3"/><text x="260" y="940" text-anchor="middle" font-size="28" fill="#a7a3b8" font-family="Inter" font-weight="700">Aug 2023</text><text x="852" y="940" text-anchor="middle" font-size="28" fill="#a7a3b8" font-family="Inter" font-weight="700">Mid 2024</text><text x="1660" y="940" text-anchor="middle" font-size="28" fill="#a7a3b8" font-family="Inter" font-weight="700">Oct 2025</text><path id="chart-s0" d="M260 772 L798 601" stroke="#8b3dff" stroke-width="10" stroke-linecap="round" fill="none" pathLength="1" stroke-dasharray="1"/><path id="chart-s1" d="M798 601 L906 492" stroke="#8b3dff" stroke-width="10" stroke-linecap="round" fill="none" pathLength="1" stroke-dasharray="1"/><path id="chart-s2" d="M906 492 L1660 338" stroke="#8b3dff" stroke-width="10" stroke-linecap="round" fill="none" pathLength="1" stroke-dasharray="1"/><circle id="chart-p0" cx="260" cy="772" r="18" fill="#8b3dff" stroke="#0b0a12" stroke-width="6"/><circle id="chart-p1" cx="798" cy="601" r="18" fill="#8b3dff" stroke="#0b0a12" stroke-width="6"/><circle id="chart-p2" cx="906" cy="492" r="18" fill="#8b3dff" stroke="#0b0a12" stroke-width="6"/><circle id="chart-p3" cx="1660" cy="338" r="18" fill="#8b3dff" stroke="#0b0a12" stroke-width="6"/></svg></div>
+<div id="chart-k" class="el clip kick q" data-start="0.12" data-duration="20.92" data-track-index="2" >ZEPTO VALUATION</div>
+<div id="chart-h" class="el clip hero" data-start="0.3" data-duration="20.74" data-track-index="3" >The money came in waves</div>
+<div id="chart-l0" class="el clip hero q" data-start="0.6" data-duration="20.44" data-track-index="4" >$1B+</div>
+<div id="chart-l1" class="el clip hero" data-start="4.99" data-duration="16.05" data-track-index="5" >$3.6B</div>
+<div id="chart-l1b" class="el clip q" data-start="4.99" data-duration="16.05" data-track-index="6" >raised $665M</div>
+<div id="chart-l2" class="el clip hero" data-start="10.16" data-duration="10.88" data-track-index="7" >$5B</div>
+<div id="chart-l2b" class="el clip q" data-start="10.16" data-duration="10.88" data-track-index="8" >raised $350M</div>
+<div id="chart-l3" class="el clip hero up" data-start="17.99" data-duration="3.05" data-track-index="9" >$7B</div>
+<div id="chart-l3b" class="el clip q" data-start="12.6" data-duration="8.44" data-track-index="10" >Oct 2025 · raised $450M · led by CalPERS</div>
+<div id="chart-src" class="el clip src" data-start="1.0" data-duration="20.04" data-track-index="11" >Sources: Money9 · Business Standard</div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#chart-ch",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.12);
+tl.to("#chart-ch",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},20.82);
+tl.fromTo("#chart-k",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.12);
+tl.to("#chart-k",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},20.82);
+tl.fromTo("#chart-h",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},0.3);
+tl.to("#chart-h",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},20.82);
+tl.fromTo("#chart-l0",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.6);
+tl.to("#chart-l0",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},20.82);
+tl.fromTo("#chart-l1",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},4.99);
+tl.to("#chart-l1",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},20.82);
+tl.fromTo("#chart-l1b",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},4.99);
+tl.to("#chart-l1b",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},20.82);
+tl.fromTo("#chart-l2",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},10.16);
+tl.to("#chart-l2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},20.82);
+tl.fromTo("#chart-l2b",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},10.16);
+tl.to("#chart-l2b",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},20.82);
+tl.fromTo("#chart-l3",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},17.99);
+tl.to("#chart-l3",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},20.82);
+tl.fromTo("#chart-l3b",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},12.6);
+tl.to("#chart-l3b",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},20.82);
+tl.fromTo("#chart-src",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},1.0);
+tl.to("#chart-src",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},20.82);
+tl.fromTo("#chart-p0",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.5);
+tl.fromTo("#chart-s0",{strokeDashoffset:1},{strokeDashoffset:0,duration:0.9,ease:"power2.inOut"},1.79);
+tl.fromTo("#chart-p1",{opacity:0},{opacity:1,duration:0.2,ease:"power2.out"},2.59);
+tl.fromTo("#chart-s1",{strokeDashoffset:1},{strokeDashoffset:0,duration:0.5,ease:"power2.inOut"},6.96);
+tl.fromTo("#chart-p2",{opacity:0},{opacity:1,duration:0.2,ease:"power2.out"},7.36);
+tl.fromTo("#chart-s2",{strokeDashoffset:1},{strokeDashoffset:0,duration:0.9,ease:"power2.inOut"},14.72);
+tl.fromTo("#chart-p3",{opacity:0},{opacity:1,duration:0.2,ease:"power2.out"},15.52);
+window.__timelines["chart"] = tl;
+</script>
+</template>

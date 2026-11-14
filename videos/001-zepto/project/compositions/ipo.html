@@ -1,0 +1,69 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:'Inter',sans-serif;font-weight:700;}
+.hero{font-family:'Archivo Black',sans-serif;font-weight:400;letter-spacing:-0.02em;line-height:1.05;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#ipo-k{left:0;width:1920px;text-align:center;top:140px;font-size:72px;}
+#ipo-ln{left:0px;top:440px;font-size:10px;}
+#ipo-d0{left:334px;top:474px;font-size:10px;width:52px;height:52px;border-radius:50%;background:var(--up);}
+#ipo-a0{left:100px;top:570px;font-size:44px;width:520px;text-align:center;}
+#ipo-b0{left:100px;top:635px;font-size:64px;width:520px;text-align:center;}
+#ipo-d1{left:934px;top:474px;font-size:10px;width:52px;height:52px;border-radius:50%;background:var(--up);}
+#ipo-a1{left:700px;top:570px;font-size:44px;width:520px;text-align:center;}
+#ipo-b1{left:700px;top:635px;font-size:64px;width:520px;text-align:center;}
+#ipo-d2{left:1534px;top:474px;font-size:10px;width:52px;height:52px;border-radius:50%;background:var(--up);}
+#ipo-a2{left:1300px;top:570px;font-size:44px;width:520px;text-align:center;}
+#ipo-b2{left:1300px;top:635px;font-size:64px;width:520px;text-align:center;}
+#ipo-src{}
+</style>
+<div id="root" data-composition-id="ipo" data-width="1920" data-height="1080">
+<div id="ipo-k" class="el clip hero" data-start="0.12" data-duration="9.46" data-track-index="1" >THE IPO PLAN</div>
+<div id="ipo-ln" class="el clip " data-start="0.12" data-duration="9.46" data-track-index="2" ><svg width="1920" height="120" viewBox="0 0 1920 120"><path id="ipo-l1" d="M360 60 H960" stroke="#8b3dff" stroke-width="8" pathLength="1" stroke-dasharray="1"/><path id="ipo-l2" d="M960 60 H1560" stroke="#8b3dff" stroke-width="8" pathLength="1" stroke-dasharray="1" /></svg></div>
+<div id="ipo-d0" class="el clip " data-start="0.6" data-duration="8.98" data-track-index="3" ></div>
+<div id="ipo-a0" class="el clip kick q" data-start="0.6" data-duration="8.98" data-track-index="4" >DEC 2025</div>
+<div id="ipo-b0" class="el clip hero" data-start="0.6" data-duration="8.98" data-track-index="5" >IPO filed</div>
+<div id="ipo-d1" class="el clip " data-start="3.84" data-duration="5.74" data-track-index="6" ></div>
+<div id="ipo-a1" class="el clip kick q" data-start="3.84" data-duration="5.74" data-track-index="7" >MAY 2026</div>
+<div id="ipo-b1" class="el clip hero" data-start="3.84" data-duration="5.74" data-track-index="8" >SEBI approval</div>
+<div id="ipo-d2" class="el clip " data-start="6.82" data-duration="2.76" data-track-index="9" ></div>
+<div id="ipo-a2" class="el clip kick q" data-start="6.82" data-duration="2.76" data-track-index="10" >JULY 2026</div>
+<div id="ipo-b2" class="el clip hero" data-start="6.82" data-duration="2.76" data-track-index="11" >Planned listing</div>
+<div id="ipo-src" class="el clip src" data-start="0.6" data-duration="8.98" data-track-index="12" >Source: Kotak Neo</div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#ipo-k",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},0.12);
+tl.to("#ipo-k",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.36);
+tl.fromTo("#ipo-ln",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.12);
+tl.to("#ipo-ln",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.36);
+tl.fromTo("#ipo-d0",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},0.6);
+tl.to("#ipo-d0",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.36);
+tl.fromTo("#ipo-a0",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.6);
+tl.to("#ipo-a0",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.36);
+tl.fromTo("#ipo-b0",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},0.6);
+tl.to("#ipo-b0",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.36);
+tl.fromTo("#ipo-d1",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},3.84);
+tl.to("#ipo-d1",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.36);
+tl.fromTo("#ipo-a1",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},3.84);
+tl.to("#ipo-a1",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.36);
+tl.fromTo("#ipo-b1",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},3.84);
+tl.to("#ipo-b1",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.36);
+tl.fromTo("#ipo-d2",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},6.82);
+tl.to("#ipo-d2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.36);
+tl.fromTo("#ipo-a2",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},6.82);
+tl.to("#ipo-a2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.36);
+tl.fromTo("#ipo-b2",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},6.82);
+tl.to("#ipo-b2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.36);
+tl.fromTo("#ipo-src",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.6);
+tl.to("#ipo-src",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.36);
+tl.fromTo("#ipo-l1",{strokeDashoffset:1},{strokeDashoffset:0,duration:0.6,ease:"power2.inOut"},3.34);
+tl.fromTo("#ipo-l2",{strokeDashoffset:1},{strokeDashoffset:0,duration:0.6,ease:"power2.inOut"},6.32);
+window.__timelines["ipo"] = tl;
+</script>
+</template>

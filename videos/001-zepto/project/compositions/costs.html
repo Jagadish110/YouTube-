@@ -1,0 +1,43 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:'Inter',sans-serif;font-weight:700;}
+.hero{font-family:'Archivo Black',sans-serif;font-weight:400;letter-spacing:-0.02em;line-height:1.05;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#costs-h{left:0;width:1920px;text-align:center;top:130px;font-size:120px;}
+#costs-c0{left:120px;top:430px;font-size:10px;width:540px;text-align:center;}
+#costs-c1{left:690px;top:430px;font-size:10px;width:540px;text-align:center;}
+#costs-c2{left:1260px;top:430px;font-size:10px;width:540px;text-align:center;}
+#costs-v{left:0;width:1920px;text-align:center;top:720px;font-size:40px;}
+#costs-r{left:0;width:1920px;text-align:center;top:780px;font-size:76px;}
+</style>
+<div id="root" data-composition-id="costs" data-width="1920" data-height="1080">
+<div id="costs-h" class="el clip hero" data-start="0.52" data-duration="10.36" data-track-index="1" >REVENUE <span class='down'>IS NOT</span> PROFIT</div>
+<div id="costs-c0" class="el clip " data-start="3.47" data-duration="7.41" data-track-index="2" ><div class="hero" style="font-size:88px">RENT</div><div class="q" style="font-size:36px;margin-top:14px;font-weight:400">stores in prime locations</div></div>
+<div id="costs-c1" class="el clip " data-start="5.79" data-duration="5.09" data-track-index="3" ><div class="hero" style="font-size:88px">RIDERS</div><div class="q" style="font-size:36px;margin-top:14px;font-weight:400">on every order</div></div>
+<div id="costs-c2" class="el clip " data-start="6.84" data-duration="4.04" data-track-index="4" ><div class="hero" style="font-size:88px">DISCOUNTS</div><div class="q" style="font-size:36px;margin-top:14px;font-weight:400">to win customers</div></div>
+<div id="costs-v" class="el clip q" data-start="8.69" data-duration="2.19" data-track-index="5" >fighting</div>
+<div id="costs-r" class="el clip hero" data-start="8.95" data-duration="1.93" data-track-index="6" >BLINKIT · INSTAMART · AMAZON</div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#costs-h",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},0.52);
+tl.to("#costs-h",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},10.66);
+tl.fromTo("#costs-c0",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},3.47);
+tl.to("#costs-c0",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},10.66);
+tl.fromTo("#costs-c1",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},5.79);
+tl.to("#costs-c1",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},10.66);
+tl.fromTo("#costs-c2",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},6.84);
+tl.to("#costs-c2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},10.66);
+tl.fromTo("#costs-v",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},8.69);
+tl.to("#costs-v",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},10.66);
+tl.fromTo("#costs-r",{clipPath:"inset(0 100% 0 0)"},{clipPath:"inset(0 0% 0 0)",duration:0.5,ease:"power3.out"},8.95);
+tl.to("#costs-r",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},10.66);
+window.__timelines["costs"] = tl;
+</script>
+</template>

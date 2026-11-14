@@ -1,0 +1,35 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:'Inter',sans-serif;font-weight:700;}
+.hero{font-family:'Archivo Black',sans-serif;font-weight:400;letter-spacing:-0.02em;line-height:1.05;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#prove-a1{left:0;width:1920px;text-align:center;top:170px;font-size:48px;}
+#prove-a2{left:0;width:1920px;text-align:center;top:250px;font-size:84px;}
+#prove-b1{left:0;width:1920px;text-align:center;top:560px;font-size:48px;}
+#prove-b2{left:0;width:1920px;text-align:center;top:640px;font-size:84px;}
+</style>
+<div id="root" data-composition-id="prove" data-width="1920" data-height="1080">
+<div id="prove-a1" class="el clip kick up" data-start="0.42" data-duration="6.36" data-track-index="1" >PROVED</div>
+<div id="prove-a2" class="el clip hero" data-start="0.79" data-duration="5.99" data-track-index="2" >India wants groceries in 10 minutes</div>
+<div id="prove-b1" class="el clip kick down" data-start="3.13" data-duration="3.65" data-track-index="3" >STILL TO PROVE</div>
+<div id="prove-b2" class="el clip hero" data-start="4.57" data-duration="2.21" data-track-index="4" >10 minutes can make money</div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#prove-a1",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.42);
+tl.to("#prove-a1",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.56);
+tl.fromTo("#prove-a2",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},0.79);
+tl.to("#prove-a2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.56);
+tl.fromTo("#prove-b1",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},3.13);
+tl.to("#prove-b1",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.56);
+tl.fromTo("#prove-b2",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},4.57);
+tl.to("#prove-b2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.56);
+window.__timelines["prove"] = tl;
+</script>
+</template>
