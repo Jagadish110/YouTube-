@@ -88,3 +88,4 @@ A copyrighted song without a licence will get a YouTube copyright claim; use roy
 - Own style, different from the Shorts: full-screen kinetic captions, bass hits / risers / ticks, colours of the subject.
 - No top label and no progress line. A small "@trendsplain" appears in the last second.
 - Every claim from an opened source. Reported but unproven claims are labelled "REPORTED · NOT PROVEN" on screen. No photos of real people, no logos.
+- Tone: information only. Each Reel tells the viewer facts they did not know (numbers, dates, who said what). No question endings, no slogans. Reference: `videos/reels/001-nvidia-huang/info/`.
