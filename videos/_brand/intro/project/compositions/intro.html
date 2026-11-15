@@ -1,0 +1,49 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:var(--body);font-weight:700;}
+.hero{font-family:var(--head);font-weight:800;letter-spacing:-0.02em;line-height:1.05;text-transform:none;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.img{display:block;}.card{background:var(--panel);border-radius:28px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#intro-glow{left:510px;top:-110px;font-size:10px;}
+#intro-mark{left:810px;top:150px;font-size:10px;}
+#intro-k{left:0;width:1920px;text-align:center;top:500px;font-size:48px;}
+#intro-w{left:0;width:1920px;text-align:center;top:560px;font-size:190px;}
+#intro-t{left:0;width:1920px;text-align:center;top:800px;font-size:60px;}
+#intro-u{left:760px;top:900px;font-size:10px;width:400px;height:10px;border-radius:5px;background:#FF4A4F;}
+</style>
+<div id="root" data-composition-id="intro" data-width="1920" data-height="1080">
+<div id="intro-glow" class="el clip " data-start="0.4" data-duration="5.9" data-track-index="1" ><svg width="900" height="900" viewBox="0 0 900 900"><circle id="intro-ring1" cx="450" cy="450" r="200" fill="none" stroke="#FF4A4F" stroke-width="6" opacity=".6"/><circle id="intro-ring2" cx="450" cy="450" r="200" fill="none" stroke="#FFFFFF" stroke-width="4" opacity=".35"/></svg></div>
+<div id="intro-mark" class="el clip " data-start="0.05" data-duration="6.25" data-track-index="2" ><svg width="300" height="320" viewBox="150 130 230 245"><path id="intro-m-bar" d="M160 142 H322 V151 H167 V195 H318 V201 H160 Z" fill="#FF4A4F"/><path id="intro-m-fold" d="M160 201 L215 262 V201 Z" fill="#FF4A4F"/><path id="intro-m-stem" d="M318 142 H322 L370 188 V250 H320 V365 L268 318 V201 H318 Z" fill="#FF4A4F"/></svg></div>
+<div id="intro-k" class="el clip kick q" data-start="0.8" data-duration="5.5" data-track-index="3" >WELCOME TO</div>
+<div id="intro-w" class="el clip hero" data-start="1.35" data-duration="4.95" data-track-index="4" >Trend<span style='color:#FF4A4F'>splain</span></div>
+<div id="intro-t" class="el clip " data-start="2.0" data-duration="4.3" data-track-index="5" >Viral topics, explained in <span style='color:#FF4A4F'>plain words.</span></div>
+<div id="intro-u" class="el clip " data-start="4.3" data-duration="2.0" data-track-index="6" ></div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#intro-glow",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.4);
+tl.to("#intro-glow",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.08);
+tl.fromTo("#intro-mark",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.05);
+tl.to("#intro-mark",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.08);
+tl.fromTo("#intro-k",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.8);
+tl.to("#intro-k",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.08);
+tl.fromTo("#intro-w",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},1.35);
+tl.to("#intro-w",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.08);
+tl.fromTo("#intro-t",{clipPath:"inset(0 100% 0 0)"},{clipPath:"inset(0 0% 0 0)",duration:0.5,ease:"power3.out"},2.0);
+tl.to("#intro-t",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.08);
+tl.fromTo("#intro-u",{clipPath:"inset(0 100% 0 0)"},{clipPath:"inset(0 0% 0 0)",duration:0.5,ease:"power3.out"},4.3);
+tl.to("#intro-u",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.08);
+tl.fromTo("#intro-ring1",{scale:0.4,opacity:.8,transformOrigin:"50% 50%"},{scale:1.8,opacity:0,duration:1.4,ease:"power2.out"},0.55);
+tl.fromTo("#intro-ring2",{scale:0.4,opacity:.6,transformOrigin:"50% 50%"},{scale:2.2,opacity:0,duration:1.6,ease:"power2.out"},0.7);
+tl.fromTo("#intro-m-bar",{scaleX:0,transformOrigin:"0% 50%"},{scaleX:1,duration:0.45,ease:"power3.out"},0.1);
+tl.fromTo("#intro-m-fold",{opacity:0,y:-40},{opacity:1,y:0,duration:0.35,ease:"back.out(2)"},0.4);
+tl.fromTo("#intro-m-stem",{opacity:0,y:-140},{opacity:1,y:0,duration:0.5,ease:"bounce.out"},0.5);
+window.__timelines["intro"] = tl;
+</script>
+</template>

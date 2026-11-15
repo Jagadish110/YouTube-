@@ -95,6 +95,24 @@ def shimmer(dur=0.6):
     return out * 0.12 * np.sin(np.pi * np.arange(n) / n)
 
 
+def mouse_click():
+    a = click() * 1.4
+    b = np.zeros(int(0.07 * SR)); b[int(0.045 * SR):int(0.045 * SR) + len(a)] += a[:len(b) - int(0.045 * SR)] * 0.7
+    b[:len(a)] += a[:len(b)]
+    return b
+
+
+def chime():
+    """Brand sting: soft riser into a bright major chord (C-E-G-C) with a bell top."""
+    n = int(1.6 * SR); t = np.arange(n) / SR; out = np.zeros(n)
+    rise = swoosh(0.5, bright=0.6) * 0.6; out[:len(rise)] += rise
+    s = int(0.45 * SR)
+    for f, g in ((523.25, .5), (659.25, .4), (783.99, .35), (1046.5, .3), (2093, .12)):
+        tt = t[:n - s]
+        out[s:] += g * np.sin(2 * np.pi * f * tt) * np.exp(-tt / 0.55) * np.minimum(1, tt / 0.01)
+    return out * 0.6
+
+
 def build(events, total):
     out = np.zeros(int((total + 2) * SR))
     last = {}
@@ -118,6 +136,10 @@ def build(events, total):
             snd = swoosh(0.3, bright=0.4)
         elif k == "stamp":
             snd = thump()
+        elif k == "click":
+            snd = mouse_click()
+        elif k == "chime":
+            snd = chime()
         elif k == "scene":
             snd = swoosh(0.45) * 0.8
             t = max(0, t - 0.15)

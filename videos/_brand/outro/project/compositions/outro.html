@@ -1,0 +1,64 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:var(--body);font-weight:700;}
+.hero{font-family:var(--head);font-weight:800;letter-spacing:-0.02em;line-height:1.05;text-transform:none;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.img{display:block;}.card{background:var(--panel);border-radius:28px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#outro-k{left:0;width:1920px;text-align:center;top:170px;font-size:52px;}
+#outro-sub{left:250px;top:380px;font-size:10px;height:170px;border-radius:85px;display:flex;align-items:center;justify-content:center;gap:28px;font-size:72px;width:680px;background:#FF4A4F;}
+#outro-subd{left:250px;top:380px;font-size:10px;height:170px;border-radius:85px;display:flex;align-items:center;justify-content:center;gap:28px;font-size:72px;width:680px;background:#3A4270;}
+#outro-bell{left:960px;top:425px;font-size:10px;}
+#outro-sh{left:1100px;top:380px;font-size:10px;height:170px;border-radius:85px;display:flex;align-items:center;justify-content:center;gap:28px;font-size:72px;width:570px;background:#FFFFFF;}
+#outro-pl{left:1600px;top:410px;font-size:10px;}
+#outro-cur{left:1500px;top:820px;font-size:10px;}
+#outro-m{left:780px;top:790px;font-size:10px;}
+#outro-h{left:890px;top:805px;font-size:56px;width:600px;}
+</style>
+<div id="root" data-composition-id="outro" data-width="1920" data-height="1080">
+<div id="outro-k" class="el clip kick q" data-start="0.1" data-duration="6.9" data-track-index="1" >IF THIS MADE SENSE…</div>
+<div id="outro-sub" class="el clip " data-start="0.3" data-duration="6.7" data-track-index="2" data-layout-allow-overlap data-layout-allow-occlusion><span class="hero">SUBSCRIBE</span></div>
+<div id="outro-subd" class="el clip " data-start="1.71" data-duration="5.29" data-track-index="3" data-layout-allow-overlap data-layout-allow-occlusion><span class="hero" style="color:#C9CFEA">SUBSCRIBED ✓</span></div>
+<div id="outro-bell" class="el clip " data-start="1.79" data-duration="5.21" data-track-index="4" ><svg width="70" height="76" viewBox="0 0 70 76"><path d="M10 56 Q10 12 35 12 Q60 12 60 56 Z" fill="#FFFFFF"/><rect x="4" y="54" width="62" height="10" rx="5" fill="#FFFFFF"/><circle cx="35" cy="70" r="7" fill="#FFFFFF"/></svg></div>
+<div id="outro-sh" class="el clip " data-start="0.45" data-duration="6.55" data-track-index="5" ><svg width="70" height="70" viewBox="0 0 70 70"><circle cx="54" cy="14" r="11" fill="#1B2240"/><circle cx="16" cy="35" r="11" fill="#1B2240"/><circle cx="54" cy="56" r="11" fill="#1B2240"/><path d="M54 14 L16 35 L54 56" stroke="#1B2240" stroke-width="7" fill="none"/></svg><span class="hero" style="color:#1B2240">SHARE</span></div>
+<div id="outro-pl" class="el clip " data-start="2.58" data-duration="4.42" data-track-index="6" ><svg width="90" height="90" viewBox="0 0 90 90"><path d="M5 45 L85 8 L60 85 L44 52 Z" fill="#FF4A4F"/><path d="M44 52 L85 8" stroke="#1B2240" stroke-width="4"/></svg></div>
+<div id="outro-cur" class="el clip " data-start="0.6" data-duration="6.4" data-track-index="7" ><svg width="80" height="100" viewBox="0 0 80 100"><path d="M8 4 L8 78 L28 60 L42 94 L56 88 L42 55 L70 55 Z" fill="#FFFFFF" stroke="#1B2240" stroke-width="6" stroke-linejoin="round"/></svg></div>
+<div id="outro-m" class="el clip " data-start="1.0" data-duration="6.0" data-track-index="8" ><svg width="90" height="96" viewBox="150 130 230 245"><path id="outro-m-bar" d="M160 142 H322 V151 H167 V195 H318 V201 H160 Z" fill="#FF4A4F"/><path id="outro-m-fold" d="M160 201 L215 262 V201 Z" fill="#FF4A4F"/><path id="outro-m-stem" d="M318 142 H322 L370 188 V250 H320 V365 L268 318 V201 H318 Z" fill="#FF4A4F"/></svg></div>
+<div id="outro-h" class="el clip hero" data-start="1.0" data-duration="6.0" data-track-index="9" >@Trendsplain</div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#outro-k",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.1);
+tl.to("#outro-k",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.78);
+tl.fromTo("#outro-sub",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},0.3);
+tl.to("#outro-sub",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.78);
+tl.fromTo("#outro-subd",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},1.71);
+tl.to("#outro-subd",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.78);
+tl.fromTo("#outro-bell",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},1.79);
+tl.to("#outro-bell",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.78);
+tl.fromTo("#outro-sh",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},0.45);
+tl.to("#outro-sh",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.78);
+tl.fromTo("#outro-pl",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},2.58);
+tl.to("#outro-pl",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.78);
+tl.fromTo("#outro-cur",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.6);
+tl.to("#outro-cur",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.78);
+tl.fromTo("#outro-m",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},1.0);
+tl.to("#outro-m",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.78);
+tl.fromTo("#outro-h",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},1.0);
+tl.to("#outro-h",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.78);
+tl.to("#outro-bell",{rotation:18,transformOrigin:"50% 10%",duration:0.1,yoyo:true,repeat:7},2.09);
+tl.to("#outro-pl",{x:260,y:-260,rotation:10,opacity:0,duration:0.9,ease:"power2.in"},2.93);
+tl.to("#outro-cur",{x:-850,y:-330,duration:0.6,ease:"power2.inOut"},0.94);
+tl.to("#outro-cur",{scale:0.85,duration:0.08,yoyo:true,repeat:1},1.57);
+tl.to("#outro-sub",{scale:0.94,duration:0.08,yoyo:true,repeat:1},1.57);
+tl.to("#outro-cur",{x:-120,y:-330,duration:0.55,ease:"power2.inOut"},1.73);
+tl.to("#outro-cur",{scale:0.85,duration:0.08,yoyo:true,repeat:1},2.31);
+tl.to("#outro-sh",{scale:0.94,duration:0.08,yoyo:true,repeat:1},2.31);
+window.__timelines["outro"] = tl;
+</script>
+</template>
