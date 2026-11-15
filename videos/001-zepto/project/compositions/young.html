@@ -12,10 +12,12 @@
 .tnum{font-variant-numeric:tabular-nums;}
 #young-k{left:0;width:1920px;text-align:center;top:330px;font-size:44px;}
 #young-h{left:0;width:1920px;text-align:center;top:430px;font-size:120px;}
+#young-fd{left:750px;top:650px;font-size:10px;}
 </style>
 <div id="root" data-composition-id="young" data-width="1920" data-height="1080">
 <div id="young-k" class="el clip kick q" data-start="0.12" data-duration="3.77" data-track-index="1" >THE TWO FOUNDERS</div>
 <div id="young-h" class="el clip hero" data-start="2.01" data-duration="1.88" data-track-index="2" >Still in their <span class='up'>mid-twenties.</span></div>
+<div id="young-fd" class="el clip " data-start="2.01" data-duration="1.88" data-track-index="3" ><svg width="420" height="300" viewBox="0 0 420 300"><circle cx="130" cy="60" r="44" fill="#CDBBEA"/><path d="M60 300 Q56 120 130 116 Q204 120 200 300 Z" fill="#CDBBEA"/><circle cx="290" cy="60" r="44" fill="#FF4F9A"/><path d="M220 300 Q216 120 290 116 Q364 120 360 300 Z" fill="#FF4F9A"/></svg></div>
 </div>
 <script>
 const tl = gsap.timeline({ paused: true });
@@ -23,6 +25,9 @@ tl.fromTo("#young-k",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.12
 tl.to("#young-k",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},3.67);
 tl.fromTo("#young-h",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},2.01);
 tl.to("#young-h",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},3.67);
+tl.fromTo("#young-fd",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},2.01);
+tl.to("#young-fd",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},3.67);
+tl.fromTo("#young-fd",{y:40},{y:0,duration:0.55,ease:"back.out(1.8)"},2.01);
 window.__timelines["young"] = tl;
 </script>
 </template>

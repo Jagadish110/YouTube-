@@ -14,12 +14,14 @@
 #loss-n{left:0;width:1920px;text-align:center;top:310px;font-size:240px;}
 #loss-c{left:0;width:1920px;text-align:center;top:640px;font-size:64px;}
 #loss-src{}
+#loss-fire{left:660px;top:740px;font-size:10px;}
 </style>
 <div id="root" data-composition-id="loss" data-width="1920" data-height="1080">
 <div id="loss-k" class="el clip kick q" data-start="0.12" data-duration="7.16" data-track-index="1" >THE YEAR BEFORE (FY25) · NET LOSS</div>
 <div id="loss-n" class="el clip hero down tnum" data-start="2.82" data-duration="4.46" data-track-index="2" >₹0 Cr</div>
 <div id="loss-c" class="el clip " data-start="5.12" data-duration="2.16" data-track-index="3" >Burning cash every quarter</div>
 <div id="loss-src" class="el clip src" data-start="2.82" data-duration="4.46" data-track-index="4" >Source: Free Press Journal</div>
+<div id="loss-fire" class="el clip " data-start="5.12" data-duration="2.16" data-track-index="5" ><svg width="600" height="290" viewBox="0 0 600 290"><rect x="150" y="150" width="300" height="130" rx="12" fill="#8FD9A8" stroke="#14002B" stroke-width="5"/><rect x="158" y="134" width="300" height="130" rx="12" fill="#7BC795" stroke="#14002B" stroke-width="5"/><rect x="166" y="118" width="300" height="130" rx="12" fill="#8FD9A8" stroke="#14002B" stroke-width="5"/><rect x="174" y="102" width="300" height="130" rx="12" fill="#7BC795" stroke="#14002B" stroke-width="5"/><path id="loss-f1" d="M260 120 Q230 60 270 10 Q280 60 310 40 Q330 90 300 120 Z" fill="#FFB238"/><path id="loss-f2" d="M340 110 Q320 60 350 20 Q360 60 390 50 Q400 90 380 110 Z" fill="#FF4F9A"/><path id="loss-f3" d="M410 120 Q400 80 430 50 Q440 80 455 75 Q465 105 450 120 Z" fill="#FFB238"/></svg></div>
 </div>
 <script>
 const tl = gsap.timeline({ paused: true });
@@ -33,6 +35,9 @@ tl.fromTo("#loss-c",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},5.12)
 tl.to("#loss-c",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.06);
 tl.fromTo("#loss-src",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},2.82);
 tl.to("#loss-src",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.06);
+tl.fromTo("#loss-fire",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},5.12);
+tl.to("#loss-fire",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.06);
+tl.to(["#loss-f1","#loss-f2","#loss-f3"],{scaleY:1.18,transformOrigin:"50% 100%",duration:0.2,yoyo:true,repeat:14,ease:"sine.inOut"},5.12);
 window.__timelines["loss"] = tl;
 </script>
 </template>

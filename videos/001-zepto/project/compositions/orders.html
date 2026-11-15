@@ -14,12 +14,14 @@
 #orders-n{left:0;width:1920px;text-align:center;top:300px;font-size:250px;}
 #orders-c{left:0;width:1920px;text-align:center;top:600px;font-size:72px;}
 #orders-c2{left:0;width:1920px;text-align:center;top:710px;font-size:44px;}
+#orders-cv{left:210px;top:790px;font-size:10px;}
 </style>
 <div id="root" data-composition-id="orders" data-width="1920" data-height="1080">
 <div id="orders-k" class="el clip kick q" data-start="0.12" data-duration="4.34" data-track-index="1" >LAST QUARTER OF FY26</div>
 <div id="orders-n" class="el clip hero up tnum" data-start="2.66" data-duration="1.8" data-track-index="2" >0 LAKH+</div>
 <div id="orders-c" class="el clip " data-start="2.91" data-duration="1.55" data-track-index="3" >orders a day</div>
 <div id="orders-c2" class="el clip q" data-start="3.36" data-duration="1.1" data-track-index="4" >(2.3 million)</div>
+<div id="orders-cv" class="el clip " data-start="0.2" data-duration="4.26" data-track-index="5" ><svg width="1500" height="220" viewBox="0 0 1500 220"><rect x="0" y="150" width="1500" height="26" rx="13" fill="#CDBBEA"/><circle cx="40" cy="190" r="16" fill="#3D0C6E" stroke="#CDBBEA" stroke-width="5"/><circle cx="160" cy="190" r="16" fill="#3D0C6E" stroke="#CDBBEA" stroke-width="5"/><circle cx="280" cy="190" r="16" fill="#3D0C6E" stroke="#CDBBEA" stroke-width="5"/><circle cx="400" cy="190" r="16" fill="#3D0C6E" stroke="#CDBBEA" stroke-width="5"/><circle cx="520" cy="190" r="16" fill="#3D0C6E" stroke="#CDBBEA" stroke-width="5"/><circle cx="640" cy="190" r="16" fill="#3D0C6E" stroke="#CDBBEA" stroke-width="5"/><circle cx="760" cy="190" r="16" fill="#3D0C6E" stroke="#CDBBEA" stroke-width="5"/><circle cx="880" cy="190" r="16" fill="#3D0C6E" stroke="#CDBBEA" stroke-width="5"/><circle cx="1000" cy="190" r="16" fill="#3D0C6E" stroke="#CDBBEA" stroke-width="5"/><circle cx="1120" cy="190" r="16" fill="#3D0C6E" stroke="#CDBBEA" stroke-width="5"/><circle cx="1240" cy="190" r="16" fill="#3D0C6E" stroke="#CDBBEA" stroke-width="5"/><circle cx="1360" cy="190" r="16" fill="#3D0C6E" stroke="#CDBBEA" stroke-width="5"/><circle cx="1480" cy="190" r="16" fill="#3D0C6E" stroke="#CDBBEA" stroke-width="5"/><g id="orders-row"><g class="orders-bx"><rect x="0" y="40" width="130" height="110" rx="10" fill="#FF4F9A"/><rect x="52" y="40" width="26" height="110" fill="#14002B" opacity=".18"/></g><g class="orders-bx"><rect x="190" y="40" width="130" height="110" rx="10" fill="#FFB238"/><rect x="242" y="40" width="26" height="110" fill="#14002B" opacity=".18"/></g><g class="orders-bx"><rect x="380" y="40" width="130" height="110" rx="10" fill="#7FD1FF"/><rect x="432" y="40" width="26" height="110" fill="#14002B" opacity=".18"/></g><g class="orders-bx"><rect x="570" y="40" width="130" height="110" rx="10" fill="#ffffff"/><rect x="622" y="40" width="26" height="110" fill="#14002B" opacity=".18"/></g><g class="orders-bx"><rect x="760" y="40" width="130" height="110" rx="10" fill="#FF4F9A"/><rect x="812" y="40" width="26" height="110" fill="#14002B" opacity=".18"/></g><g class="orders-bx"><rect x="950" y="40" width="130" height="110" rx="10" fill="#FFB238"/><rect x="1002" y="40" width="26" height="110" fill="#14002B" opacity=".18"/></g><g class="orders-bx"><rect x="1140" y="40" width="130" height="110" rx="10" fill="#7FD1FF"/><rect x="1192" y="40" width="26" height="110" fill="#14002B" opacity=".18"/></g><g class="orders-bx"><rect x="1330" y="40" width="130" height="110" rx="10" fill="#ffffff"/><rect x="1382" y="40" width="26" height="110" fill="#14002B" opacity=".18"/></g><g class="orders-bx"><rect x="1520" y="40" width="130" height="110" rx="10" fill="#FF4F9A"/><rect x="1572" y="40" width="26" height="110" fill="#14002B" opacity=".18"/></g></g></svg></div>
 </div>
 <script>
 const tl = gsap.timeline({ paused: true });
@@ -33,6 +35,9 @@ tl.fromTo("#orders-c",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},2.9
 tl.to("#orders-c",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},4.24);
 tl.fromTo("#orders-c2",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},3.36);
 tl.to("#orders-c2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},4.24);
+tl.fromTo("#orders-cv",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.2);
+tl.to("#orders-cv",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},4.24);
+tl.fromTo("#orders-row",{x:-380},{x:0,duration:4,ease:"none"},0.2);
 window.__timelines["orders"] = tl;
 </script>
 </template>

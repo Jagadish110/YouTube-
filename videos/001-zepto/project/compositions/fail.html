@@ -15,6 +15,7 @@
 #fail-r0{left:520px;top:470px;font-size:72px;width:1300px;}
 #fail-r1{left:520px;top:600px;font-size:72px;width:1300px;}
 #fail-r2{left:520px;top:730px;font-size:72px;width:1300px;}
+#fail-ph{left:110px;top:450px;font-size:10px;}
 </style>
 <div id="root" data-composition-id="fail" data-width="1920" data-height="1080">
 <div id="fail-t" class="el clip hero q" data-start="0.05" data-duration="7.25" data-track-index="1" >KIRANAKART</div>
@@ -22,6 +23,7 @@
 <div id="fail-r0" class="el clip " data-start="1.13" data-duration="6.17" data-track-index="3" ><span class="down hero">×</span>&nbsp;&nbsp;Shops run out of stock</div>
 <div id="fail-r1" class="el clip " data-start="2.6" data-duration="4.7" data-track-index="4" ><span class="down hero">×</span>&nbsp;&nbsp;No inventory tracking</div>
 <div id="fail-r2" class="el clip " data-start="3.97" data-duration="3.33" data-track-index="5" ><span class="down hero">×</span>&nbsp;&nbsp;Every order = a phone call</div>
+<div id="fail-ph" class="el clip " data-start="1.13" data-duration="6.17" data-track-index="6" ><svg width="320" height="440" viewBox="0 0 320 440"><rect x="20" y="10" width="280" height="420" rx="44" fill="#14002B" stroke="#CDBBEA" stroke-width="8"/><rect x="42" y="44" width="236" height="352" rx="28" fill="#3D0C6E"/><path d="M80 60 L150 170 L120 200 L200 300 L170 330 L240 390" stroke="#ffffff" stroke-width="6" fill="none"/><rect x="70" y="250" width="180" height="90" rx="18" fill="#FFB238"/><text x="160" y="310" text-anchor="middle" font-family="Outfit" font-weight="800" font-size="48" fill="#14002B">ERROR</text></svg></div>
 </div>
 <script>
 const tl = gsap.timeline({ paused: true });
@@ -35,6 +37,9 @@ tl.fromTo("#fail-r1",{clipPath:"inset(0 100% 0 0)"},{clipPath:"inset(0 0% 0 0)",
 tl.to("#fail-r1",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.08);
 tl.fromTo("#fail-r2",{clipPath:"inset(0 100% 0 0)"},{clipPath:"inset(0 0% 0 0)",duration:0.5,ease:"power3.out"},3.97);
 tl.to("#fail-r2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.08);
+tl.fromTo("#fail-ph",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},1.13);
+tl.to("#fail-ph",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.08);
+tl.to("#fail-ph",{rotation:4,duration:0.07,yoyo:true,repeat:5},1.53);
 window.__timelines["fail"] = tl;
 </script>
 </template>

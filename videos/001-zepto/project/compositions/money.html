@@ -18,6 +18,8 @@
 #money-b1{left:1020px;top:360px;font-size:44px;width:800px;text-align:center;}
 #money-b2{left:1020px;top:470px;font-size:56px;width:800px;text-align:center;}
 #money-b3{left:1020px;top:560px;font-size:100px;width:800px;text-align:center;}
+#money-cb{left:340px;top:720px;font-size:10px;}
+#money-cr{left:1260px;top:710px;font-size:10px;}
 </style>
 <div id="root" data-composition-id="money" data-width="1920" data-height="1080">
 <div id="money-k" class="el clip hero" data-start="1.01" data-duration="7.23" data-track-index="1" >TWO KINDS OF MONEY</div>
@@ -28,6 +30,8 @@
 <div id="money-b1" class="el clip kick q" data-start="5.9" data-duration="2.34" data-track-index="6" >PUBLIC MARKETS</div>
 <div id="money-b2" class="el clip " data-start="6.71" data-duration="1.53" data-track-index="7" >pay for what it</div>
 <div id="money-b3" class="el clip hero down" data-start="7.57" data-duration="0.67" data-track-index="8" >EARNS</div>
+<div id="money-cb" class="el clip " data-start="5.15" data-duration="3.09" data-track-index="9" ><svg width="320" height="290" viewBox="0 0 320 290"><circle cx="160" cy="130" r="110" fill="#7FD1FF" opacity=".35" stroke="#7FD1FF" stroke-width="8"/><path d="M110 100 Q130 70 160 70" stroke="#ffffff" stroke-width="10" fill="none" stroke-linecap="round"/><path d="M90 230 H230 L250 270 H70 Z" fill="#FF4F9A"/><path d="M130 150 L150 110 L170 140 L190 90" stroke="#FFB238" stroke-width="8" fill="none" stroke-linecap="round"/></svg></div>
+<div id="money-cr" class="el clip " data-start="7.57" data-duration="0.67" data-track-index="10" ><svg width="320" height="300" viewBox="0 0 320 300"><rect x="40" y="110" width="240" height="160" rx="16" fill="#CDBBEA"/><rect x="70" y="40" width="180" height="80" rx="10" fill="#3D0C6E" stroke="#CDBBEA" stroke-width="6"/><text x="160" y="96" text-anchor="middle" font-family="Outfit" font-weight="800" font-size="44" fill="#57E39A">₹ ₹ ₹</text><rect x="70" y="140" width="34" height="26" rx="5" fill="#3D0C6E"/><rect x="118" y="140" width="34" height="26" rx="5" fill="#3D0C6E"/><rect x="166" y="140" width="34" height="26" rx="5" fill="#3D0C6E"/><rect x="214" y="140" width="34" height="26" rx="5" fill="#3D0C6E"/><rect x="70" y="180" width="34" height="26" rx="5" fill="#3D0C6E"/><rect x="118" y="180" width="34" height="26" rx="5" fill="#3D0C6E"/><rect x="166" y="180" width="34" height="26" rx="5" fill="#3D0C6E"/><rect x="214" y="180" width="34" height="26" rx="5" fill="#3D0C6E"/><rect x="30" y="270" width="260" height="20" rx="8" fill="#FFB238"/></svg></div>
 </div>
 <script>
 const tl = gsap.timeline({ paused: true });
@@ -47,6 +51,10 @@ tl.fromTo("#money-b2",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},6.7
 tl.to("#money-b2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},8.02);
 tl.fromTo("#money-b3",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},7.57);
 tl.to("#money-b3",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},8.02);
+tl.fromTo("#money-cb",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},5.15);
+tl.to("#money-cb",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},8.02);
+tl.fromTo("#money-cr",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},7.57);
+tl.to("#money-cr",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},8.02);
 window.__timelines["money"] = tl;
 </script>
 </template>

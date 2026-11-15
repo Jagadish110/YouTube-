@@ -58,7 +58,7 @@ what the numbers say and why it matters, without hype.
 
 | Video | Look |
 |---|---|
-| 001 Zepto | v1 dark + purple; v2 Zepto purple #2E0854 + pink #FF4F9A, Outfit / Plus Jakarta Sans |
+| 001 Zepto | v3 Zepto purple #2E0854 + pink #FF4F9A, Outfit / Plus Jakarta Sans, drawn images in every scene |
 | 002 Blinkit | Blinkit yellow + green, Bricolage Grotesque / DM Sans, drawn images |
 | 003 Coca-Cola IPO | Coca-Cola red + white, Anton (planned) |
 | 004 Albinder Dhindsa | Zomato red + Blinkit yellow on charcoal, Sora (planned) |

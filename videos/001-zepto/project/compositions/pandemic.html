@@ -13,11 +13,13 @@
 #pandemic-lk{left:0;width:1920px;text-align:center;top:250px;font-size:230px;}
 #pandemic-a{left:0;width:1920px;text-align:center;top:560px;font-size:60px;}
 #pandemic-b{left:0;width:1920px;text-align:center;top:680px;font-size:84px;}
+#pandemic-ill{left:480px;top:790px;font-size:10px;}
 </style>
 <div id="root" data-composition-id="pandemic" data-width="1920" data-height="1080">
 <div id="pandemic-lk" class="el clip hero down" data-start="0.12" data-duration="4.89" data-track-index="1" >LOCKDOWN</div>
 <div id="pandemic-a" class="el clip q" data-start="1.24" data-duration="3.77" data-track-index="2" >Stuck at home in Mumbai</div>
 <div id="pandemic-b" class="el clip hero" data-start="2.81" data-duration="2.2" data-track-index="3" >No grocery delivery.</div>
+<div id="pandemic-ill" class="el clip " data-start="2.81" data-duration="2.2" data-track-index="4" ><svg width="960" height="280" viewBox="0 0 960 280"><g id="pandemic-h"><path d="M60 120 L200 20 L340 120 Z" fill="#FF4F9A"/><rect x="90" y="120" width="220" height="150" fill="#ffffff"/><rect x="170" y="180" width="60" height="90" rx="6" fill="#14002B"/><rect x="110" y="150" width="44" height="40" rx="6" fill="#7FD1FF"/><rect x="246" y="150" width="44" height="40" rx="6" fill="#7FD1FF"/><rect x="100" y="200" width="200" height="16" rx="6" fill="#FFB238" transform="rotate(-8 200 208)"/><rect x="100" y="200" width="200" height="16" rx="6" fill="#FFB238" transform="rotate(8 200 208)"/></g><g id="pandemic-p" transform="translate(520 0)"><rect x="0" y="10" width="150" height="260" rx="26" fill="#14002B" stroke="#CDBBEA" stroke-width="6"/><rect x="14" y="36" width="122" height="206" rx="16" fill="#3D0C6E"/><rect x="30" y="60" width="90" height="34" rx="8" fill="#CDBBEA" opacity=".5"/><rect x="30" y="104" width="90" height="34" rx="8" fill="#CDBBEA" opacity=".5"/><circle cx="75" cy="190" r="34" fill="none" stroke="#FFB238" stroke-width="10"/><path d="M52 167 L98 213" stroke="#FFB238" stroke-width="10"/></g><g id="pandemic-b" transform="translate(760 70)"><path d="M10 60 H170 L150 200 H30 Z" fill="#CDBBEA" opacity=".85"/><path d="M50 60 Q50 10 90 10 Q130 10 130 60" stroke="#CDBBEA" stroke-width="10" fill="none"/><text x="90" y="160" text-anchor="middle" font-family="Outfit" font-weight="800" font-size="60" fill="#3D0C6E">0</text></g></svg></div>
 </div>
 <script>
 const tl = gsap.timeline({ paused: true });
@@ -27,6 +29,11 @@ tl.fromTo("#pandemic-a",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},1
 tl.to("#pandemic-a",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},4.79);
 tl.fromTo("#pandemic-b",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},2.81);
 tl.to("#pandemic-b",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},4.79);
+tl.fromTo("#pandemic-ill",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},2.81);
+tl.to("#pandemic-ill",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},4.79);
+tl.fromTo("#pandemic-h",{opacity:0,scale:0.4,transformOrigin:"50% 50%"},{opacity:1,scale:1,duration:0.35,ease:"back.out(2)"},2.81);
+tl.fromTo("#pandemic-p",{opacity:0,scale:0.4,transformOrigin:"50% 50%"},{opacity:1,scale:1,duration:0.35,ease:"back.out(2)"},2.96);
+tl.fromTo("#pandemic-b",{opacity:0,scale:0.4,transformOrigin:"50% 50%"},{opacity:1,scale:1,duration:0.35,ease:"back.out(2)"},3.11);
 window.__timelines["pandemic"] = tl;
 </script>
 </template>

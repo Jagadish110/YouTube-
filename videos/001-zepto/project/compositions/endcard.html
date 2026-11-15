@@ -12,10 +12,14 @@
 .tnum{font-variant-numeric:tabular-nums;}
 #endcard-s{left:0;width:1920px;text-align:center;top:300px;font-size:220px;}
 #endcard-n{left:0;width:1920px;text-align:center;top:620px;font-size:72px;}
+#endcard-bell{left:1610px;top:290px;font-size:10px;}
+#endcard-bk{left:730px;top:760px;font-size:10px;transform:scale(0.8);transform-origin:left top;}
 </style>
 <div id="root" data-composition-id="endcard" data-width="1920" data-height="1080">
 <div id="endcard-s" class="el clip hero up" data-start="1.95" data-duration="3.92" data-track-index="1" >SUBSCRIBE</div>
 <div id="endcard-n" class="el clip q" data-start="2.51" data-duration="3.36" data-track-index="2" >Next breakdown: <span style='color:var(--ink)'>BLINKIT</span></div>
+<div id="endcard-bell" class="el clip " data-start="1.95" data-duration="3.92" data-track-index="3" ><svg width="160" height="170" viewBox="0 0 160 170"><path d="M30 130 Q30 30 80 30 Q130 30 130 130 Z" fill="#FFB238"/><rect x="18" y="126" width="124" height="16" rx="8" fill="#FFB238"/><circle cx="80" cy="156" r="13" fill="#FFB238"/></svg></div>
+<div id="endcard-bk" class="el clip " data-start="2.51" data-duration="3.36" data-track-index="4" ><svg width="460" height="320" viewBox="0 -20 460 320"><g id="endcard-sc"><circle cx="110" cy="240" r="48" fill="#14002B" stroke="#CDBBEA" stroke-width="6"/><circle cx="370" cy="240" r="48" fill="#14002B" stroke="#CDBBEA" stroke-width="6"/><path d="M64 232 Q74 160 160 160 L310 160 Q338 160 356 140 L392 84 L414 92 L384 160 Q374 232 318 232 Z" fill="#0C831F"/><rect x="96" y="40" width="160" height="128" rx="18" fill="#F8CB46" stroke="#14002B" stroke-width="8"/><path d="M262 160 L286 74 Q293 44 322 44 L330 44 L316 160 Z" fill="#CDBBEA"/><circle cx="314" cy="22" r="32" fill="#FFB238"/></g></svg></div>
 </div>
 <script>
 const tl = gsap.timeline({ paused: true });
@@ -23,6 +27,12 @@ tl.fromTo("#endcard-s",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,e
 tl.to("#endcard-s",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},5.65);
 tl.fromTo("#endcard-n",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},2.51);
 tl.to("#endcard-n",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},5.65);
+tl.fromTo("#endcard-bell",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},1.95);
+tl.to("#endcard-bell",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},5.65);
+tl.fromTo("#endcard-bk",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},2.51);
+tl.to("#endcard-bk",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},5.65);
+tl.to("#endcard-bell",{rotation:14,transformOrigin:"50% 10%",duration:0.12,yoyo:true,repeat:7},2.35);
+tl.fromTo("#endcard-bk",{x:-700},{x:0,duration:0.9,ease:"power3.out"},2.51);
 window.__timelines["endcard"] = tl;
 </script>
 </template>

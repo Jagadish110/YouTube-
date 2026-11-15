@@ -16,6 +16,8 @@
 #unicorn-u{left:0;width:1920px;text-align:center;top:490px;font-size:250px;}
 #unicorn-c{left:0;width:1920px;text-align:center;top:790px;font-size:52px;}
 #unicorn-src{}
+#unicorn-hn{left:1560px;top:90px;font-size:10px;}
+#unicorn-hn2{left:60px;top:90px;font-size:10px;transform:scaleX(-1);}
 </style>
 <div id="root" data-composition-id="unicorn" data-width="1920" data-height="1080">
 <div id="unicorn-b" class="el clip q" data-start="1.4" data-duration="6.63" data-track-index="1" >Backed by</div>
@@ -24,6 +26,8 @@
 <div id="unicorn-u" class="el clip hero up" data-start="5.48" data-duration="2.55" data-track-index="4" >UNICORN</div>
 <div id="unicorn-c" class="el clip " data-start="6.38" data-duration="1.65" data-track-index="5" >India's first unicorn of 2023</div>
 <div id="unicorn-src" class="el clip src" data-start="3.86" data-duration="4.17" data-track-index="6" >Source: Outlook Business</div>
+<div id="unicorn-hn" class="el clip " data-start="5.48" data-duration="2.55" data-track-index="7" ><svg width="300" height="320" viewBox="0 0 300 320"><path d="M100 300 L150 20 L200 300 Z" fill="#ffffff"/><path d="M112 250 L188 230 M122 190 L180 172 M134 130 L170 116 M144 76 L162 68" stroke="#FF4F9A" stroke-width="10" stroke-linecap="round"/><path id="unicorn-st0" d="M40 58 L47 73 L62 80 L47 87 L40 102 L33 87 L18 80 L33 73 Z" fill="#FFB238"/><path id="unicorn-st1" d="M260 38 L267 53 L282 60 L267 67 L260 82 L253 67 L238 60 L253 53 Z" fill="#FFB238"/><path id="unicorn-st2" d="M250 198 L257 213 L272 220 L257 227 L250 242 L243 227 L228 220 L243 213 Z" fill="#FFB238"/><path id="unicorn-st3" d="M30 218 L37 233 L52 240 L37 247 L30 262 L23 247 L8 240 L23 233 Z" fill="#FFB238"/></svg></div>
+<div id="unicorn-hn2" class="el clip " data-start="5.48" data-duration="2.55" data-track-index="8" ><svg width="300" height="320" viewBox="0 0 300 320"><path d="M100 300 L150 20 L200 300 Z" fill="#ffffff"/><path d="M112 250 L188 230 M122 190 L180 172 M134 130 L170 116 M144 76 L162 68" stroke="#FF4F9A" stroke-width="10" stroke-linecap="round"/><path id="unicorn-su0" d="M40 58 L47 73 L62 80 L47 87 L40 102 L33 87 L18 80 L33 73 Z" fill="#FFB238"/><path id="unicorn-su1" d="M260 38 L267 53 L282 60 L267 67 L260 82 L253 67 L238 60 L253 53 Z" fill="#FFB238"/><path id="unicorn-su2" d="M250 198 L257 213 L272 220 L257 227 L250 242 L243 227 L228 220 L243 213 Z" fill="#FFB238"/><path id="unicorn-su3" d="M30 218 L37 233 L52 240 L37 247 L30 262 L23 247 L8 240 L23 233 Z" fill="#FFB238"/></svg></div>
 </div>
 <script>
 const tl = gsap.timeline({ paused: true });
@@ -39,6 +43,14 @@ tl.fromTo("#unicorn-c",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},6.
 tl.to("#unicorn-c",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.81);
 tl.fromTo("#unicorn-src",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},3.86);
 tl.to("#unicorn-src",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.81);
+tl.fromTo("#unicorn-hn",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},5.48);
+tl.to("#unicorn-hn",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.81);
+tl.fromTo("#unicorn-hn2",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},5.48);
+tl.to("#unicorn-hn2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.81);
+tl.fromTo("#unicorn-st0",{opacity:0,scale:0.4,transformOrigin:"50% 50%"},{opacity:1,scale:1,duration:0.35,ease:"back.out(2)"},5.78);
+tl.fromTo("#unicorn-st1",{opacity:0,scale:0.4,transformOrigin:"50% 50%"},{opacity:1,scale:1,duration:0.35,ease:"back.out(2)"},5.88);
+tl.fromTo("#unicorn-st2",{opacity:0,scale:0.4,transformOrigin:"50% 50%"},{opacity:1,scale:1,duration:0.35,ease:"back.out(2)"},5.98);
+tl.fromTo("#unicorn-st3",{opacity:0,scale:0.4,transformOrigin:"50% 50%"},{opacity:1,scale:1,duration:0.35,ease:"back.out(2)"},6.08);
 window.__timelines["unicorn"] = tl;
 </script>
 </template>

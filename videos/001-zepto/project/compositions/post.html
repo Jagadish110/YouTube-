@@ -13,11 +13,15 @@
 #post-i{left:0;width:1920px;text-align:center;top:150px;font-size:240px;}
 #post-x{left:410px;top:440px;font-size:170px;width:1100px;text-align:center;border:12px solid var(--down);border-radius:20px;padding:6px 0;background:var(--ground);}
 #post-c{left:0;width:1920px;text-align:center;top:770px;font-size:64px;}
+#post-cal{left:100px;top:420px;font-size:10px;}
+#post-hg{left:1600px;top:410px;font-size:10px;}
 </style>
 <div id="root" data-composition-id="post" data-width="1920" data-height="1080">
 <div id="post-i" class="el clip hero q" data-start="0.1" data-duration="3.23" data-track-index="1" data-layout-allow-overlap>IPO</div>
 <div id="post-x" class="el clip hero down" data-start="0.81" data-duration="2.52" data-track-index="2" data-layout-allow-overlap data-layout-allow-occlusion>POSTPONED</div>
 <div id="post-c" class="el clip " data-start="1.69" data-duration="1.64" data-track-index="3" >by 2 to 3 quarters</div>
+<div id="post-cal" class="el clip " data-start="0.81" data-duration="2.52" data-track-index="4" ><svg width="280" height="290" viewBox="0 0 280 290"><rect x="10" y="30" width="260" height="250" rx="18" fill="#ffffff"/><rect x="10" y="30" width="260" height="70" rx="18" fill="#FF4F9A"/><rect x="60" y="10" width="20" height="50" rx="8" fill="#14002B"/><rect x="200" y="10" width="20" height="50" rx="8" fill="#14002B"/><rect x="36" y="122" width="40" height="34" rx="6" fill="#d6cbe8"/><rect x="92" y="122" width="40" height="34" rx="6" fill="#d6cbe8"/><rect x="148" y="122" width="40" height="34" rx="6" fill="#d6cbe8"/><rect x="204" y="122" width="40" height="34" rx="6" fill="#d6cbe8"/><rect x="36" y="172" width="40" height="34" rx="6" fill="#d6cbe8"/><rect x="92" y="172" width="40" height="34" rx="6" fill="#d6cbe8"/><rect x="148" y="172" width="40" height="34" rx="6" fill="#FFB238"/><rect x="204" y="172" width="40" height="34" rx="6" fill="#d6cbe8"/><rect x="36" y="222" width="40" height="34" rx="6" fill="#d6cbe8"/><rect x="92" y="222" width="40" height="34" rx="6" fill="#d6cbe8"/><rect x="148" y="222" width="40" height="34" rx="6" fill="#d6cbe8"/><rect x="204" y="222" width="40" height="34" rx="6" fill="#d6cbe8"/></svg></div>
+<div id="post-hg" class="el clip " data-start="1.69" data-duration="1.64" data-track-index="5" ><svg width="220" height="320" viewBox="0 0 220 320"><rect x="20" y="10" width="180" height="20" rx="10" fill="#CDBBEA"/><rect x="20" y="290" width="180" height="20" rx="10" fill="#CDBBEA"/><path d="M40 30 H180 Q180 120 110 160 Q180 200 180 290 H40 Q40 200 110 160 Q40 120 40 30 Z" fill="none" stroke="#CDBBEA" stroke-width="10"/><path id="post-sand" d="M60 270 Q110 220 160 270 Z" fill="#FFB238"/><path d="M70 60 H150 Q140 110 110 140 Q80 110 70 60 Z" fill="#FFB238"/></svg></div>
 </div>
 <script>
 const tl = gsap.timeline({ paused: true });
@@ -27,6 +31,11 @@ tl.fromTo("#post-x",{opacity:0,scale:2.2,rotation:-9},{opacity:1,scale:1,rotatio
 tl.to("#post-x",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},3.11);
 tl.fromTo("#post-c",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},1.69);
 tl.to("#post-c",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},3.11);
+tl.fromTo("#post-cal",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},0.81);
+tl.to("#post-cal",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},3.11);
+tl.fromTo("#post-hg",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},1.69);
+tl.to("#post-hg",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},3.11);
+tl.fromTo("#post-hg",{rotation:0},{rotation:180,duration:0.8,ease:"power2.inOut"},2.29);
 window.__timelines["post"] = tl;
 </script>
 </template>

@@ -11,14 +11,19 @@
 .src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
 .tnum{font-variant-numeric:tabular-nums;}
 #why-q{left:0;width:1920px;text-align:center;top:450px;font-size:130px;}
+#why-bd{left:410px;top:680px;font-size:10px;}
 </style>
 <div id="root" data-composition-id="why" data-width="1920" data-height="1080">
 <div id="why-q" class="el clip hero" data-start="0.1" data-duration="2.05" data-track-index="1" >SO WHY ISN'T IT <span class='down'>PUBLIC?</span></div>
+<div id="why-bd" class="el clip " data-start="0.3" data-duration="1.85" data-track-index="2" ><svg width="1100" height="200" viewBox="0 0 1100 200"><rect x="0" y="0" width="1100" height="200" rx="20" fill="#14002B" stroke="#CDBBEA" stroke-width="6"/><text x="60" y="80" font-family="Outfit" font-weight="800" font-size="40" fill="#CDBBEA">ETERNAL</text><text x="60" y="140" font-family="Outfit" font-weight="800" font-size="40" fill="#57E39A">▲</text><text x="320" y="80" font-family="Outfit" font-weight="800" font-size="40" fill="#CDBBEA">SWIGGY</text><text x="320" y="140" font-family="Outfit" font-weight="800" font-size="40" fill="#FFB238">▼</text><text x="580" y="80" font-family="Outfit" font-weight="800" font-size="40" fill="#CDBBEA">ZEPTO</text><text x="580" y="140" font-family="Outfit" font-weight="800" font-size="40" fill="#FF4F9A">?</text><text x="840" y="80" font-family="Outfit" font-weight="800" font-size="40" fill="#CDBBEA">NIFTY</text><text x="840" y="140" font-family="Outfit" font-weight="800" font-size="40" fill="#57E39A">▲</text></svg></div>
 </div>
 <script>
 const tl = gsap.timeline({ paused: true });
 tl.fromTo("#why-q",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},0.1);
 tl.to("#why-q",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},1.93);
+tl.fromTo("#why-bd",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.3);
+tl.to("#why-bd",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},1.93);
+tl.fromTo("#why-bd",{y:40},{y:0,duration:0.5,ease:"back.out(1.6)"},0.3);
 window.__timelines["why"] = tl;
 </script>
 </template>

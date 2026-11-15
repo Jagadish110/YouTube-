@@ -18,6 +18,8 @@
 #kids-c1{left:260px;top:810px;font-size:44px;width:400px;text-align:center;}
 #kids-c2{left:1210px;top:810px;font-size:44px;width:500px;text-align:center;}
 #kids-c3{left:1210px;top:874px;font-size:36px;width:500px;text-align:center;}
+#kids-pl{left:470px;top:728px;font-size:10px;}
+#kids-cap{left:1360px;top:600px;font-size:10px;}
 </style>
 <div id="root" data-composition-id="kids" data-width="1920" data-height="1080">
 <div id="kids-yr" class="el clip hero up" data-start="0.1" data-duration="9.29" data-track-index="1" >2020</div>
@@ -28,6 +30,8 @@
 <div id="kids-c1" class="el clip kick q" data-start="5.71" data-duration="3.68" data-track-index="6" >DUBAI</div>
 <div id="kids-c2" class="el clip kick" data-start="6.99" data-duration="2.4" data-track-index="7" >STANFORD</div>
 <div id="kids-c3" class="el clip q" data-start="7.52" data-duration="1.87" data-track-index="8" >Computer Science</div>
+<div id="kids-pl" class="el clip " data-start="5.71" data-duration="3.68" data-track-index="9" ><svg width="120" height="80" viewBox="0 0 120 80"><path d="M10 40 L110 30 Q120 40 110 50 L10 40 Z" fill="#ffffff"/><path d="M50 38 L30 6 L48 6 L74 36 Z M50 42 L30 74 L48 74 L74 44 Z" fill="#ffffff"/><path d="M12 40 L4 22 L16 22 L26 38 Z" fill="#ffffff"/></svg></div>
+<div id="kids-cap" class="el clip " data-start="6.99" data-duration="2.4" data-track-index="10" ><svg width="200" height="130" viewBox="0 0 200 130"><path d="M100 10 L190 50 L100 90 L10 50 Z" fill="#FF4F9A" stroke="#14002B" stroke-width="6"/><path d="M50 70 L50 110 Q100 130 150 110 L150 70" fill="#3D0C6E" stroke="#14002B" stroke-width="6"/><path d="M170 58 L170 100" stroke="#FFB238" stroke-width="6"/><circle cx="170" cy="104" r="9" fill="#FFB238"/></svg></div>
 </div>
 <script>
 const tl = gsap.timeline({ paused: true });
@@ -47,8 +51,14 @@ tl.fromTo("#kids-c2",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px
 tl.to("#kids-c2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.17);
 tl.fromTo("#kids-c3",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},7.52);
 tl.to("#kids-c3",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.17);
+tl.fromTo("#kids-pl",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},5.71);
+tl.to("#kids-pl",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.17);
+tl.fromTo("#kids-cap",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},6.99);
+tl.to("#kids-cap",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.17);
 tl.fromTo("#kids-ln",{strokeDashoffset:1},{strokeDashoffset:0,duration:1.2,ease:"power2.inOut"},5.91);
 tl.fromTo("#kids-d2",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},6.99);
+tl.fromTo("#kids-pl",{x:0},{x:880,duration:1.4,ease:"power2.inOut"},5.91);
+tl.to("#kids-pl",{opacity:0,duration:0.2},7.31);
 window.__timelines["kids"] = tl;
 </script>
 </template>

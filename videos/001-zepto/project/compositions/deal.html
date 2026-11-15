@@ -14,12 +14,16 @@
 #deal-c{left:0;width:1920px;text-align:center;top:480px;font-size:60px;}
 #deal-i{left:0;width:1920px;text-align:center;top:580px;font-size:60px;}
 #deal-d{left:0;width:1920px;text-align:center;top:740px;font-size:120px;}
+#deal-cap{left:80px;top:420px;font-size:10px;}
+#deal-doc{left:1590px;top:400px;font-size:10px;}
 </style>
 <div id="root" data-composition-id="deal" data-width="1920" data-height="1080">
 <div id="deal-st" class="el clip hero" data-start="0.12" data-duration="6.9" data-track-index="1" >STANFORD<span id="deal-x" style="position:absolute;left:-2%;width:104%;top:46%;height:16px;background:var(--down);transform-origin:left center;"></span></div>
 <div id="deal-c" class="el clip q" data-start="2.44" data-duration="4.58" data-track-index="2" >Investor <span style="color:var(--ink)">CONTRARY</span> offers to back them</div>
 <div id="deal-i" class="el clip " data-start="4.83" data-duration="2.19" data-track-index="3" >…if they drop out.</div>
 <div id="deal-d" class="el clip hero up" data-start="5.72" data-duration="1.3" data-track-index="4" >THEY TAKE THE DEAL.</div>
+<div id="deal-cap" class="el clip " data-start="1.1" data-duration="5.92" data-track-index="5" ><svg width="260" height="200" viewBox="0 0 260 200"><path d="M130 20 L250 74 L130 128 L10 74 Z" fill="#CDBBEA" stroke="#14002B" stroke-width="6"/><path d="M60 100 L60 150 Q130 176 200 150 L200 100" fill="#3D0C6E" stroke="#14002B" stroke-width="6"/><path d="M20 180 L240 20" stroke="#FFB238" stroke-width="16" stroke-linecap="round"/></svg></div>
+<div id="deal-doc" class="el clip " data-start="2.44" data-duration="4.58" data-track-index="6" ><svg width="260" height="320" viewBox="0 0 260 320"><rect x="10" y="10" width="240" height="300" rx="16" fill="#ffffff"/><rect x="40" y="50" width="180" height="14" rx="7" fill="#d6cbe8"/><rect x="40" y="84" width="150" height="14" rx="7" fill="#d6cbe8"/><rect x="40" y="118" width="120" height="14" rx="7" fill="#d6cbe8"/><rect x="40" y="152" width="180" height="14" rx="7" fill="#d6cbe8"/><rect x="40" y="186" width="150" height="14" rx="7" fill="#d6cbe8"/><path id="deal-sig" d="M40 260 Q70 220 90 262 T150 250 T210 240" stroke="#FF4F9A" stroke-width="8" fill="none" stroke-linecap="round" pathLength="1" stroke-dasharray="1"/></svg></div>
 </div>
 <script>
 const tl = gsap.timeline({ paused: true });
@@ -31,7 +35,12 @@ tl.fromTo("#deal-i",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},4.83)
 tl.to("#deal-i",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.8);
 tl.fromTo("#deal-d",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},5.72);
 tl.to("#deal-d",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.8);
+tl.fromTo("#deal-cap",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},1.1);
+tl.to("#deal-cap",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.8);
+tl.fromTo("#deal-doc",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},2.44);
+tl.to("#deal-doc",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.8);
 tl.fromTo("#deal-x",{scaleX:0},{scaleX:1,duration:0.35,ease:"power3.inOut"},1.1);
+tl.fromTo("#deal-sig",{strokeDashoffset:1},{strokeDashoffset:0,duration:0.6,ease:"power2.inOut"},5.72);
 window.__timelines["deal"] = tl;
 </script>
 </template>

@@ -22,6 +22,9 @@
 #ipo-a2{left:1300px;top:570px;font-size:44px;width:520px;text-align:center;}
 #ipo-b2{left:1300px;top:635px;font-size:64px;width:520px;text-align:center;}
 #ipo-src{}
+#ipo-ic0{left:285px;top:270px;font-size:10px;}
+#ipo-ic1{left:885px;top:270px;font-size:10px;}
+#ipo-ic2{left:1485px;top:270px;font-size:10px;}
 </style>
 <div id="root" data-composition-id="ipo" data-width="1920" data-height="1080">
 <div id="ipo-k" class="el clip hero" data-start="0.12" data-duration="9.46" data-track-index="1" >THE IPO PLAN</div>
@@ -36,6 +39,9 @@
 <div id="ipo-a2" class="el clip kick q" data-start="6.82" data-duration="2.76" data-track-index="10" >JULY 2026</div>
 <div id="ipo-b2" class="el clip hero" data-start="6.82" data-duration="2.76" data-track-index="11" >Planned listing</div>
 <div id="ipo-src" class="el clip src" data-start="0.6" data-duration="8.98" data-track-index="12" >Source: Kotak Neo</div>
+<div id="ipo-ic0" class="el clip " data-start="0.6" data-duration="8.98" data-track-index="13" ><svg width="150" height="160" viewBox="0 0 150 160"><rect x="20" y="10" width="110" height="140" rx="10" fill="#ffffff"/><rect x="38" y="36" width="74" height="10" rx="5" fill="#d6cbe8"/><rect x="38" y="60" width="74" height="10" rx="5" fill="#d6cbe8"/><rect x="38" y="84" width="74" height="10" rx="5" fill="#d6cbe8"/><rect x="38" y="108" width="74" height="10" rx="5" fill="#d6cbe8"/></svg></div>
+<div id="ipo-ic1" class="el clip " data-start="3.84" data-duration="5.74" data-track-index="14" ><svg width="150" height="160" viewBox="0 0 150 160"><circle cx="75" cy="80" r="64" fill="none" stroke="#57E39A" stroke-width="12"/><path d="M45 82 L68 104 L108 58" stroke="#57E39A" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div id="ipo-ic2" class="el clip " data-start="6.82" data-duration="2.76" data-track-index="15" ><svg width="150" height="160" viewBox="0 0 150 160"><path d="M30 120 Q30 30 75 30 Q120 30 120 120 Z" fill="#FFB238"/><rect x="20" y="118" width="110" height="14" rx="7" fill="#FFB238"/><circle cx="75" cy="146" r="12" fill="#FFB238"/><rect x="68" y="12" width="14" height="22" rx="5" fill="#FFB238"/></svg></div>
 </div>
 <script>
 const tl = gsap.timeline({ paused: true });
@@ -63,6 +69,12 @@ tl.fromTo("#ipo-b2",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)
 tl.to("#ipo-b2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.36);
 tl.fromTo("#ipo-src",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.6);
 tl.to("#ipo-src",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.36);
+tl.fromTo("#ipo-ic0",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},0.6);
+tl.to("#ipo-ic0",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.36);
+tl.fromTo("#ipo-ic1",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},3.84);
+tl.to("#ipo-ic1",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.36);
+tl.fromTo("#ipo-ic2",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},6.82);
+tl.to("#ipo-ic2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.36);
 tl.fromTo("#ipo-l1",{strokeDashoffset:1},{strokeDashoffset:0,duration:0.6,ease:"power2.inOut"},3.34);
 tl.fromTo("#ipo-l2",{strokeDashoffset:1},{strokeDashoffset:0,duration:0.6,ease:"power2.inOut"},6.32);
 window.__timelines["ipo"] = tl;

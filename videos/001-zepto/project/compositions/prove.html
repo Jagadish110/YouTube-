@@ -14,12 +14,18 @@
 #prove-a2{left:0;width:1920px;text-align:center;top:250px;font-size:84px;}
 #prove-b1{left:0;width:1920px;text-align:center;top:560px;font-size:48px;}
 #prove-b2{left:0;width:1920px;text-align:center;top:640px;font-size:84px;}
+#prove-ok{left:150px;top:210px;font-size:10px;}
+#prove-qq{left:150px;top:600px;font-size:10px;}
+#prove-pw{left:1580px;top:380px;font-size:10px;}
 </style>
 <div id="root" data-composition-id="prove" data-width="1920" data-height="1080">
 <div id="prove-a1" class="el clip kick up" data-start="0.42" data-duration="6.36" data-track-index="1" >PROVED</div>
 <div id="prove-a2" class="el clip hero" data-start="0.79" data-duration="5.99" data-track-index="2" >India wants groceries in 10 minutes</div>
 <div id="prove-b1" class="el clip kick down" data-start="3.13" data-duration="3.65" data-track-index="3" >STILL TO PROVE</div>
 <div id="prove-b2" class="el clip hero" data-start="4.57" data-duration="2.21" data-track-index="4" >10 minutes can make money</div>
+<div id="prove-ok" class="el clip " data-start="0.79" data-duration="5.99" data-track-index="5" ><svg width="150" height="150" viewBox="0 0 150 150"><circle cx="75" cy="75" r="68" fill="#FF4F9A"/><path d="M42 78 L66 102 L110 54" stroke="#ffffff" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div id="prove-qq" class="el clip " data-start="4.57" data-duration="2.21" data-track-index="6" ><svg width="150" height="150" viewBox="0 0 150 150"><circle cx="75" cy="75" r="68" fill="#FFB238"/><text x="75" y="102" text-anchor="middle" font-family="Outfit" font-weight="800" font-size="84" fill="#14002B">?</text></svg></div>
+<div id="prove-pw" class="el clip " data-start="4.57" data-duration="2.21" data-track-index="7" ><svg width="240" height="270" viewBox="0 0 240 270"><rect x="100" y="0" width="40" height="30" rx="6" fill="#ffffff"/><circle cx="120" cy="150" r="110" fill="#ffffff"/><circle id="prove-arc" cx="120" cy="150" r="86" fill="none" stroke="#FF4F9A" stroke-width="20" pathLength="1" stroke-dasharray="1" transform="rotate(-90 120 150)"/><text x="120" y="172" text-anchor="middle" font-family="Outfit" font-weight="800" font-size="66" fill="#14002B">10</text></svg></div>
 </div>
 <script>
 const tl = gsap.timeline({ paused: true });
@@ -31,6 +37,13 @@ tl.fromTo("#prove-b1",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},3.1
 tl.to("#prove-b1",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.56);
 tl.fromTo("#prove-b2",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},4.57);
 tl.to("#prove-b2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.56);
+tl.fromTo("#prove-ok",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},0.79);
+tl.to("#prove-ok",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.56);
+tl.fromTo("#prove-qq",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},4.57);
+tl.to("#prove-qq",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.56);
+tl.fromTo("#prove-pw",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},4.57);
+tl.to("#prove-pw",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.56);
+tl.fromTo("#prove-arc",{strokeDashoffset:1},{strokeDashoffset:0,duration:1.2,ease:"power2.inOut"},4.57);
 window.__timelines["prove"] = tl;
 </script>
 </template>
