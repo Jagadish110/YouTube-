@@ -1,0 +1,2 @@
+run_at_utc,kind,video,status,setup_s,voiceover_s,render_s,duration_s,size_kb,supabase,commit,notes
+2026-11-15T05:30:00Z,health,test-run,pass,25,9,29,14.2,716,reachable,7cae5f8,First scheduled test. Check ok; screenshot capture fallback.
