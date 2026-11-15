@@ -30,3 +30,22 @@ what the numbers say and why it matters, without hype.
 | No. | Folder | Company / person | Pillar | Made (UTC date) |
 |---|---|---|---|---|
 | 001 | 001-zepto | Zepto | 1 Startup rise & fall | 2026-11-14 |
+
+## Look and images: every video is different
+
+- Never reuse a previous video's colours, fonts or layout. Each video sets its own theme with
+  `sl.theme(...)` in its build.py (ground, ink, accent colours, headline + body fonts, background CSS),
+  picked to fit the subject. Fonts come from npm `@fontsource/<font>` (Google Fonts cannot be downloaded here);
+  copy the .woff2 files into `project/assets/fonts/` and list them in `fonts=[...]`.
+- Colourful is the default. Light or bright grounds are fine; keep text contrast strong.
+- Every video uses images: flat illustrations drawn in SVG inside build.py (people only from behind or as
+  silhouettes, no faces, no brand logos). See `videos/002-blinkit/sample/build.py` for phone, scooter, store,
+  shelves and map examples. Real photos only if Jagadish supplies them or allows a free photo site.
+- Planned looks: 002 Blinkit = sunny yellow + deep green, Bricolage Grotesque / DM Sans.
+  003 Coca-Cola IPO = bold red + white with bottle and plant illustrations, condensed headline font.
+  004 Albinder Dhindsa = teal + coral, a timeline style with drawn city and store scenes.
+
+| Video | Look |
+|---|---|
+| 001 Zepto | dark + purple, Archivo Black / Inter |
+| 002 Blinkit | yellow + green, Bricolage Grotesque / DM Sans, drawn images |

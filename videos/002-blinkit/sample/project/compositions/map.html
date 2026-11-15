@@ -1,0 +1,45 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:var(--body);font-weight:700;}
+.hero{font-family:var(--head);font-weight:800;letter-spacing:-0.02em;line-height:1.05;text-transform:none;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.img{display:block;}.card{background:var(--panel);border-radius:28px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#map-m{left:90px;top:180px;font-size:10px;}
+#map-k{left:1170px;top:220px;font-size:40px;width:660px;}
+#map-a{left:1170px;top:330px;font-size:56px;width:660px;}
+#map-b{left:1162px;top:410px;font-size:120px;width:680px;}
+#map-c{left:1170px;top:700px;font-size:56px;width:660px;}
+</style>
+<div id="root" data-composition-id="map" data-width="1920" data-height="1080">
+<div id="map-m" class="el clip " data-start="0.1" data-duration="7.54" data-track-index="1" ><svg width="1000" height="720" viewBox="0 0 1000 720"><rect width="1000" height="720" rx="40" fill="#F6E7A0"/><path d="M0 255 H1000 M0 445 H1000 M240 0 V720 M780 0 V720" stroke="#ffffff" stroke-width="44" fill="none"/><path d="M0 255 H1000 M0 445 H1000 M240 0 V720 M780 0 V720" stroke="#e9c232" stroke-width="4" stroke-dasharray="18 18" fill="none"/><rect x="116" y="140" width="68" height="60" rx="12" fill="#FF8A3D"/><path d="M110 142 L150 108 L190 142 Z" fill="#12301F" opacity="0.85"/><rect x="296" y="120" width="68" height="60" rx="12" fill="#3DB2FF"/><path d="M290 122 L330 88 L370 122 Z" fill="#12301F" opacity="0.85"/><rect x="656" y="130" width="68" height="60" rx="12" fill="#7BD389"/><path d="M650 132 L690 98 L730 132 Z" fill="#12301F" opacity="0.85"/><rect x="806" y="160" width="68" height="60" rx="12" fill="#FF5C8A"/><path d="M800 162 L840 128 L880 162 Z" fill="#12301F" opacity="0.85"/><rect x="96" y="490" width="68" height="60" rx="12" fill="#B48CFF"/><path d="M90 492 L130 458 L170 492 Z" fill="#12301F" opacity="0.85"/><rect x="266" y="530" width="68" height="60" rx="12" fill="#FFC23D"/><path d="M260 532 L300 498 L340 532 Z" fill="#12301F" opacity="0.85"/><rect x="686" y="530" width="68" height="60" rx="12" fill="#FF8A3D"/><path d="M680 532 L720 498 L760 532 Z" fill="#12301F" opacity="0.85"/><rect x="826" y="490" width="68" height="60" rx="12" fill="#3DB2FF"/><path d="M820 492 L860 458 L900 492 Z" fill="#12301F" opacity="0.85"/><rect x="106" y="310" width="68" height="60" rx="12" fill="#7BD389"/><path d="M100 312 L140 278 L180 312 Z" fill="#12301F" opacity="0.85"/><rect x="826" y="330" width="68" height="60" rx="12" fill="#FF5C8A"/><path d="M820 332 L860 298 L900 332 Z" fill="#12301F" opacity="0.85"/><rect x="486" y="90" width="68" height="60" rx="12" fill="#B48CFF"/><path d="M480 92 L520 58 L560 92 Z" fill="#12301F" opacity="0.85"/><rect x="486" y="580" width="68" height="60" rx="12" fill="#FFC23D"/><path d="M480 582 L520 548 L560 582 Z" fill="#12301F" opacity="0.85"/><circle id="map-m-ring" cx="510" cy="350" r="300" fill="rgba(15,138,60,0.10)" stroke="#0F8A3C" stroke-width="8" pathLength="1" stroke-dasharray="1"/><rect x="460" y="300" width="100" height="100" rx="20" fill="#0F8A3C"/><text x="510" y="364" text-anchor="middle" font-family="Bricolage Grotesque" font-weight="800" font-size="40" fill="#FFD84D">DS</text><path id="map-m-route" d="M560 350 H780 V200" stroke="#E5383B" stroke-width="10" stroke-linecap="round" fill="none" pathLength="1" stroke-dasharray="1"/><circle id="map-m-pin" cx="840" cy="190" r="22" fill="#E5383B" stroke="#ffffff" stroke-width="6"/><circle id="map-m-dot" cx="560" cy="350" r="18" fill="#12301F" stroke="#ffffff" stroke-width="6"/></svg></div>
+<div id="map-k" class="el clip kick up" data-start="1.54" data-duration="6.1" data-track-index="2" >SHORT TRIP</div>
+<div id="map-a" class="el clip q" data-start="3.5" data-duration="4.14" data-track-index="3" >The speed comes from</div>
+<div id="map-b" class="el clip hero up" data-start="4.58" data-duration="3.06" data-track-index="4" >where the<br>store sits</div>
+<div id="map-c" class="el clip hero down" data-start="5.71" data-duration="1.93" data-track-index="5" >not from fast driving.</div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#map-m",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.1);
+tl.to("#map-m",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.42);
+tl.fromTo("#map-k",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},1.54);
+tl.to("#map-k",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.42);
+tl.fromTo("#map-a",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},3.5);
+tl.to("#map-a",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.42);
+tl.fromTo("#map-b",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},4.58);
+tl.to("#map-b",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.42);
+tl.fromTo("#map-c",{clipPath:"inset(0 100% 0 0)"},{clipPath:"inset(0 0% 0 0)",duration:0.5,ease:"power3.out"},5.71);
+tl.to("#map-c",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.42);
+tl.fromTo("#map-m-ring",{strokeDashoffset:1},{strokeDashoffset:0,duration:1.2,ease:"power2.inOut"},0.3);
+tl.fromTo("#map-m-route",{strokeDashoffset:1},{strokeDashoffset:0,duration:1.4,ease:"power2.inOut"},1.54);
+tl.to("#map-m-dot",{x:220,duration:0.7,ease:"none"},1.54);
+tl.to("#map-m-dot",{y:-150,duration:0.7,ease:"none"},2.24);
+tl.fromTo("#map-m-pin",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},2.84);
+window.__timelines["map"] = tl;
+</script>
+</template>

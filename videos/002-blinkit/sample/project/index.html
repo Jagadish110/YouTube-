@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: 'Bricolage Grotesque'; font-weight: 800; src: url('assets/fonts/bricolage-grotesque-latin-800-normal.woff2') format('woff2'); } @font-face { font-family: 'DM Sans'; font-weight: 500; src: url('assets/fonts/dm-sans-latin-500-normal.woff2') format('woff2'); } @font-face { font-family: 'DM Sans'; font-weight: 700; src: url('assets/fonts/dm-sans-latin-700-normal.woff2') format('woff2'); }
+      :root { --ground: #FFD84D; --ink: #12301F; --quiet: #5E5A2E; --up: #0F8A3C; --down: #E5383B; --panel: #FFF1A8; --line: #E9C232; --head: 'Bricolage Grotesque', 'Inter', sans-serif; --body: 'DM Sans', 'Inter', sans-serif; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: var(--ground); }
+      #bg { position: absolute; inset: 0; background: var(--ground); background-image: radial-gradient(circle at 88% 12%, #FFE98A 0, rgba(255,233,138,0) 38%), radial-gradient(circle at 6% 94%, #FFC83A 0, rgba(255,200,58,0) 42%); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="31.0" data-width="1920" data-height="1080">
+      <div id="bg"></div>
+      <div id="hook" data-composition-id="hook" data-composition-src="compositions/hook.html" data-start="0.0" data-duration="7.57" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+<div id="question" data-composition-id="question" data-composition-src="compositions/question.html" data-start="7.57" data-duration="4.2" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+<div id="darkstore" data-composition-id="darkstore" data-composition-src="compositions/darkstore.html" data-start="11.77" data-duration="3.16" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+<div id="inside" data-composition-id="inside" data-composition-src="compositions/inside.html" data-start="14.93" data-duration="8.43" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+<div id="map" data-composition-id="map" data-composition-src="compositions/map.html" data-start="23.36" data-duration="7.64" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+      <audio id="vo" class="clip" src="assets/vo.mp3" data-start="0" data-duration="30.8" data-track-index="2" data-volume="1"></audio>
+    </div>
+    <script>
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>

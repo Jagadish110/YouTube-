@@ -3,3 +3,6 @@ date,area,change,status
 2026-11-15,Schedule,Videos on Mon/Wed/Fri with the Eric voice; topics researched from trending news,Done
 2026-11-15,Schedule,Video maker paused until the scripts and review clip are approved,Done
 2026-11-15,LinkedIn,New company page for daily AI news with a branded 1200x1200 card; drafts only and never auto-posted,Done
+2026-11-15,Videos,Every video gets its own colourful look (colours + fonts + layout) instead of one shared style,Done
+2026-11-15,Videos,Images added: drawn illustrations in every video (Blinkit sample: phone + scooter + dark store + shelves + map),Done
+2026-11-15,LinkedIn,Feed-style preview added before anything is scheduled (tools/linkedin_preview.py),Done

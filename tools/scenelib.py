@@ -10,6 +10,21 @@ import json, os
 
 MARKS, LEAD, TOTAL = [], 0.2, 0.0
 
+# Per-video look. Every video sets its own THEME with sl.theme(...) so videos never share one design.
+# Defaults = video 001's dark/purple look.
+THEME = dict(
+    ground="#0b0a12", ink="#ffffff", quiet="#a7a3b8", up="#8b3dff", down="#ff3b47",
+    panel="#16141f", line="#2a2740",
+    head="'Archivo Black', sans-serif", head_weight=400, head_case="none",
+    body="'Inter', sans-serif",
+    fonts=[],          # [(family, weight, "assets/fonts/file.woff2"), ...] copied into the project
+    bg="",             # extra CSS for #bg (gradients, patterns)
+)
+
+
+def theme(**kw):
+    THEME.update(kw)
+
 
 def setup(marks_path, total, lead=0.2):
     global MARKS, LEAD, TOTAL
@@ -51,12 +66,13 @@ class Scene:
 
     def render(self):
         css = [
-            "#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:'Inter',sans-serif;font-weight:700;}",
-            ".hero{font-family:'Archivo Black',sans-serif;font-weight:400;letter-spacing:-0.02em;line-height:1.05;}",
+            "#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:var(--body);font-weight:700;}",
+            f".hero{{font-family:var(--head);font-weight:{THEME['head_weight']};letter-spacing:-0.02em;line-height:1.05;text-transform:{THEME['head_case']};}}",
             ".q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}",
             ".kick{letter-spacing:0.14em;font-weight:900;}",
             ".el{position:absolute;}",
             ".pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}",
+            ".img{display:block;}.card{background:var(--panel);border-radius:28px;}",
             ".box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}",
             ".src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}",
             ".tnum{font-variant-numeric:tabular-nums;}",
@@ -116,6 +132,8 @@ def write_project(out, scenes, first_host=None, audio="assets/vo.mp3", audio_dur
         open(f"{out}/compositions/{sc.name}.html", "w").write(sc.render())
         hosts.append(f'<div id="{sc.name}" data-composition-id="{sc.name}" data-composition-src="compositions/{sc.name}.html" data-start="{sc.start}" data-duration="{sc.dur}" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>')
     adur = audio_dur if audio_dur else round(MARKS[-1]["end"] + 0.4, 2)
+    T = THEME
+    fontfaces = " ".join(f"@font-face {{ font-family: '{fam}'; font-weight: {w}; src: url('{src}') format('woff2'); }}" for fam, w, src in T["fonts"])
     index = f"""<!doctype html>
 <html lang="en">
   <head>
@@ -123,10 +141,11 @@ def write_project(out, scenes, first_host=None, audio="assets/vo.mp3", audio_dur
     <meta name="viewport" content="width=1920, height=1080" />
     <script src="assets/gsap.min.js"></script>
     <style>
-      :root {{ --ground: #0b0a12; --ink: #ffffff; --quiet: #a7a3b8; --up: #8b3dff; --down: #ff3b47; }}
+      {fontfaces}
+      :root {{ --ground: {T['ground']}; --ink: {T['ink']}; --quiet: {T['quiet']}; --up: {T['up']}; --down: {T['down']}; --panel: {T['panel']}; --line: {T['line']}; --head: {T['head']}; --body: {T['body']}; }}
       * {{ margin: 0; padding: 0; box-sizing: border-box; }}
       html, body {{ margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: var(--ground); }}
-      #bg {{ position: absolute; inset: 0; background: var(--ground); }}
+      #bg {{ position: absolute; inset: 0; background: var(--ground); {T['bg']} }}
     </style>
   </head>
   <body>

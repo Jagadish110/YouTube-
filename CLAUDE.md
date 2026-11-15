@@ -6,8 +6,8 @@ work, so everything needed is written here.
 
 ## What the pipeline makes
 
-Motion-graphics explainer videos: dark background, white Archivo Black headlines, purple
-(#8b3dff) for growth, red (#ff3b47) for drops, source lines on screen for every number.
+Motion-graphics explainer videos with drawn illustrations. Each video has its own colourful look (CHANNEL.md);
+video 001 used dark + purple. Source lines on screen for every number.
 Voiceover is the open-source Kokoro voice `am_eric`. No stock footage, no faces.
 
 ## Niche and topics
@@ -74,6 +74,7 @@ Each daily run saves `posts/linkedin/YYYY-MM-DD/` (post.md, card.json, card.png)
 
 ## Rules
 
+- Every video has its own look and uses drawn images; see "Look and images" in CHANNEL.md.
 - Text on screen is never smaller than 28 px. Keep content inside the middle 90% of the frame.
 - One number at a time; a count-up runs 1.2 to 1.6 s. No pie charts, no grids of KPI cards.
 - Nobody in the pipeline can hear audio. Flag names and Indian terms (crore, lakh) for a human listen.
