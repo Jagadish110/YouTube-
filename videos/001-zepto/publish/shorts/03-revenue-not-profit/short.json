@@ -1,0 +1,10 @@
+{
+ "video": "../../../output/zepto-full-v3-sfx.mp4", "captions": "../../captions.srt",
+ "start": 134.1, "end": 157.88, "replace_until": 140.17,
+ "hook": "Zepto brings in over twenty-two thousand crore rupees a year. Yet it was burning cash every quarter. Here is why.",
+ "hook_captions": [[0.0, 3.0, "Zepto brings in over ₹22,000 crore a year."], [3.0, 5.2, "Yet it was burning cash every quarter."], [5.2, 6.0, "Here is why."]],
+ "kicker": "ZEPTO · EXPLAINED", "title": "REVENUE IS\\NNOT PROFIT",
+ "flash": "₹22,600 CR REVENUE",
+ "source": "Sources: Free Press Journal · 5paisa",
+ "bg": "FF4F9A", "ink": "2E0854", "accent": "2E0854"
+}

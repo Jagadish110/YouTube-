@@ -1,0 +1,25 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Title,Inter Black,84,&H0054082E,&H0054082E,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,8,60,60,190,1
+Style: Kick,Inter ExtraBold,44,&H0054082E,&H0054082E,&H00000000,&H00000000,-1,0,0,0,100,100,2,0,1,0,0,8,60,60,130,1
+Style: Big,Inter Black,96,&H00FFFFFF,&H00FFFFFF,&H0054082E,&H0054082E,-1,0,0,0,100,100,0,0,3,18,0,5,60,60,0,1
+Style: Cap,Inter ExtraBold,62,&H0054082E,&H0054082E,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,8,70,70,1290,1
+Style: Foot,Inter Bold,32,&H0054082E,&H0054082E,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,2,60,60,120,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:20.57,Kick,,0,0,0,,ZEPTO · EXPLAINED
+Dialogue: 0,0:00:00.00,0:00:20.57,Title,,0,0,0,,10 MINUTES.\NNOT THE RIDER.
+Dialogue: 0,0:00:00.00,0:00:20.57,Foot,,0,0,0,,Source: Aadit Palicha via Global Indian\NFull video on the channel
+Dialogue: 1,0:00:00.15,0:00:02.40,Big,,0,0,0,,{\pos(540,1640)\fad(120,150)}UNDER 15 KM/H
+Dialogue: 0,0:00:00.00,0:00:01.90,Cap,,0,0,0,,{\fad(60,60)}Zepto delivers in ten minutes.
+Dialogue: 0,0:00:01.90,0:00:04.10,Cap,,0,0,0,,{\fad(60,60)}And its riders are not riding fast.
+Dialogue: 0,0:00:04.10,0:00:05.60,Cap,,0,0,0,,{\fad(60,60)}Here is the trick.
+Dialogue: 0,0:00:05.70,0:00:10.15,Cap,,0,0,0,,{\fad(60,60)}Each dark store covers a small radius, so the rider only has a short distance to go.
+Dialogue: 0,0:00:10.15,0:00:16.55,Cap,,0,0,0,,{\fad(60,60)}Aadit Palicha once pointed out that covering 1.8 kilometres in ten minutes means riding under fifteen kilometres an hour.
+Dialogue: 0,0:00:16.55,0:00:20.57,Cap,,0,0,0,,{\fad(60,60)}The speed comes from where the store sits, not from how fast the rider goes.

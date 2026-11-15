@@ -111,6 +111,7 @@ Each daily run saves `posts/linkedin/YYYY-MM-DD/` (post.md, card.json, card.png)
 - `content/` dashboard data: videos.csv, linkedin.csv, changes.csv
 - `posts/linkedin/` daily AI news drafts and PAGE.md
 - `tools/make_short.py` vertical Shorts from a long video; `tools/marks_to_srt.py` captions
+- `tools/add_short_outro.py` appends the Trendsplain like + share end card (`videos/_brand/short_outro/`) to a Short; every Short gets it (post `short-final.mp4`)
 - `.claude/skills/yt-*` YouTube agent skills (packaging, SEO, chapters, Shorts, viral, plan, comments, retention, audit)
 - `tools/thumbnail.py` YouTube thumbnails; `tools/linkedin_card.py`, `tools/linkedin_preview.py` LinkedIn
 - `tools/fonts/` woff2 fonts (all OFL, from @fontsource) used by thumbnails and cards
