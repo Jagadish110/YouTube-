@@ -1,0 +1,49 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:var(--body);font-weight:700;}
+.hero{font-family:var(--head);font-weight:800;letter-spacing:-0.02em;line-height:1.05;text-transform:none;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.img{display:block;}.card{background:var(--panel);border-radius:28px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#origin-y{left:150px;top:170px;font-size:60px;width:600px;}
+#origin-g{left:140px;top:250px;font-size:170px;width:1000px;}
+#origin-d{left:150px;top:450px;font-size:56px;width:900px;}
+#origin-bk{left:1330px;top:200px;font-size:10px;}
+#origin-f1{left:150px;top:640px;font-size:10px;width:640px;padding:30px 36px;}
+#origin-f2{left:840px;top:640px;font-size:10px;width:640px;padding:30px 36px;}
+#origin-src{left:150px;top:960px;font-size:28px;width:800px;font-weight:500;}
+</style>
+<div id="root" data-composition-id="origin" data-width="1920" data-height="1080">
+<div id="origin-y" class="el clip kick up" data-start="0.1" data-duration="6.86" data-track-index="1" >2013</div>
+<div id="origin-g" class="el clip hero" data-start="2.08" data-duration="4.88" data-track-index="2" >GROFERS</div>
+<div id="origin-d" class="el clip q" data-start="2.76" data-duration="4.2" data-track-index="3" >an online grocery app</div>
+<div id="origin-bk" class="el clip " data-start="0.3" data-duration="6.66" data-track-index="4" ><svg width="360" height="300" viewBox="0 0 360 300"><path d="M110 110 Q110 30 180 30 Q250 30 250 110" stroke="#0F2A1A" stroke-width="14" fill="none"/><rect x="80" y="70" width="60" height="80" rx="10" fill="#3DB2FF"/><rect x="150" y="50" width="56" height="100" rx="10" fill="#FF5C8A"/><rect x="214" y="80" width="64" height="70" rx="10" fill="#FF8A3D"/><path d="M30 120 H330 L300 280 H60 Z" fill="#0C831F" stroke="#0F2A1A" stroke-width="10" stroke-linejoin="round"/><path d="M110 160 V250 M180 160 V250 M250 160 V250" stroke="#F8CB46" stroke-width="10" stroke-linecap="round"/></svg></div>
+<div id="origin-f1" class="el clip card" data-start="4.63" data-duration="2.33" data-track-index="5" ><div class="q" style="font-size:30px;font-weight:700">FOUNDER</div><div class="hero" style="font-size:64px">Albinder Dhindsa</div></div>
+<div id="origin-f2" class="el clip card" data-start="5.82" data-duration="1.14" data-track-index="6" ><div class="q" style="font-size:30px;font-weight:700">FOUNDER</div><div class="hero" style="font-size:64px">Saurabh Kumar</div></div>
+<div id="origin-src" class="el clip q" data-start="2.08" data-duration="4.88" data-track-index="7" >Source: Wikipedia, Blinkit</div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#origin-y",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.1);
+tl.to("#origin-y",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.74);
+tl.fromTo("#origin-g",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},2.08);
+tl.to("#origin-g",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.74);
+tl.fromTo("#origin-d",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},2.76);
+tl.to("#origin-d",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.74);
+tl.fromTo("#origin-bk",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.3);
+tl.to("#origin-bk",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.74);
+tl.fromTo("#origin-f1",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},4.63);
+tl.to("#origin-f1",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.74);
+tl.fromTo("#origin-f2",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},5.82);
+tl.to("#origin-f2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.74);
+tl.fromTo("#origin-src",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},2.08);
+tl.to("#origin-src",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},6.74);
+tl.fromTo("#origin-bk",{y:40},{y:0,duration:0.6,ease:"back.out(1.8)"},0.3);
+window.__timelines["origin"] = tl;
+</script>
+</template>

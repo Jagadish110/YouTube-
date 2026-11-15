@@ -1,0 +1,57 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:var(--body);font-weight:700;}
+.hero{font-family:var(--head);font-weight:800;letter-spacing:-0.02em;line-height:1.05;text-transform:none;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.img{display:block;}.card{background:var(--panel);border-radius:28px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#hook-ph{left:170px;top:140px;font-size:10px;}
+#hook-k{left:720px;top:250px;font-size:34px;width:1080px;}
+#hook-n{left:712px;top:320px;font-size:190px;width:1100px;}
+#hook-c{left:720px;top:560px;font-size:60px;width:1080px;}
+#hook-a{left:720px;top:330px;font-size:60px;width:1080px;}
+#hook-b{left:712px;top:420px;font-size:170px;width:1100px;}
+#hook-src{left:720px;top:960px;font-size:28px;width:1100px;font-weight:500;}
+</style>
+<div id="root" data-composition-id="hook" data-width="1920" data-height="1080">
+<div id="hook-ph" class="el clip " data-start="0.05" data-duration="7.52" data-track-index="1" ><svg width="440" height="800" viewBox="0 0 440 800"><rect x="10" y="10" width="420" height="780" rx="64" fill="#0F2A1A"/><rect x="34" y="40" width="372" height="720" rx="44" fill="#FFF8DC"/><rect x="170" y="56" width="100" height="18" rx="9" fill="#0F2A1A"/><rect x="58" y="110" width="324" height="52" rx="26" fill="#ffffff"/><circle cx="88" cy="136" r="10" fill="none" stroke="#9a9a7a" stroke-width="4"/><rect x="112" y="128" width="150" height="16" rx="8" fill="#d8d4b0"/><rect id="hook-ph-t0" x="58" y="190" width="92" height="104" rx="18" fill="#FF8A3D"/><rect x="78" y="214" width="52" height="40" rx="8" fill="#ffffff" opacity="0.55"/><rect id="hook-ph-t1" x="164" y="190" width="92" height="104" rx="18" fill="#3DB2FF"/><rect x="184" y="214" width="52" height="40" rx="8" fill="#ffffff" opacity="0.55"/><rect id="hook-ph-t2" x="270" y="190" width="92" height="104" rx="18" fill="#7BD389"/><rect x="290" y="214" width="52" height="40" rx="8" fill="#ffffff" opacity="0.55"/><rect id="hook-ph-t3" x="58" y="310" width="92" height="104" rx="18" fill="#FF5C8A"/><rect x="78" y="334" width="52" height="40" rx="8" fill="#ffffff" opacity="0.55"/><rect id="hook-ph-t4" x="164" y="310" width="92" height="104" rx="18" fill="#B48CFF"/><rect x="184" y="334" width="52" height="40" rx="8" fill="#ffffff" opacity="0.55"/><rect id="hook-ph-t5" x="270" y="310" width="92" height="104" rx="18" fill="#FFC23D"/><rect x="290" y="334" width="52" height="40" rx="8" fill="#ffffff" opacity="0.55"/><g id="hook-ph-bar"><rect x="58" y="460" width="324" height="150" rx="26" fill="#0C831F"/><text x="84" y="520" font-family="DM Sans" font-weight="700" font-size="30" fill="#ffffff">Arriving in</text><text x="84" y="584" font-family="Bricolage Grotesque" font-weight="800" font-size="60" fill="#F8CB46">9 min</text><circle cx="330" cy="535" r="34" fill="none" stroke="#F8CB46" stroke-width="8" stroke-dasharray="160 220" transform="rotate(-90 330 535)"/></g><rect x="58" y="640" width="324" height="84" rx="22" fill="#0F2A1A"/><rect x="90" y="672" width="160" height="20" rx="10" fill="#F8CB46"/></svg></div>
+<div id="hook-k" class="el clip kick q" data-start="0.1" data-duration="7.47" data-track-index="2" >BLINKIT · JULY TO SEPTEMBER 2026</div>
+<div id="hook-n" class="el clip hero up tnum" data-start="0.91" data-duration="3.38" data-track-index="3" >₹0 Cr</div>
+<div id="hook-c" class="el clip " data-start="1.31" data-duration="2.98" data-track-index="4" >in orders, in just 3 months</div>
+<div id="hook-a" class="el clip q" data-start="4.19" data-duration="3.38" data-track-index="5" >And for the first time…</div>
+<div id="hook-b" class="el clip hero" data-start="5.66" data-duration="1.91" data-track-index="6" >it's making<br><span class='up'>money.</span></div>
+<div id="hook-src" class="el clip q" data-start="0.91" data-duration="6.66" data-track-index="7" >Source: Eternal Q2 FY27 results, via Business Standard</div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#hook-ph",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.05);
+tl.to("#hook-ph",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.35);
+tl.fromTo("#hook-k",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.1);
+tl.to("#hook-k",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.35);
+const o2={v:0}, el2=document.querySelector("#hook-n"), f2=(v)=>"₹"+Math.round(v).toLocaleString("en-IN")+" Cr";
+tl.fromTo("#hook-n",{opacity:0,scale:0.94},{opacity:1,scale:1,duration:0.3,ease:"expo.out"},0.91);
+tl.fromTo(o2,{v:0},{v:20940,duration:1.5,ease:"power3.out",onUpdate:()=>{el2.textContent=f2(o2.v);}},0.91);
+tl.to("#hook-n",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},4.09);
+tl.fromTo("#hook-c",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},1.31);
+tl.to("#hook-c",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},4.09);
+tl.fromTo("#hook-a",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},4.19);
+tl.to("#hook-a",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.35);
+tl.fromTo("#hook-b",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},5.66);
+tl.to("#hook-b",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.35);
+tl.fromTo("#hook-src",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.91);
+tl.to("#hook-src",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.35);
+tl.fromTo("#hook-ph-t0",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"back.out(2)"},0.2);
+tl.fromTo("#hook-ph-t1",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"back.out(2)"},0.26);
+tl.fromTo("#hook-ph-t2",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"back.out(2)"},0.32);
+tl.fromTo("#hook-ph-t3",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"back.out(2)"},0.38);
+tl.fromTo("#hook-ph-t4",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"back.out(2)"},0.44);
+tl.fromTo("#hook-ph-t5",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"back.out(2)"},0.5);
+tl.fromTo("#hook-ph-bar",{opacity:0,y:60},{opacity:1,y:0,duration:0.5,ease:"back.out(1.6)"},0.75);
+window.__timelines["hook"] = tl;
+</script>
+</template>

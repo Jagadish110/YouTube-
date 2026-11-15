@@ -9,6 +9,17 @@ from scenelib import C, L, draw, fin
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sl.setup(os.path.join(HERE, "vo_marks.json"), 234.5)
+# v2 look: Zepto brand colours (deep purple + pink). Growth = Zepto pink, drops = amber.
+sl.theme(
+    ground="#2E0854", ink="#ffffff", quiet="#CDBBEA", up="#FF4F9A", down="#FFB238",
+    panel="#3D0C6E", line="#4A1C80",
+    head="'Outfit', 'Inter', sans-serif", head_weight=800,
+    body="'Plus Jakarta Sans', 'Inter', sans-serif",
+    fonts=[("Outfit", 800, "assets/fonts/outfit-latin-800-normal.woff2"),
+           ("Plus Jakarta Sans", 500, "assets/fonts/plus-jakarta-sans-latin-500-normal.woff2"),
+           ("Plus Jakarta Sans", 700, "assets/fonts/plus-jakarta-sans-latin-700-normal.woff2")],
+    bg="background-image: radial-gradient(circle at 85% 10%, rgba(255,79,154,0.22) 0, rgba(255,79,154,0) 40%), radial-gradient(circle at 8% 95%, rgba(127,209,255,0.14) 0, rgba(127,209,255,0) 45%);",
+)
 
 S = []
 
@@ -18,9 +29,9 @@ s.E("yr", "2020", C(110, 150), 0.1, cls="hero up")
 s.E("n1", "AADIT PALICHA", L(110, 390, 68, "width:850px;text-align:center;white-space:nowrap;"), s.P("Aadit"), cls="hero")
 s.E("n2", "KAIVALYA VOHRA", L(960, 390, 68, "width:850px;text-align:center;white-space:nowrap;"), s.P("Kaivalya"), cls="hero")
 s.E("fr", "Childhood friends · grew up in Dubai", C(520, 48), s.P("childhood"), "fade", cls="q")
-svg = ('<svg width="1920" height="300" viewBox="0 0 1920 300"><circle id="kids-d1" cx="460" cy="110" r="18" fill="#a7a3b8"/>'
-       '<path id="kids-ln" d="M478 110 H1442" stroke="#8b3dff" stroke-width="8" fill="none" pathLength="1" stroke-dasharray="1"/>'
-       '<circle id="kids-d2" cx="1460" cy="110" r="22" fill="#8b3dff"/></svg>')
+svg = ('<svg width="1920" height="300" viewBox="0 0 1920 300"><circle id="kids-d1" cx="460" cy="110" r="18" fill="#CDBBEA"/>'
+       '<path id="kids-ln" d="M478 110 H1442" stroke="#FF4F9A" stroke-width="8" fill="none" pathLength="1" stroke-dasharray="1"/>'
+       '<circle id="kids-d2" cx="1460" cy="110" r="22" fill="#FF4F9A"/></svg>')
 s.E("rt", svg, L(0, 660, 10), s.P("They've"), "fade")
 s.J(draw("#kids-ln", s.P("They've") + 0.2, 1.2)); s.J(fin("#kids-d2", s.P("Stanford")))
 s.E("c1", "DUBAI", L(260, 810, 44, "width:400px;text-align:center;"), s.P("They've"), "fade", cls="kick q")
@@ -41,7 +52,7 @@ bx = "width:440px;height:170px;font-size:46px;"
 s.E("b1", "KIRANA SHOP", L(170, 640, 46, bx), s.P("Partner"), cls="box")
 s.E("b2", "RIDER", L(740, 640, 46, bx), s.P("deliver"), cls="box")
 s.E("b3", "YOUR DOOR", L(1310, 640, 46, bx + "border-color:var(--up);"), s.P("to your door"), cls="box")
-s.E("ar", '<svg width="1920" height="60" viewBox="0 0 1920 60"><path id="kirana-a1" d="M622 30 H728" stroke="#a7a3b8" stroke-width="8" pathLength="1" stroke-dasharray="1"/><path id="kirana-a2" d="M1192 30 H1298" stroke="#a7a3b8" stroke-width="8" pathLength="1" stroke-dasharray="1"/></svg>', L(0, 695, 10), s.P("Partner"), "fade")
+s.E("ar", '<svg width="1920" height="60" viewBox="0 0 1920 60"><path id="kirana-a1" d="M622 30 H728" stroke="#CDBBEA" stroke-width="8" pathLength="1" stroke-dasharray="1"/><path id="kirana-a2" d="M1192 30 H1298" stroke="#CDBBEA" stroke-width="8" pathLength="1" stroke-dasharray="1"/></svg>', L(0, 695, 10), s.P("Partner"), "fade")
 s.J(draw("#kirana-a1", s.P("deliver") - 0.3, 0.4)); s.J(draw("#kirana-a2", s.P("to your door") - 0.3, 0.4))
 
 # ---- 5: failure
@@ -79,9 +90,9 @@ for r in range(rows_):
     for c in range(cols):
         x, y = 268 + c * 176, 20 + r * 130
         if (c, r) in dark:
-            blocks.append(f'<rect x="{x}" y="{y}" width="150" height="104" rx="14" fill="#2a2740"/><rect id="dark-{dark[(c, r)]}" x="{x}" y="{y}" width="150" height="104" rx="14" fill="#8b3dff"/>')
+            blocks.append(f'<rect x="{x}" y="{y}" width="150" height="104" rx="14" fill="#4A1C80"/><rect id="dark-{dark[(c, r)]}" x="{x}" y="{y}" width="150" height="104" rx="14" fill="#FF4F9A"/>')
         else:
-            blocks.append(f'<rect x="{x}" y="{y}" width="150" height="104" rx="14" fill="#2a2740"/>')
+            blocks.append(f'<rect x="{x}" y="{y}" width="150" height="104" rx="14" fill="#4A1C80"/>')
 s.E("g", f'<svg width="1920" height="420" viewBox="0 0 1920 420">{"".join(blocks)}</svg>', L(0, 310, 10), s.P("It builds"), "fade")
 s.J(f'tl.fromTo("#dark-dk0",{{opacity:0,scale:0.6,transformOrigin:"50% 50%"}},{{opacity:1,scale:1,duration:0.4,ease:"expo.out"}},{s.P("called dark")});')
 for n in range(1, 5):
@@ -94,9 +105,9 @@ s.E("b", "Built only to pack orders fast.", C(890, 48), s.P("They only"), "fade"
 s = sl.Scene("radius", 9); S.append(s)
 t_sw = round(s.P("The speed comes") - 0.1, 2)
 svg = ('<svg width="900" height="900" viewBox="0 0 900 900">'
-       '<circle id="radius-c" cx="450" cy="450" r="330" stroke="#8b3dff" stroke-width="6" fill="rgba(139,61,255,0.08)" pathLength="1" stroke-dasharray="1"/>'
-       '<line id="radius-l" x1="450" y1="450" x2="780" y2="450" stroke="#a7a3b8" stroke-width="5" stroke-dasharray="14 12"/>'
-       '<rect x="418" y="418" width="64" height="64" rx="12" fill="#8b3dff"/>'
+       '<circle id="radius-c" cx="450" cy="450" r="330" stroke="#FF4F9A" stroke-width="6" fill="rgba(255,79,154,0.10)" pathLength="1" stroke-dasharray="1"/>'
+       '<line id="radius-l" x1="450" y1="450" x2="780" y2="450" stroke="#CDBBEA" stroke-width="5" stroke-dasharray="14 12"/>'
+       '<rect x="418" y="418" width="64" height="64" rx="12" fill="#FF4F9A"/>'
        '<circle id="radius-r" cx="450" cy="450" r="20" fill="#ffffff"/></svg>')
 s.E("m", svg, L(90, 90, 10), 0.12, "fade")
 s.J(draw("#radius-c", s.P("covers a small"), 1.4)); s.J(fin("#radius-l", s.P("so the rider")))
@@ -132,11 +143,11 @@ X = lambda m: round(260 + m / 26 * 1400)
 Y = lambda v: round(880 - v / 8 * 620)
 pts = [(0, 1.4), (10, 3.6), (12, 5.0), (26, 7.0)]
 xy = [(X(m), Y(v)) for m, v in pts]
-segs = "".join(f'<path id="chart-s{n}" d="M{xy[n][0]} {xy[n][1]} L{xy[n + 1][0]} {xy[n + 1][1]}" stroke="#8b3dff" stroke-width="10" stroke-linecap="round" fill="none" pathLength="1" stroke-dasharray="1"/>' for n in range(3))
-dots = "".join(f'<circle id="chart-p{n}" cx="{x}" cy="{y}" r="18" fill="#8b3dff" stroke="#0b0a12" stroke-width="6"/>' for n, (x, y) in enumerate(xy))
-grid = "".join(f'<line x1="260" x2="1700" y1="{Y(v)}" y2="{Y(v)}" stroke="#221f33" stroke-width="2"/><text x="236" y="{Y(v) + 10}" text-anchor="end" font-size="28" fill="#a7a3b8" font-family="Inter" font-weight="700">${v}B</text>' for v in (2, 4, 6, 8))
-ticks = "".join(f'<text x="{X(m)}" y="940" text-anchor="middle" font-size="28" fill="#a7a3b8" font-family="Inter" font-weight="700">{lb}</text>' for m, lb in ((0, "Aug 2023"), (11, "Mid 2024"), (26, "Oct 2025")))
-s.E("ch", f'<svg width="1920" height="1080" viewBox="0 0 1920 1080">{grid}<line x1="260" x2="1700" y1="880" y2="880" stroke="#a7a3b8" stroke-width="3"/>{ticks}{segs}{dots}</svg>', L(0, 0, 10), 0.12, "fade")
+segs = "".join(f'<path id="chart-s{n}" d="M{xy[n][0]} {xy[n][1]} L{xy[n + 1][0]} {xy[n + 1][1]}" stroke="#FF4F9A" stroke-width="10" stroke-linecap="round" fill="none" pathLength="1" stroke-dasharray="1"/>' for n in range(3))
+dots = "".join(f'<circle id="chart-p{n}" cx="{x}" cy="{y}" r="18" fill="#FF4F9A" stroke="#2E0854" stroke-width="6"/>' for n, (x, y) in enumerate(xy))
+grid = "".join(f'<line x1="260" x2="1700" y1="{Y(v)}" y2="{Y(v)}" stroke="#3F1470" stroke-width="2"/><text x="236" y="{Y(v) + 10}" text-anchor="end" font-size="28" fill="#CDBBEA" font-family="Plus Jakarta Sans" font-weight="700">${v}B</text>' for v in (2, 4, 6, 8))
+ticks = "".join(f'<text x="{X(m)}" y="940" text-anchor="middle" font-size="28" fill="#CDBBEA" font-family="Plus Jakarta Sans" font-weight="700">{lb}</text>' for m, lb in ((0, "Aug 2023"), (11, "Mid 2024"), (26, "Oct 2025")))
+s.E("ch", f'<svg width="1920" height="1080" viewBox="0 0 1920 1080">{grid}<line x1="260" x2="1700" y1="880" y2="880" stroke="#CDBBEA" stroke-width="3"/>{ticks}{segs}{dots}</svg>', L(0, 0, 10), 0.12, "fade")
 s.E("k", "ZEPTO VALUATION", L(260, 90, 40), 0.12, "fade", cls="kick q")
 s.E("h", "The money came in waves", L(260, 150, 72), 0.3, cls="hero")
 T = [0.5, s.P("In 2024"), s.P("A few months"), s.P("led a four", 13)]
@@ -201,8 +212,8 @@ s.E("src", "Source: Free Press Journal", "", s.P("three thousand"), "fade", cls=
 s = sl.Scene("ipo", 19); S.append(s)
 s.E("k", "THE IPO PLAN", C(140, 72), 0.12, cls="hero")
 xs = [360, 960, 1560]
-ln = (f'<svg width="1920" height="120" viewBox="0 0 1920 120"><path id="ipo-l1" d="M{xs[0]} 60 H{xs[1]}" stroke="#8b3dff" stroke-width="8" pathLength="1" stroke-dasharray="1"/>'
-      f'<path id="ipo-l2" d="M{xs[1]} 60 H{xs[2]}" stroke="#8b3dff" stroke-width="8" pathLength="1" stroke-dasharray="1" /></svg>')
+ln = (f'<svg width="1920" height="120" viewBox="0 0 1920 120"><path id="ipo-l1" d="M{xs[0]} 60 H{xs[1]}" stroke="#FF4F9A" stroke-width="8" pathLength="1" stroke-dasharray="1"/>'
+      f'<path id="ipo-l2" d="M{xs[1]} 60 H{xs[2]}" stroke="#FF4F9A" stroke-width="8" pathLength="1" stroke-dasharray="1" /></svg>')
 s.E("ln", ln, L(0, 440, 10), 0.12, "fade")
 tp = [s.P("filed"), s.P("got approval"), s.P("The plan")]
 s.J(draw("#ipo-l1", round(tp[1] - 0.5, 2), 0.6)); s.J(draw("#ipo-l2", round(tp[2] - 0.5, 2), 0.6))
@@ -217,8 +228,8 @@ s = sl.Scene("push", 20); S.append(s)
 s.E("h", "Fund managers pushed back", C(120, 84), 0.12, cls="hero")
 card = "width:700px;height:420px;flex-direction:column;gap:26px;justify-content:flex-start;padding-top:56px;"
 bar = lambda t, c: f'<div style="width:520px;padding:22px 0;border-radius:16px;background:{c};font-size:40px;color:#fff">{t}</div>'
-s.E("z", f'<div class="hero" style="font-size:72px">ZEPTO</div>{bar("Quick commerce", "#8b3dff")}', L(190, 330, 10, card), s.P("Zepto only"), cls="box")
-s.E("o", f'<div class="hero" style="font-size:56px">SWIGGY · ETERNAL</div>{bar("Quick commerce", "#8b3dff")}{bar("Food delivery", "#3d7bff")}', L(1030, 330, 10, card), s.P("like Swiggy"), cls="box")
+s.E("z", f'<div class="hero" style="font-size:72px">ZEPTO</div>{bar("Quick commerce", "#FF4F9A")}', L(190, 330, 10, card), s.P("Zepto only"), cls="box")
+s.E("o", f'<div class="hero" style="font-size:56px">SWIGGY · ETERNAL</div>{bar("Quick commerce", "#FF4F9A")}{bar("Food delivery", "#7FD1FF")}', L(1030, 330, 10, card), s.P("like Swiggy"), cls="box")
 s.E("nf", "No food delivery", L(280, 608, 40, "width:520px;height:92px;border:4px dashed var(--quiet);border-radius:16px;display:flex;align-items:center;justify-content:center;"), s.P("It doesn't have"), "fade", cls="q")
 s.E("n", "Nothing to fall back on", L(190, 800, 52, "width:700px;text-align:center;"), s.P("to fall back"), "fade", cls="down")
 s.E("src", "Source: The Week", "", s.P("Zepto only"), "fade", cls="src")
@@ -230,12 +241,12 @@ X2 = lambda m: round(260 + m / 35 * 1400)
 p2 = [(0, 1.4), (10, 3.6), (12, 5.0), (26, 7.0), (35, 4.5)]
 q = [(X2(m), Y(v)) for m, v in p2]
 old = " ".join(f"{'M' if n == 0 else 'L'}{x} {y}" for n, (x, y) in enumerate(q[:4]))
-grid2 = "".join(f'<line x1="260" x2="1700" y1="{Y(v)}" y2="{Y(v)}" stroke="#221f33" stroke-width="2"/><text x="236" y="{Y(v) + 10}" text-anchor="end" font-size="28" fill="#a7a3b8" font-family="Inter" font-weight="700">${v}B</text>' for v in (2, 4, 6, 8))
-ticks2 = "".join(f'<text x="{X2(m)}" y="940" text-anchor="middle" font-size="28" fill="#a7a3b8" font-family="Inter" font-weight="700">{lb}</text>' for m, lb in ((0, "Aug 2023"), (26, "Oct 2025"), (35, "Jul 2026")))
-s.E("ch", f'<svg width="1920" height="1080" viewBox="0 0 1920 1080">{grid2}<line x1="260" x2="1700" y1="880" y2="880" stroke="#a7a3b8" stroke-width="3"/>{ticks2}'
-    f'<path d="{old}" stroke="#8b3dff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>'
-    f'<path id="drop-s" d="M{q[3][0]} {q[3][1]} L{q[4][0]} {q[4][1]}" stroke="#ff3b47" stroke-width="12" stroke-linecap="round" fill="none" pathLength="1" stroke-dasharray="1"/>'
-    f'<circle cx="{q[3][0]}" cy="{q[3][1]}" r="18" fill="#8b3dff" stroke="#0b0a12" stroke-width="6"/><circle id="drop-p" cx="{q[4][0]}" cy="{q[4][1]}" r="20" fill="#ff3b47" stroke="#0b0a12" stroke-width="6"/></svg>', L(0, 0, 10), 0.12, "fade")
+grid2 = "".join(f'<line x1="260" x2="1700" y1="{Y(v)}" y2="{Y(v)}" stroke="#3F1470" stroke-width="2"/><text x="236" y="{Y(v) + 10}" text-anchor="end" font-size="28" fill="#CDBBEA" font-family="Plus Jakarta Sans" font-weight="700">${v}B</text>' for v in (2, 4, 6, 8))
+ticks2 = "".join(f'<text x="{X2(m)}" y="940" text-anchor="middle" font-size="28" fill="#CDBBEA" font-family="Plus Jakarta Sans" font-weight="700">{lb}</text>' for m, lb in ((0, "Aug 2023"), (26, "Oct 2025"), (35, "Jul 2026")))
+s.E("ch", f'<svg width="1920" height="1080" viewBox="0 0 1920 1080">{grid2}<line x1="260" x2="1700" y1="880" y2="880" stroke="#CDBBEA" stroke-width="3"/>{ticks2}'
+    f'<path d="{old}" stroke="#FF4F9A" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>'
+    f'<path id="drop-s" d="M{q[3][0]} {q[3][1]} L{q[4][0]} {q[4][1]}" stroke="#FFB238" stroke-width="12" stroke-linecap="round" fill="none" pathLength="1" stroke-dasharray="1"/>'
+    f'<circle cx="{q[3][0]}" cy="{q[3][1]}" r="18" fill="#FF4F9A" stroke="#2E0854" stroke-width="6"/><circle id="drop-p" cx="{q[4][0]}" cy="{q[4][1]}" r="20" fill="#FFB238" stroke="#2E0854" stroke-width="6"/></svg>', L(0, 0, 10), 0.12, "fade")
 s.E("k", "JULY 2026", L(260, 66, 40), 0.12, "fade", cls="kick q")
 s.E("h", "Zepto pulls the brakes", L(260, 116, 72), s.P("Zepto pulled"), cls="hero")
 s.E("r", "Raised ~₹1,000 Cr privately instead of listing", L(260, 204, 36, "font-weight:400;"), s.P("it raised"), "fade", cls="q")
@@ -264,7 +275,7 @@ s.E("src", "Sources: Outlook Business · Free Press Journal", "", s.P("Its cash 
 # ---- 24: two kinds of money
 s = sl.Scene("money", 24); S.append(s)
 s.E("k", "TWO KINDS OF MONEY", C(130, 72), s.P("the gap"), cls="hero")
-s.E("dv", "", L(958, 330, 10, "width:4px;height:520px;background:#2a2740;"), s.P("Private"), "fade")
+s.E("dv", "", L(958, 330, 10, "width:4px;height:520px;background:#4A1C80;"), s.P("Private"), "fade")
 s.E("a1", "PRIVATE INVESTORS", L(100, 360, 44, "width:800px;text-align:center;"), s.P("Private"), "fade", cls="kick q")
 s.E("a2", "pay for what it", L(100, 470, 56, "width:800px;text-align:center;"), s.P("pay for what a"), "fade")
 s.E("a3", "COULD BECOME", L(100, 560, 100, "width:800px;text-align:center;"), s.P("could become"), "pop", cls="hero up")

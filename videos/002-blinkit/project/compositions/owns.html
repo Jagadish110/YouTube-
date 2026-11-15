@@ -1,0 +1,38 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:var(--body);font-weight:700;}
+.hero{font-family:var(--head);font-weight:800;letter-spacing:-0.02em;line-height:1.05;text-transform:none;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.img{display:block;}.card{background:var(--panel);border-radius:28px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#owns-k{left:150px;top:300px;font-size:40px;width:700px;}
+#owns-h{left:140px;top:370px;font-size:130px;width:800px;}
+#owns-bx{left:1060px;top:260px;font-size:10px;}
+</style>
+<div id="root" data-composition-id="owns" data-width="1920" data-height="1080">
+<div id="owns-k" class="el clip kick up" data-start="0.1" data-duration="3.02" data-track-index="1" >THING #2</div>
+<div id="owns-h" class="el clip hero" data-start="1.08" data-duration="2.04" data-track-index="2" >Blinkit<br>owns what<br>it sells.</div>
+<div id="owns-bx" class="el clip " data-start="0.1" data-duration="3.02" data-track-index="3" ><svg width="660" height="540" viewBox="0 0 660 540"><g id="owns-bx-b0"><rect x="60" y="360" width="170" height="150" rx="10" fill="#D9A15B" stroke="#0F2A1A" stroke-width="8"/><rect x="130" y="360" width="30" height="150" fill="#C08744"/><rect x="90" y="450" width="110" height="34" rx="6" fill="#0C831F"/><text x="145" y="476" text-anchor="middle" font-family="DM Sans" font-weight="700" font-size="24" fill="#fff">OWNED</text></g><g id="owns-bx-b1"><rect x="240" y="360" width="170" height="150" rx="10" fill="#D9A15B" stroke="#0F2A1A" stroke-width="8"/><rect x="310" y="360" width="30" height="150" fill="#C08744"/><rect x="270" y="450" width="110" height="34" rx="6" fill="#0C831F"/><text x="325" y="476" text-anchor="middle" font-family="DM Sans" font-weight="700" font-size="24" fill="#fff">OWNED</text></g><g id="owns-bx-b2"><rect x="420" y="360" width="170" height="150" rx="10" fill="#D9A15B" stroke="#0F2A1A" stroke-width="8"/><rect x="490" y="360" width="30" height="150" fill="#C08744"/><rect x="450" y="450" width="110" height="34" rx="6" fill="#0C831F"/><text x="505" y="476" text-anchor="middle" font-family="DM Sans" font-weight="700" font-size="24" fill="#fff">OWNED</text></g><g id="owns-bx-b3"><rect x="150" y="200" width="170" height="150" rx="10" fill="#D9A15B" stroke="#0F2A1A" stroke-width="8"/><rect x="220" y="200" width="30" height="150" fill="#C08744"/><rect x="180" y="290" width="110" height="34" rx="6" fill="#0C831F"/><text x="235" y="316" text-anchor="middle" font-family="DM Sans" font-weight="700" font-size="24" fill="#fff">OWNED</text></g><g id="owns-bx-b4"><rect x="330" y="200" width="170" height="150" rx="10" fill="#D9A15B" stroke="#0F2A1A" stroke-width="8"/><rect x="400" y="200" width="30" height="150" fill="#C08744"/><rect x="360" y="290" width="110" height="34" rx="6" fill="#0C831F"/><text x="415" y="316" text-anchor="middle" font-family="DM Sans" font-weight="700" font-size="24" fill="#fff">OWNED</text></g><g id="owns-bx-b5"><rect x="240" y="40" width="170" height="150" rx="10" fill="#D9A15B" stroke="#0F2A1A" stroke-width="8"/><rect x="310" y="40" width="30" height="150" fill="#C08744"/><rect x="270" y="130" width="110" height="34" rx="6" fill="#0C831F"/><text x="325" y="156" text-anchor="middle" font-family="DM Sans" font-weight="700" font-size="24" fill="#fff">OWNED</text></g></svg></div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#owns-k",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.1);
+tl.to("#owns-k",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},2.9);
+tl.fromTo("#owns-h",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},1.08);
+tl.to("#owns-h",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},2.9);
+tl.fromTo("#owns-bx",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.1);
+tl.to("#owns-bx",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},2.9);
+tl.fromTo("#owns-bx-b0",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"back.out(2)"},0.3);
+tl.fromTo("#owns-bx-b1",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"back.out(2)"},0.42);
+tl.fromTo("#owns-bx-b2",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"back.out(2)"},0.54);
+tl.fromTo("#owns-bx-b3",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"back.out(2)"},0.66);
+tl.fromTo("#owns-bx-b4",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"back.out(2)"},0.78);
+tl.fromTo("#owns-bx-b5",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"back.out(2)"},0.9);
+window.__timelines["owns"] = tl;
+</script>
+</template>

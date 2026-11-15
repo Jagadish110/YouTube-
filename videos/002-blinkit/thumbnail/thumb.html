@@ -2,27 +2,33 @@
 @font-face{font-family:'Bricolage';font-weight:800;src:url('../../../tools/fonts/bricolage-grotesque-latin-800-normal.woff2')}
 @font-face{font-family:'DMSans';font-weight:700;src:url('../../../tools/fonts/dm-sans-latin-700-normal.woff2')}
 *{margin:0;padding:0;box-sizing:border-box}
-body{width:1280px;height:720px;overflow:hidden;position:relative;background:#F8CB46;font-family:'DMSans',Inter,sans-serif;color:#0F2A1A}
-.glow{position:absolute;right:-120px;top:-160px;width:760px;height:760px;border-radius:50%;background:#FFE27A}
-.t1{position:absolute;left:64px;top:70px;font-family:'Bricolage';font-weight:800;font-size:200px;line-height:.9;letter-spacing:-.03em;color:#0C831F}
-.t2{position:absolute;left:68px;top:300px;font-family:'Bricolage';font-weight:800;font-size:116px;line-height:.95;letter-spacing:-.02em}
-.tag{position:absolute;left:70px;bottom:70px;background:#0F2A1A;color:#F8CB46;font-size:44px;font-weight:700;padding:14px 28px;border-radius:16px}
-svg{position:absolute;right:30px;top:200px}
+body{width:1280px;height:720px;overflow:hidden;position:relative}
+.rays{position:absolute;inset:0}
+.abs{position:absolute}
+.stroke{paint-order:stroke fill}
+
+body{background:#F8CB46;font-family:'DMSans',Inter,sans-serif;color:#0F2A1A}
+.t1{left:50px;top:30px;font-family:'Bricolage';font-weight:800;font-size:240px;line-height:.95;letter-spacing:-.03em;color:#0C831F;-webkit-text-stroke:10px #0F2A1A;text-shadow:12px 12px 0 #0F2A1A}
+.t2{left:60px;top:290px;transform:rotate(-3deg);background:#0F2A1A;color:#fff;font-family:'Bricolage';font-weight:800;font-size:92px;line-height:1;padding:10px 30px 20px;border-radius:22px;box-shadow:10px 10px 0 #0C831F}
+.t2 b{color:#F8CB46}
+.stk{left:72px;top:530px;background:#fff;border:6px solid #0F2A1A;font-family:'Bricolage';font-weight:800;font-size:54px;padding:6px 26px 10px;border-radius:999px;transform:rotate(2deg)}
+.art{right:6px;top:190px}
 </style></head><body>
-<div class="glow" data-bleed></div>
-<div class="t1">10 MIN</div>
-<div class="t2">= PROFIT?</div>
-<div class="tag">BLINKIT, EXPLAINED</div>
-<svg width="600" height="460" viewBox="0 0 760 520">
- <g stroke="#0F2A1A" stroke-width="12" stroke-linecap="round" opacity=".35"><line x1="10" y1="260" x2="150" y2="260"/><line x1="0" y1="330" x2="170" y2="330"/><line x1="30" y1="400" x2="160" y2="400"/></g>
- <ellipse cx="420" cy="500" rx="300" ry="14" fill="#0F2A1A" opacity=".18"/>
- <circle cx="250" cy="430" r="62" fill="#0F2A1A"/><circle cx="250" cy="430" r="26" fill="#d9cf9a"/>
- <circle cx="600" cy="430" r="62" fill="#0F2A1A"/><circle cx="600" cy="430" r="26" fill="#d9cf9a"/>
- <path d="M190 420 Q200 330 320 330 L520 330 Q560 330 590 300 L640 220 L668 230 L630 330 Q620 420 540 420 Z" fill="#0C831F"/>
- <rect x="600" y="170" width="70" height="20" rx="10" fill="#0F2A1A"/>
- <rect x="250" y="120" width="210" height="190" rx="22" fill="#FFF3C4" stroke="#0F2A1A" stroke-width="10"/>
- <text x="355" y="240" text-anchor="middle" font-family="Bricolage" font-weight="800" font-size="80" fill="#0C831F">10</text>
- <path d="M470 330 L500 210 Q510 170 550 170 L560 170 L540 330 Z" fill="#0F2A1A"/>
- <circle cx="540" cy="130" r="48" fill="#0C831F"/><rect x="500" y="118" width="80" height="18" rx="9" fill="#0F2A1A" opacity=".6"/>
+<svg class="rays" data-bleed width="1280" height="720" viewBox="0 0 1280 720"><rect width="1280" height="720" fill="#F8CB46"/><path d="M1000 380 L3000 380 L2989 589 Z" fill="#FFD866"/><path d="M1000 380 L2956 796 L2902 998 Z" fill="#FFD866"/><path d="M1000 380 L2827 1193 L2732 1380 Z" fill="#FFD866"/><path d="M1000 380 L2618 1556 L2486 1718 Z" fill="#FFD866"/><path d="M1000 380 L2338 1866 L2176 1998 Z" fill="#FFD866"/><path d="M1000 380 L2000 2112 L1813 2207 Z" fill="#FFD866"/><path d="M1000 380 L1618 2282 L1416 2336 Z" fill="#FFD866"/><path d="M1000 380 L1209 2369 L1000 2380 Z" fill="#FFD866"/><path d="M1000 380 L791 2369 L584 2336 Z" fill="#FFD866"/><path d="M1000 380 L382 2282 L187 2207 Z" fill="#FFD866"/><path d="M1000 380 L0 2112 L-176 1998 Z" fill="#FFD866"/><path d="M1000 380 L-338 1866 L-486 1718 Z" fill="#FFD866"/><path d="M1000 380 L-618 1556 L-732 1380 Z" fill="#FFD866"/><path d="M1000 380 L-827 1193 L-902 998 Z" fill="#FFD866"/><path d="M1000 380 L-956 796 L-989 589 Z" fill="#FFD866"/><path d="M1000 380 L-1000 380 L-989 171 Z" fill="#FFD866"/><path d="M1000 380 L-956 -36 L-902 -238 Z" fill="#FFD866"/><path d="M1000 380 L-827 -433 L-732 -620 Z" fill="#FFD866"/><path d="M1000 380 L-618 -796 L-486 -958 Z" fill="#FFD866"/><path d="M1000 380 L-338 -1106 L-176 -1238 Z" fill="#FFD866"/><path d="M1000 380 L-0 -1352 L187 -1447 Z" fill="#FFD866"/><path d="M1000 380 L382 -1522 L584 -1576 Z" fill="#FFD866"/><path d="M1000 380 L791 -1609 L1000 -1620 Z" fill="#FFD866"/><path d="M1000 380 L1209 -1609 L1416 -1576 Z" fill="#FFD866"/><path d="M1000 380 L1618 -1522 L1813 -1447 Z" fill="#FFD866"/><path d="M1000 380 L2000 -1352 L2176 -1238 Z" fill="#FFD866"/><path d="M1000 380 L2338 -1106 L2486 -958 Z" fill="#FFD866"/><path d="M1000 380 L2618 -796 L2732 -620 Z" fill="#FFD866"/><path d="M1000 380 L2827 -433 L2902 -238 Z" fill="#FFD866"/><path d="M1000 380 L2956 -36 L2989 171 Z" fill="#FFD866"/></svg>
+<div class="abs t1">10 MIN</div>
+<div class="abs t2">MAKES <b>MONEY?</b></div>
+<div class="abs stk">BLINKIT, EXPLAINED</div>
+<svg class="abs art" width="500" height="452" viewBox="0 0 760 560">
+ <circle cx="560" cy="120" r="96" fill="#fff" stroke="#0F2A1A" stroke-width="12"/><path d="M560 120 L560 60 M560 120 L605 145" stroke="#0C831F" stroke-width="14" stroke-linecap="round"/><rect x="540" y="10" width="40" height="22" rx="6" fill="#0F2A1A"/>
+ <g stroke="#0F2A1A" stroke-width="14" stroke-linecap="round" opacity=".5"><line x1="10" y1="300" x2="150" y2="300"/><line x1="0" y1="370" x2="170" y2="370"/><line x1="30" y1="440" x2="160" y2="440"/></g>
+ <g transform="rotate(-6 420 420)">
+ <ellipse cx="420" cy="540" rx="300" ry="14" fill="#0F2A1A" opacity=".25"/>
+ <circle cx="250" cy="470" r="66" fill="#0F2A1A"/><circle cx="250" cy="470" r="28" fill="#fff"/>
+ <circle cx="600" cy="470" r="66" fill="#0F2A1A"/><circle cx="600" cy="470" r="28" fill="#fff"/>
+ <path d="M190 460 Q200 370 320 370 L520 370 Q560 370 590 340 L640 260 L668 270 L630 370 Q620 460 540 460 Z" fill="#0C831F" stroke="#0F2A1A" stroke-width="10" stroke-linejoin="round"/>
+ <rect x="240" y="160" width="220" height="200" rx="24" fill="#fff" stroke="#0F2A1A" stroke-width="12"/>
+ <text x="350" y="290" text-anchor="middle" font-family="Bricolage" font-weight="800" font-size="96" fill="#0C831F">10</text>
+ <path d="M470 370 L500 250 Q510 210 550 210 L560 210 L540 370 Z" fill="#0F2A1A"/>
+ <circle cx="540" cy="170" r="50" fill="#0C831F" stroke="#0F2A1A" stroke-width="10"/></g>
 </svg>
 </body></html>

@@ -8,4 +8,8 @@ date,area,change,status
 2026-11-15,LinkedIn,Feed-style preview added before anything is scheduled (tools/linkedin_preview.py),Done
 2026-11-15,Videos,Each video uses its company's colours (Blinkit yellow + green; Coca-Cola red; Zomato red + Blinkit yellow),Done
 2026-11-15,Thumbnails,Thumbnail for every video (1280x720 in company colours) shown on the dashboard,Done
-2026-11-15,LinkedIn,On hold: company pages earn no direct money on LinkedIn; waiting for your decision,Pending
+2026-11-15,LinkedIn,On hold by your decision: company pages earn no direct money on LinkedIn,Done
+2026-11-15,Thumbnails,Redesigned all thumbnails: light rays + outlined text + tilted stickers + bigger drawings; added Zepto thumbnail,Done
+2026-11-15,Videos,Zepto video redesigned in Zepto purple + pink with new fonts (v2),Done
+2026-11-15,Videos,Full Blinkit video built for Monday: 24 scenes in Blinkit colours with drawn images,Done
+2026-11-15,Music,Background song: tools/add_music.py ready (ducks under the voice); waiting for your song file,Pending

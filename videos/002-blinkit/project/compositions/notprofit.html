@@ -1,0 +1,36 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:var(--body);font-weight:700;}
+.hero{font-family:var(--head);font-weight:800;letter-spacing:-0.02em;line-height:1.05;text-transform:none;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.img{display:block;}.card{background:var(--panel);border-radius:28px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#notprofit-a{left:0;width:1920px;text-align:center;top:270px;font-size:170px;}
+#notprofit-x{left:0;width:1920px;text-align:center;top:440px;font-size:150px;}
+#notprofit-b{left:0;width:1920px;text-align:center;top:600px;font-size:170px;}
+#notprofit-q{left:0;width:1920px;text-align:center;top:860px;font-size:56px;}
+</style>
+<div id="root" data-composition-id="notprofit" data-width="1920" data-height="1080">
+<div id="notprofit-a" class="el clip hero" data-start="0.1" data-duration="3.92" data-track-index="1" >REVENUE</div>
+<div id="notprofit-x" class="el clip hero down" data-start="0.72" data-duration="3.3" data-track-index="2" >≠</div>
+<div id="notprofit-b" class="el clip hero up" data-start="0.72" data-duration="3.3" data-track-index="3" >PROFIT</div>
+<div id="notprofit-q" class="el clip q" data-start="1.45" data-duration="2.57" data-track-index="4" >So where does the money come from?</div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#notprofit-a",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},0.1);
+tl.to("#notprofit-a",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},3.8);
+tl.fromTo("#notprofit-x",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},0.72);
+tl.to("#notprofit-x",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},3.8);
+tl.fromTo("#notprofit-b",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},0.72);
+tl.to("#notprofit-b",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},3.8);
+tl.fromTo("#notprofit-q",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},1.45);
+tl.to("#notprofit-q",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},3.8);
+window.__timelines["notprofit"] = tl;
+</script>
+</template>

@@ -1,0 +1,46 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:var(--body);font-weight:700;}
+.hero{font-family:var(--head);font-weight:800;letter-spacing:-0.02em;line-height:1.05;text-transform:none;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.img{display:block;}.card{background:var(--panel);border-radius:28px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#thin-n{left:180px;top:230px;font-size:230px;width:900px;}
+#thin-c{left:190px;top:500px;font-size:56px;width:900px;}
+#thin-st{left:1120px;top:360px;font-size:10px;}
+#thin-l{left:1080px;top:790px;font-size:44px;width:760px;text-align:center;}
+#thin-src{left:180px;top:980px;font-size:28px;width:1200px;font-weight:500;}
+</style>
+<div id="root" data-composition-id="thin" data-width="1920" data-height="1080">
+<div id="thin-n" class="el clip hero up" data-start="0.15" data-duration="7.08" data-track-index="1" >₹0.9</div>
+<div id="thin-c" class="el clip " data-start="0.4" data-duration="6.83" data-track-index="2" >profit for every ₹100 of orders</div>
+<div id="thin-st" class="el clip " data-start="4.06" data-duration="3.17" data-track-index="3" ><svg width="660" height="400" viewBox="0 0 660 400"><rect id="thin-s0" x="0" y="328" width="86" height="52" rx="10" fill="#0F2A1A"/><rect id="thin-s1" x="110" y="276" width="86" height="104" rx="10" fill="#0F2A1A"/><rect id="thin-s2" x="220" y="224" width="86" height="156" rx="10" fill="#0F2A1A"/><rect id="thin-s3" x="330" y="172" width="86" height="208" rx="10" fill="#0F2A1A"/><rect id="thin-s4" x="440" y="120" width="86" height="260" rx="10" fill="#0F2A1A"/><rect id="thin-s5" x="550" y="68" width="86" height="312" rx="10" fill="#0C831F"/></svg></div>
+<div id="thin-l" class="el clip hero" data-start="5.69" data-duration="1.54" data-track-index="4" >better for 6 quarters in a row</div>
+<div id="thin-src" class="el clip q" data-start="0.4" data-duration="6.83" data-track-index="5" >0.9% of net order value · Source: Indian Startup News</div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#thin-n",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},0.15);
+tl.to("#thin-n",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.01);
+tl.fromTo("#thin-c",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.4);
+tl.to("#thin-c",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.01);
+tl.fromTo("#thin-st",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},4.06);
+tl.to("#thin-st",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.01);
+tl.fromTo("#thin-l",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},5.69);
+tl.to("#thin-l",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.01);
+tl.fromTo("#thin-src",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.4);
+tl.to("#thin-src",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.01);
+tl.fromTo("#thin-s0",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"back.out(2)"},4.16);
+tl.fromTo("#thin-s1",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"back.out(2)"},4.31);
+tl.fromTo("#thin-s2",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"back.out(2)"},4.46);
+tl.fromTo("#thin-s3",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"back.out(2)"},4.61);
+tl.fromTo("#thin-s4",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"back.out(2)"},4.76);
+tl.fromTo("#thin-s5",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"back.out(2)"},4.91);
+window.__timelines["thin"] = tl;
+</script>
+</template>

@@ -1,0 +1,33 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:var(--body);font-weight:700;}
+.hero{font-family:var(--head);font-weight:800;letter-spacing:-0.02em;line-height:1.05;text-transform:none;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.img{display:block;}.card{background:var(--panel);border-radius:28px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#darkstore-k{left:150px;top:300px;font-size:40px;width:700px;}
+#darkstore-h{left:140px;top:370px;font-size:150px;width:700px;}
+#darkstore-st{left:900px;top:240px;font-size:10px;}
+</style>
+<div id="root" data-composition-id="darkstore" data-width="1920" data-height="1080">
+<div id="darkstore-k" class="el clip kick up" data-start="0.1" data-duration="3.06" data-track-index="1" >THING #1</div>
+<div id="darkstore-h" class="el clip hero" data-start="0.35" data-duration="2.81" data-track-index="2" >The<br>dark<br>store.</div>
+<div id="darkstore-st" class="el clip " data-start="0.1" data-duration="3.06" data-track-index="3" ><svg width="800" height="620" viewBox="0 0 800 620"><rect x="120" y="120" width="660" height="480" rx="10" fill="#ffffff"/><rect x="120" y="140" width="660" height="70" fill="#ffffff"/><rect x="150" y="140" width="50" height="70" fill="#0C831F"/><rect x="250" y="140" width="50" height="70" fill="#0C831F"/><rect x="350" y="140" width="50" height="70" fill="#0C831F"/><rect x="450" y="140" width="50" height="70" fill="#0C831F"/><rect x="550" y="140" width="50" height="70" fill="#0C831F"/><rect x="650" y="140" width="50" height="70" fill="#0C831F"/><rect x="100" y="110" width="700" height="30" rx="10" fill="#0F2A1A"/><rect x="240" y="280" width="420" height="320" fill="#c9d1c9"/><line x1="240" x2="660" y1="300" y2="300" stroke="#9aa39a" stroke-width="6"/><line x1="240" x2="660" y1="326" y2="326" stroke="#9aa39a" stroke-width="6"/><line x1="240" x2="660" y1="352" y2="352" stroke="#9aa39a" stroke-width="6"/><line x1="240" x2="660" y1="378" y2="378" stroke="#9aa39a" stroke-width="6"/><line x1="240" x2="660" y1="404" y2="404" stroke="#9aa39a" stroke-width="6"/><line x1="240" x2="660" y1="430" y2="430" stroke="#9aa39a" stroke-width="6"/><line x1="240" x2="660" y1="456" y2="456" stroke="#9aa39a" stroke-width="6"/><line x1="240" x2="660" y1="482" y2="482" stroke="#9aa39a" stroke-width="6"/><line x1="240" x2="660" y1="508" y2="508" stroke="#9aa39a" stroke-width="6"/><g id="darkstore-st-sign"><rect x="300" y="220" width="300" height="46" rx="10" fill="#0F2A1A"/><text x="450" y="254" text-anchor="middle" font-family="DM Sans" font-weight="700" font-size="30" fill="#F8CB46">STAFF ONLY</text></g><rect x="80" y="596" width="740" height="14" rx="7" fill="#0F2A1A" opacity="0.2"/></svg></div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#darkstore-k",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.1);
+tl.to("#darkstore-k",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},2.94);
+tl.fromTo("#darkstore-h",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},0.35);
+tl.to("#darkstore-h",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},2.94);
+tl.fromTo("#darkstore-st",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.1);
+tl.to("#darkstore-st",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},2.94);
+tl.fromTo("#darkstore-st-sign",{opacity:0,y:-30},{opacity:1,y:0,duration:0.4,ease:"back.out(2)"},2.04);
+window.__timelines["darkstore"] = tl;
+</script>
+</template>

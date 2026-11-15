@@ -1,2 +1,4 @@
 run_at_utc,kind,video,status,setup_s,voiceover_s,render_s,duration_s,size_kb,supabase,commit,notes
 2026-11-15T05:30:00Z,health,test-run,pass,25,9,29,14.2,716,reachable,7cae5f8,First scheduled test. Check ok; screenshot capture fallback.
+2026-11-15T11:20:00Z,video,001-zepto,pass,,,341,234.5,17483,,,v2 redesign in Zepto colours. Manual run.
+2026-11-15T11:50:00Z,video,002-blinkit,pass,,,237,163.0,15214,,,Full Blinkit video. Manual run.

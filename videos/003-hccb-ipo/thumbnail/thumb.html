@@ -2,24 +2,32 @@
 @font-face{font-family:'Anton';src:url('../../../tools/fonts/anton-latin-400-normal.woff2')}
 @font-face{font-family:'DMSans';font-weight:700;src:url('../../../tools/fonts/dm-sans-latin-700-normal.woff2')}
 *{margin:0;padding:0;box-sizing:border-box}
-body{width:1280px;height:720px;overflow:hidden;position:relative;background:#E4002B;font-family:'DMSans',Inter,sans-serif;color:#fff}
-.k{position:absolute;left:64px;top:64px;font-size:46px;font-weight:700;letter-spacing:.04em}
-.t1{position:absolute;left:60px;top:125px;font-family:'Anton';font-size:176px;line-height:.98;text-transform:uppercase}
-.t2{position:absolute;left:64px;top:520px;font-family:'Anton';font-size:96px;line-height:1;background:#fff;color:#E4002B;padding:6px 24px 10px;border-radius:12px}
-svg{position:absolute;right:40px;top:140px}
+body{width:1280px;height:720px;overflow:hidden;position:relative}
+.rays{position:absolute;inset:0}
+.abs{position:absolute}
+.stroke{paint-order:stroke fill}
+
+body{background:#E4002B;font-family:'DMSans',Inter,sans-serif;color:#fff}
+.k{left:60px;top:46px;font-size:44px;font-weight:700;letter-spacing:.03em;text-shadow:4px 4px 0 #8E0019}
+.t1{left:56px;top:100px;font-family:'Anton';font-size:250px;line-height:1;color:#fff;text-shadow:12px 12px 0 #8E0019}
+.stamp{left:400px;top:160px;transform:rotate(-10deg);border:10px solid #FFD43B;color:#FFD43B;font-family:'Anton';font-size:84px;padding:0 22px 6px;border-radius:18px}
+.t2{left:60px;top:420px;background:#FFD43B;color:#1A1A1A;font-family:'Anton';font-size:110px;line-height:1;padding:8px 26px 14px;border-radius:16px;box-shadow:10px 10px 0 #8E0019}
+.sub{left:64px;top:600px;font-size:40px;font-weight:700}
+.art{right:30px;top:70px}
 </style></head><body>
-<div class="k">INDIA'S BIGGEST COKE BOTTLER</div>
-<div class="t1">IPO<br>NOW?</div>
-<div class="t2">REVENUE ▼ 18%</div>
-<svg width="480" height="520" viewBox="0 0 520 560">
- <g fill="#fff">
-  <rect x="70" y="200" width="100" height="300" rx="26"/><rect x="98" y="120" width="44" height="100" rx="12"/><rect x="92" y="104" width="56" height="24" rx="6"/>
-  <rect x="210" y="160" width="110" height="340" rx="28"/><rect x="240" y="70" width="50" height="110" rx="12"/><rect x="233" y="52" width="64" height="26" rx="6"/>
-  <rect x="360" y="230" width="96" height="270" rx="24"/><rect x="387" y="155" width="42" height="95" rx="12"/><rect x="381" y="140" width="54" height="22" rx="6"/>
+<svg class="rays" data-bleed width="1280" height="720" viewBox="0 0 1280 720"><rect width="1280" height="720" fill="#E4002B"/><path d="M1010 360 L3010 360 L2995 601 Z" fill="#EE1D3D"/><path d="M1010 360 L2952 839 L2880 1069 Z" fill="#EE1D3D"/><path d="M1010 360 L2781 1289 L2656 1496 Z" fill="#EE1D3D"/><path d="M1010 360 L2507 1686 L2336 1857 Z" fill="#EE1D3D"/><path d="M1010 360 L2146 2006 L1939 2131 Z" fill="#EE1D3D"/><path d="M1010 360 L1719 2230 L1489 2302 Z" fill="#EE1D3D"/><path d="M1010 360 L1251 2345 L1010 2360 Z" fill="#EE1D3D"/><path d="M1010 360 L769 2345 L531 2302 Z" fill="#EE1D3D"/><path d="M1010 360 L301 2230 L81 2131 Z" fill="#EE1D3D"/><path d="M1010 360 L-126 2006 L-316 1857 Z" fill="#EE1D3D"/><path d="M1010 360 L-487 1686 L-636 1496 Z" fill="#EE1D3D"/><path d="M1010 360 L-761 1289 L-860 1069 Z" fill="#EE1D3D"/><path d="M1010 360 L-932 839 L-975 601 Z" fill="#EE1D3D"/><path d="M1010 360 L-990 360 L-975 119 Z" fill="#EE1D3D"/><path d="M1010 360 L-932 -119 L-860 -349 Z" fill="#EE1D3D"/><path d="M1010 360 L-761 -569 L-636 -776 Z" fill="#EE1D3D"/><path d="M1010 360 L-487 -966 L-316 -1137 Z" fill="#EE1D3D"/><path d="M1010 360 L-126 -1286 L81 -1411 Z" fill="#EE1D3D"/><path d="M1010 360 L301 -1510 L531 -1582 Z" fill="#EE1D3D"/><path d="M1010 360 L769 -1625 L1010 -1640 Z" fill="#EE1D3D"/><path d="M1010 360 L1251 -1625 L1489 -1582 Z" fill="#EE1D3D"/><path d="M1010 360 L1719 -1510 L1939 -1411 Z" fill="#EE1D3D"/><path d="M1010 360 L2146 -1286 L2336 -1137 Z" fill="#EE1D3D"/><path d="M1010 360 L2507 -966 L2656 -776 Z" fill="#EE1D3D"/><path d="M1010 360 L2781 -569 L2880 -349 Z" fill="#EE1D3D"/><path d="M1010 360 L2952 -119 L2995 119 Z" fill="#EE1D3D"/></svg>
+<div class="abs k">INDIA'S BIGGEST COKE BOTTLER</div>
+<div class="abs t1">IPO</div>
+<div class="abs stamp">WHY NOW?</div>
+<div class="abs t2">REVENUE ▼18%</div>
+<div class="abs sub">in two years, but there's a twist</div>
+<svg class="abs art" width="500" height="600" viewBox="0 0 500 600">
+ <circle cx="250" cy="330" r="230" fill="#fff" opacity=".12"/>
+ <g stroke="#1A1A1A" stroke-width="10">
+  <g transform="rotate(-8 140 380)"><rect x="80" y="230" width="120" height="330" rx="30" fill="#fff"/><rect x="113" y="140" width="54" height="110" rx="14" fill="#fff"/><rect x="104" y="118" width="72" height="28" rx="8" fill="#1A1A1A"/><rect x="80" y="340" width="120" height="80" fill="#E4002B"/></g>
+  <g transform="rotate(7 330 360)"><rect x="270" y="200" width="130" height="360" rx="32" fill="#fff"/><rect x="306" y="100" width="58" height="120" rx="14" fill="#fff"/><rect x="296" y="78" width="78" height="28" rx="8" fill="#1A1A1A"/><rect x="270" y="320" width="130" height="90" fill="#E4002B"/></g>
  </g>
- <g fill="#E4002B" opacity=".9"><rect x="70" y="300" width="100" height="70"/><rect x="210" y="280" width="110" height="80"/><rect x="360" y="320" width="96" height="64"/></g>
- <path d="M20 40 L180 120 L300 90 L500 300" stroke="#1A1A1A" stroke-width="22" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
- <path d="M500 300 L452 300 M500 300 L500 252" stroke="#1A1A1A" stroke-width="22" stroke-linecap="round"/>
- <rect x="20" y="520" width="480" height="16" rx="8" fill="#1A1A1A" opacity=".35"/>
+ <path d="M150 60 L230 150 L310 115 L470 330" stroke="#FFD43B" stroke-width="26" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+ <path d="M470 330 L410 330 M470 330 L470 270" stroke="#FFD43B" stroke-width="26" stroke-linecap="round"/>
 </svg>
 </body></html>

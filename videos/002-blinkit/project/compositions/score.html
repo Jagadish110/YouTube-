@@ -1,0 +1,62 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:var(--body);font-weight:700;}
+.hero{font-family:var(--head);font-weight:800;letter-spacing:-0.02em;line-height:1.05;text-transform:none;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.img{display:block;}.card{background:var(--panel);border-radius:28px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#score-k{left:0;width:1920px;text-align:center;top:120px;font-size:36px;}
+#score-ax{left:260px;top:600px;font-size:10px;width:1400px;height:6px;background:#0F2A1A;}
+#score-b1{left:480px;top:606px;font-size:10px;width:300px;height:156px;background:#E5383B;border-radius:0 0 16px 16px;transform-origin:top;}
+#score-n1{left:380px;top:800px;font-size:72px;width:500px;text-align:center;}
+#score-l1{left:380px;top:890px;font-size:40px;width:500px;text-align:center;}
+#score-b2{left:1140px;top:412px;font-size:10px;width:300px;height:188px;background:#0C831F;border-radius:16px 16px 0 0;transform-origin:bottom;}
+#score-n2{left:1040px;top:250px;font-size:90px;width:500px;text-align:center;}
+#score-l2{left:990px;top:640px;font-size:40px;width:600px;text-align:center;}
+#score-src{left:260px;top:980px;font-size:28px;width:800px;font-weight:500;}
+</style>
+<div id="root" data-composition-id="score" data-width="1920" data-height="1080">
+<div id="score-k" class="el clip kick q" data-start="0.1" data-duration="9.08" data-track-index="1" >ADJUSTED EBITDA (PROFIT BEFORE SOME COSTS)</div>
+<div id="score-ax" class="el clip " data-start="0.2" data-duration="8.98" data-track-index="2" ></div>
+<div id="score-b1" class="el clip " data-start="2.34" data-duration="6.84" data-track-index="3" ></div>
+<div id="score-n1" class="el clip hero down tnum" data-start="2.34" data-duration="6.84" data-track-index="4" >−₹0 Cr</div>
+<div id="score-l1" class="el clip q" data-start="2.34" data-duration="6.84" data-track-index="5" >a year ago</div>
+<div id="score-b2" class="el clip " data-start="5.85" data-duration="3.33" data-track-index="6" ></div>
+<div id="score-n2" class="el clip hero up tnum" data-start="5.85" data-duration="3.33" data-track-index="7" >+₹0 Cr</div>
+<div id="score-l2" class="el clip q" data-start="5.85" data-duration="3.33" data-track-index="8" >July to September 2026</div>
+<div id="score-src" class="el clip q" data-start="2.34" data-duration="6.84" data-track-index="9" >Source: Indian Startup News</div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#score-k",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.1);
+tl.to("#score-k",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},8.96);
+tl.fromTo("#score-ax",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.2);
+tl.to("#score-ax",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},8.96);
+tl.fromTo("#score-b1",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},2.34);
+tl.to("#score-b1",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},8.96);
+const o3={v:0}, el3=document.querySelector("#score-n1"), f3=(v)=>"−₹"+Math.round(v)+" Cr";
+tl.fromTo("#score-n1",{opacity:0,scale:0.94},{opacity:1,scale:1,duration:0.3,ease:"expo.out"},2.34);
+tl.fromTo(o3,{v:0},{v:156,duration:1.2,ease:"power3.out",onUpdate:()=>{el3.textContent=f3(o3.v);}},2.34);
+tl.to("#score-n1",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},8.96);
+tl.fromTo("#score-l1",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},2.34);
+tl.to("#score-l1",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},8.96);
+tl.fromTo("#score-b2",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},5.85);
+tl.to("#score-b2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},8.96);
+const o6={v:0}, el6=document.querySelector("#score-n2"), f6=(v)=>"+₹"+Math.round(v)+" Cr";
+tl.fromTo("#score-n2",{opacity:0,scale:0.94},{opacity:1,scale:1,duration:0.3,ease:"expo.out"},5.85);
+tl.fromTo(o6,{v:0},{v:184,duration:1.3,ease:"power3.out",onUpdate:()=>{el6.textContent=f6(o6.v);}},5.85);
+tl.to("#score-n2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},8.96);
+tl.fromTo("#score-l2",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},5.85);
+tl.to("#score-l2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},8.96);
+tl.fromTo("#score-src",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},2.34);
+tl.to("#score-src",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},8.96);
+tl.fromTo("#score-b1",{scaleY:0},{scaleY:1,duration:0.6,ease:"power3.out"},2.34);
+tl.fromTo("#score-b2",{scaleY:0},{scaleY:1,duration:0.6,ease:"power3.out"},5.85);
+window.__timelines["score"] = tl;
+</script>
+</template>

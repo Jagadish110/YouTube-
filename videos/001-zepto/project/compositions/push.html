@@ -1,11 +1,12 @@
 <template>
 <style>
-#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:'Inter',sans-serif;font-weight:700;}
-.hero{font-family:'Archivo Black',sans-serif;font-weight:400;letter-spacing:-0.02em;line-height:1.05;}
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:var(--body);font-weight:700;}
+.hero{font-family:var(--head);font-weight:800;letter-spacing:-0.02em;line-height:1.05;text-transform:none;}
 .q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
 .kick{letter-spacing:0.14em;font-weight:900;}
 .el{position:absolute;}
 .pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.img{display:block;}.card{background:var(--panel);border-radius:28px;}
 .box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
 .src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
 .tnum{font-variant-numeric:tabular-nums;}
@@ -19,8 +20,8 @@
 </style>
 <div id="root" data-composition-id="push" data-width="1920" data-height="1080">
 <div id="push-h" class="el clip hero" data-start="0.12" data-duration="9.48" data-track-index="1" >Fund managers pushed back</div>
-<div id="push-z" class="el clip box" data-start="2.17" data-duration="7.43" data-track-index="2" ><div class="hero" style="font-size:72px">ZEPTO</div><div style="width:520px;padding:22px 0;border-radius:16px;background:#8b3dff;font-size:40px;color:#fff">Quick commerce</div></div>
-<div id="push-o" class="el clip box" data-start="6.15" data-duration="3.45" data-track-index="3" ><div class="hero" style="font-size:56px">SWIGGY · ETERNAL</div><div style="width:520px;padding:22px 0;border-radius:16px;background:#8b3dff;font-size:40px;color:#fff">Quick commerce</div><div style="width:520px;padding:22px 0;border-radius:16px;background:#3d7bff;font-size:40px;color:#fff">Food delivery</div></div>
+<div id="push-z" class="el clip box" data-start="2.17" data-duration="7.43" data-track-index="2" ><div class="hero" style="font-size:72px">ZEPTO</div><div style="width:520px;padding:22px 0;border-radius:16px;background:#FF4F9A;font-size:40px;color:#fff">Quick commerce</div></div>
+<div id="push-o" class="el clip box" data-start="6.15" data-duration="3.45" data-track-index="3" ><div class="hero" style="font-size:56px">SWIGGY · ETERNAL</div><div style="width:520px;padding:22px 0;border-radius:16px;background:#FF4F9A;font-size:40px;color:#fff">Quick commerce</div><div style="width:520px;padding:22px 0;border-radius:16px;background:#7FD1FF;font-size:40px;color:#fff">Food delivery</div></div>
 <div id="push-nf" class="el clip q" data-start="3.91" data-duration="5.69" data-track-index="4" >No food delivery</div>
 <div id="push-n" class="el clip down" data-start="8.38" data-duration="1.22" data-track-index="5" >Nothing to fall back on</div>
 <div id="push-src" class="el clip src" data-start="2.17" data-duration="7.43" data-track-index="6" >Source: The Week</div>

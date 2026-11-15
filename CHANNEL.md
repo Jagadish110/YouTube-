@@ -52,11 +52,20 @@ what the numbers say and why it matters, without hype.
 - Every video gets `videos/NNN-slug/thumbnail/thumb.html`, rendered with `python3 tools/thumbnail.py <thumb.html>`
   into thumb.png (1280x720, under 2 MB) and thumb-small.png. Look at both; the small one must still read.
 - Company colours, 2 to 5 big words, one drawn image, no faces, no logos. Fonts from tools/fonts.
+- Make it pop: light-ray background, outlined or shadowed headline, one tilted sticker/badge, a big bold drawing.
+  See the four thumbnails in videos/001 to 004 as the reference style.
 - Upload thumb.png to the dashboard as an asset and put its `/_blob/<id>` in the `thumbnail` column of content/videos.csv.
 
 | Video | Look |
 |---|---|
-| 001 Zepto | dark + purple, Archivo Black / Inter |
+| 001 Zepto | v1 dark + purple; v2 Zepto purple #2E0854 + pink #FF4F9A, Outfit / Plus Jakarta Sans |
 | 002 Blinkit | Blinkit yellow + green, Bricolage Grotesque / DM Sans, drawn images |
 | 003 Coca-Cola IPO | Coca-Cola red + white, Anton (planned) |
 | 004 Albinder Dhindsa | Zomato red + Blinkit yellow on charcoal, Sora (planned) |
+
+## Background music
+
+Jagadish supplies the song. Save it as `videos/NNN-slug/music/<file>` and run
+`python3 tools/add_music.py output/NNN-slug-v1.mp4 music/<file> output/NNN-slug-v1-music.mp4 0.16`.
+It loops/trims the song, fades it, and ducks it under the voice. Note the song's licence in sources.md.
+A copyrighted song without a licence will get a YouTube copyright claim; use royalty-free or licensed music.

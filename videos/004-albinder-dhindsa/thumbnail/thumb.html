@@ -2,22 +2,35 @@
 @font-face{font-family:'Sora';font-weight:800;src:url('../../../tools/fonts/sora-latin-800-normal.woff2')}
 @font-face{font-family:'Sora';font-weight:600;src:url('../../../tools/fonts/sora-latin-600-normal.woff2')}
 *{margin:0;padding:0;box-sizing:border-box}
-body{width:1280px;height:720px;overflow:hidden;position:relative;background:#1B1B1F;font-family:'Sora',Inter,sans-serif;color:#fff}
-.t1{position:absolute;left:64px;top:80px;font-weight:800;font-size:92px;line-height:1.02;letter-spacing:-.02em}
-.t1 b{color:#E23744}
-.t2{position:absolute;left:64px;top:300px;font-weight:800;font-size:92px;line-height:1.02;letter-spacing:-.02em}
-.t2 b{color:#F8CB46}
-.name{position:absolute;left:68px;bottom:72px;font-weight:600;font-size:42px;color:#cfcfd6}
-svg{position:absolute;right:40px;bottom:40px}
+body{width:1280px;height:720px;overflow:hidden;position:relative}
+.rays{position:absolute;inset:0}
+.abs{position:absolute}
+.stroke{paint-order:stroke fill}
+
+body{background:#18181C;font-family:'Sora',Inter,sans-serif;color:#fff}
+.spot{left:620px;top:-200px;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(248,203,70,.35) 0,rgba(248,203,70,0) 65%)}
+.l1{left:56px;top:56px;font-weight:800;font-size:96px;line-height:1}
+.l2{left:52px;top:160px;transform:rotate(-2deg);background:#E23744;font-weight:800;font-size:112px;line-height:1;padding:6px 26px 18px;border-radius:16px;box-shadow:10px 10px 0 #000}
+.l3{left:56px;top:350px;font-weight:800;font-size:96px;line-height:1}
+.l4{left:52px;top:454px;transform:rotate(2deg);background:#F8CB46;color:#18181C;font-weight:800;font-size:112px;line-height:1;padding:6px 26px 18px;border-radius:16px;box-shadow:10px 10px 0 #000}
+.name{left:60px;bottom:40px;font-weight:600;font-size:38px;color:#bdbdc6}
+.art{right:40px;bottom:30px}
 </style></head><body>
-<div class="t1">SOLD TO<br><b>ZOMATO.</b></div>
-<div class="t2">NOW HE<br><b>RUNS IT.</b></div>
-<div class="name">Albinder Dhindsa</div>
-<svg width="560" height="560" viewBox="0 0 560 560">
- <rect x="20" y="420" width="170" height="120" fill="#3A3A42"/><rect x="190" y="300" width="170" height="240" fill="#E23744"/><rect x="360" y="180" width="180" height="360" fill="#F8CB46"/>
- <text x="105" y="490" text-anchor="middle" font-family="Sora" font-weight="800" font-size="40" fill="#fff">2013</text>
- <text x="275" y="430" text-anchor="middle" font-family="Sora" font-weight="800" font-size="40" fill="#fff">2022</text>
- <text x="450" y="310" text-anchor="middle" font-family="Sora" font-weight="800" font-size="40" fill="#1B1B1F">2026</text>
- <circle cx="450" cy="70" r="34" fill="#fff"/><path d="M400 180 Q400 112 450 112 Q500 112 500 180 Z" fill="#fff"/>
+<div class="abs spot" data-bleed></div>
+<div class="abs l1">SOLD TO</div>
+<div class="abs l2">ZOMATO.</div>
+<div class="abs l3">NOW HE</div>
+<div class="abs l4">RUNS IT.</div>
+<div class="abs name">Albinder Dhindsa</div>
+<svg class="abs art" width="560" height="620" viewBox="0 0 560 620">
+ <rect x="20" y="470" width="170" height="130" rx="8" fill="#3A3A44"/><rect x="190" y="340" width="170" height="260" rx="8" fill="#E23744"/><rect x="360" y="200" width="180" height="400" rx="8" fill="#F8CB46"/>
+ <text x="105" y="548" text-anchor="middle" font-family="Sora" font-weight="800" font-size="42" fill="#fff">2013</text>
+ <text x="275" y="470" text-anchor="middle" font-family="Sora" font-weight="800" font-size="42" fill="#fff">2022</text>
+ <text x="450" y="330" text-anchor="middle" font-family="Sora" font-weight="800" font-size="42" fill="#18181C">2026</text>
+ <text x="105" y="590" text-anchor="middle" font-family="Sora" font-weight="600" font-size="24" fill="#bdbdc6">GROFERS</text>
+ <text x="275" y="585" text-anchor="middle" font-family="Sora" font-weight="600" font-size="24" fill="#fff">SOLD</text>
+ <text x="450" y="585" text-anchor="middle" font-family="Sora" font-weight="600" font-size="24" fill="#18181C">CEO</text>
+ <path d="M410 40 L430 70 L450 30 L470 70 L490 40 L484 96 L416 96 Z" fill="#F8CB46" stroke="#000" stroke-width="6" stroke-linejoin="round"/>
+ <circle cx="450" cy="128" r="30" fill="#fff"/><path d="M402 200 Q402 162 450 162 Q498 162 498 200 Z" fill="#fff"/>
 </svg>
 </body></html>

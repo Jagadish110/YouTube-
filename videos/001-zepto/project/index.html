@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=1920, height=1080" />
     <script src="assets/gsap.min.js"></script>
     <style>
-      :root { --ground: #0b0a12; --ink: #ffffff; --quiet: #a7a3b8; --up: #8b3dff; --down: #ff3b47; }
+      @font-face { font-family: 'Outfit'; font-weight: 800; src: url('assets/fonts/outfit-latin-800-normal.woff2') format('woff2'); } @font-face { font-family: 'Plus Jakarta Sans'; font-weight: 500; src: url('assets/fonts/plus-jakarta-sans-latin-500-normal.woff2') format('woff2'); } @font-face { font-family: 'Plus Jakarta Sans'; font-weight: 700; src: url('assets/fonts/plus-jakarta-sans-latin-700-normal.woff2') format('woff2'); }
+      :root { --ground: #2E0854; --ink: #ffffff; --quiet: #CDBBEA; --up: #FF4F9A; --down: #FFB238; --panel: #3D0C6E; --line: #4A1C80; --head: 'Outfit', 'Inter', sans-serif; --body: 'Plus Jakarta Sans', 'Inter', sans-serif; }
       * { margin: 0; padding: 0; box-sizing: border-box; }
       html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: var(--ground); }
-      #bg { position: absolute; inset: 0; background: var(--ground); }
+      #bg { position: absolute; inset: 0; background: var(--ground); background-image: radial-gradient(circle at 85% 10%, rgba(255,79,154,0.22) 0, rgba(255,79,154,0) 40%), radial-gradient(circle at 8% 95%, rgba(127,209,255,0.14) 0, rgba(127,209,255,0) 45%); }
     </style>
   </head>
   <body>

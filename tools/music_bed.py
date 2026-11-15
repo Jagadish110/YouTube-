@@ -7,7 +7,7 @@ def f(m): return 440*2**((m-69)/12)
 chords=[(45,[57,60,64,67]),(41,[57,60,65,69]),(48,[55,60,64,67]),(43,[55,59,62,67])]
 n=int(DUR*sr); t=np.arange(n)/sr; L=np.zeros(n); R=np.zeros(n)
 def env(x,a,r):
-    e=np.ones(len(x)); na=int(a*sr); nr=int(r*sr)
+    e=np.ones(len(x)); na=min(int(a*sr),len(x)//2); nr=min(int(r*sr),len(x)//2)
     e[:na]=np.linspace(0,1,na)**2; e[-nr:]=np.linspace(1,0,nr)**2; return e
 clen=2*bar; k=0; pos=0.0
 while pos<DUR:

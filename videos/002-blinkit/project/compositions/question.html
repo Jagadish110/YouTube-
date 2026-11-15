@@ -1,0 +1,39 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:var(--body);font-weight:700;}
+.hero{font-family:var(--head);font-weight:800;letter-spacing:-0.02em;line-height:1.05;text-transform:none;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.img{display:block;}.card{background:var(--panel);border-radius:28px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#question-a{left:0;width:1920px;text-align:center;top:110px;font-size:100px;}
+#question-b{left:0;width:1920px;text-align:center;top:230px;font-size:100px;}
+#question-sc{left:580px;top:430px;font-size:10px;}
+#question-d{left:150px;top:560px;font-size:60px;width:420px;}
+</style>
+<div id="root" data-composition-id="question" data-width="1920" data-height="1080">
+<div id="question-a" class="el clip hero" data-start="0.1" data-duration="4.1" data-track-index="1" >How does <span class='up'>10-minute</span> delivery</div>
+<div id="question-b" class="el clip hero" data-start="2.05" data-duration="2.15" data-track-index="2" >turn a profit?</div>
+<div id="question-sc" class="el clip " data-start="0.15" data-duration="4.05" data-track-index="3" ><svg width="760" height="520" viewBox="0 0 760 520"><g id="question-sc-lines" stroke="#0F2A1A" stroke-width="10" stroke-linecap="round" opacity="0.35"><line x1="20" y1="260" x2="150" y2="260"/><line x1="0" y1="330" x2="170" y2="330"/><line x1="40" y1="400" x2="160" y2="400"/></g><g id="question-sc-body"><ellipse cx="420" cy="500" rx="300" ry="14" fill="#0F2A1A" opacity="0.15"/><circle cx="250" cy="430" r="62" fill="#0F2A1A"/><circle cx="250" cy="430" r="26" fill="#cfc9a0"/><circle cx="600" cy="430" r="62" fill="#0F2A1A"/><circle cx="600" cy="430" r="26" fill="#cfc9a0"/><path d="M190 420 Q200 330 320 330 L520 330 Q560 330 590 300 L640 220 L668 230 L630 330 Q620 420 540 420 Z" fill="#0C831F"/><rect x="600" y="170" width="70" height="20" rx="10" fill="#0F2A1A"/><rect x="250" y="120" width="210" height="190" rx="22" fill="#F8CB46" stroke="#0F2A1A" stroke-width="10"/><text x="355" y="238" text-anchor="middle" font-family="Bricolage Grotesque" font-weight="800" font-size="72" fill="#0F2A1A">10</text><path d="M470 330 L500 210 Q510 170 550 170 L560 170 L540 330 Z" fill="#0F2A1A"/><circle cx="540" cy="130" r="48" fill="#E5383B"/><rect x="500" y="118" width="80" height="18" rx="9" fill="#0F2A1A" opacity="0.6"/></g></svg></div>
+<div id="question-d" class="el clip q" data-start="2.82" data-duration="1.38" data-track-index="4" >Let's break<br>it down.</div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#question-a",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},0.1);
+tl.to("#question-a",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},3.98);
+tl.fromTo("#question-b",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},2.05);
+tl.to("#question-b",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},3.98);
+tl.fromTo("#question-sc",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.15);
+tl.to("#question-sc",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},3.98);
+tl.fromTo("#question-d",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},2.82);
+tl.to("#question-d",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},3.98);
+tl.fromTo("#question-sc-body",{x:-260},{x:0,duration:0.9,ease:"power3.out"},0.15);
+tl.fromTo("#question-sc-lines",{opacity:0,x:60},{opacity:0.35,x:0,duration:0.6,ease:"power2.out"},0.6);
+tl.to("#question-sc-body",{y:-6,duration:0.25,yoyo:true,repeat:11,ease:"sine.inOut"},1.05);
+window.__timelines["question"] = tl;
+</script>
+</template>

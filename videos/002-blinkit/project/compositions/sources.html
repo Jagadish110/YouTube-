@@ -1,0 +1,44 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:var(--body);font-weight:700;}
+.hero{font-family:var(--head);font-weight:800;letter-spacing:-0.02em;line-height:1.05;text-transform:none;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.img{display:block;}.card{background:var(--panel);border-radius:28px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#sources-h{left:0;width:1920px;text-align:center;top:100px;font-size:84px;}
+#sources-c1{left:160px;top:280px;font-size:10px;width:760px;height:600px;padding:52px;}
+#sources-bk{left:560px;top:640px;font-size:10px;transform:scale(0.8);transform-origin:left top;}
+#sources-c2{left:1000px;top:280px;font-size:10px;width:760px;height:600px;padding:52px;}
+#sources-ph{left:1470px;top:470px;font-size:10px;transform:scale(0.75);transform-origin:left top;}
+#sources-src{left:160px;top:960px;font-size:28px;width:1500px;font-weight:500;}
+</style>
+<div id="root" data-composition-id="sources" data-width="1920" data-height="1080">
+<div id="sources-h" class="el clip hero" data-start="0.1" data-duration="7.13" data-track-index="1" >Where the money comes from</div>
+<div id="sources-c1" class="el clip card" data-start="1.0" data-duration="6.23" data-track-index="2" ><div class="kick up" style="font-size:34px">1</div><div class="hero" style="font-size:70px;margin-top:8px">Margin on<br>every product</div><div class="q" style="font-size:36px;margin-top:20px;font-weight:500">buy for less, sell for more</div></div>
+<div id="sources-bk" class="el clip " data-start="1.2" data-duration="6.03" data-track-index="3" ><svg width="360" height="300" viewBox="0 0 360 300"><path d="M110 110 Q110 30 180 30 Q250 30 250 110" stroke="#0F2A1A" stroke-width="14" fill="none"/><rect x="80" y="70" width="60" height="80" rx="10" fill="#3DB2FF"/><rect x="150" y="50" width="56" height="100" rx="10" fill="#FF5C8A"/><rect x="214" y="80" width="64" height="70" rx="10" fill="#FF8A3D"/><path d="M30 120 H330 L300 280 H60 Z" fill="#0C831F" stroke="#0F2A1A" stroke-width="10" stroke-linejoin="round"/><path d="M110 160 V250 M180 160 V250 M250 160 V250" stroke="#F8CB46" stroke-width="10" stroke-linecap="round"/></svg></div>
+<div id="sources-c2" class="el clip card" data-start="3.01" data-duration="4.22" data-track-index="4" ><div class="kick up" style="font-size:34px">2</div><div class="hero" style="font-size:70px;margin-top:8px">Advertising</div><div class="q" style="font-size:36px;margin-top:20px;font-weight:500">brands pay to show<br>up first in search</div></div>
+<div id="sources-ph" class="el clip " data-start="3.21" data-duration="4.02" data-track-index="5" ><svg width="330" height="520" viewBox="0 0 330 520"><rect x="6" y="6" width="318" height="508" rx="48" fill="#0F2A1A"/><rect x="24" y="30" width="282" height="462" rx="32" fill="#FFF8DC"/><rect x="44" y="60" width="242" height="48" rx="24" fill="#fff" stroke="#d8d4b0" stroke-width="4"/><text x="70" y="92" font-family="DM Sans" font-weight="700" font-size="24" fill="#8a8a6a">chips</text><rect x="44" y="130" width="242" height="110" rx="18" fill="#fff" stroke="#0C831F" stroke-width="6"/><rect x="60" y="146" width="78" height="78" rx="12" fill="#FF8A3D"/><rect x="152" y="152" width="110" height="18" rx="9" fill="#cfcab0"/><rect x="152" y="186" width="92" height="30" rx="8" fill="#0C831F"/><text x="198" y="208" text-anchor="middle" font-family="DM Sans" font-weight="700" font-size="20" fill="#fff">AD</text><rect x="44" y="258" width="242" height="96" rx="18" fill="#fff"/><rect x="60" y="272" width="68" height="68" rx="12" fill="#3DB2FF"/><rect x="142" y="282" width="110" height="18" rx="9" fill="#e0dcc4"/><rect x="44" y="372" width="242" height="96" rx="18" fill="#fff"/><rect x="60" y="386" width="68" height="68" rx="12" fill="#B48CFF"/><rect x="142" y="396" width="110" height="18" rx="9" fill="#e0dcc4"/></svg></div>
+<div id="sources-src" class="el clip q" data-start="3.01" data-duration="4.22" data-track-index="6" >Ads source: Storyboard18 (Blinkit ad revenue up 220% in Q3 FY24)</div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#sources-h",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},0.1);
+tl.to("#sources-h",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.01);
+tl.fromTo("#sources-c1",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},1.0);
+tl.to("#sources-c1",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.01);
+tl.fromTo("#sources-bk",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},1.2);
+tl.to("#sources-bk",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.01);
+tl.fromTo("#sources-c2",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},3.01);
+tl.to("#sources-c2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.01);
+tl.fromTo("#sources-ph",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},3.21);
+tl.to("#sources-ph",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.01);
+tl.fromTo("#sources-src",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},3.01);
+tl.to("#sources-src",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.01);
+window.__timelines["sources"] = tl;
+</script>
+</template>

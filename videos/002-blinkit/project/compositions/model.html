@@ -1,0 +1,55 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:var(--body);font-weight:700;}
+.hero{font-family:var(--head);font-weight:800;letter-spacing:-0.02em;line-height:1.05;text-transform:none;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.img{display:block;}.card{background:var(--panel);border-radius:28px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#model-k{left:0;width:1920px;text-align:center;top:120px;font-size:40px;}
+#model-sm{left:0;width:1920px;text-align:center;top:190px;font-size:64px;}
+#model-c1{left:240px;top:340px;font-size:10px;width:620px;height:520px;padding:44px;}
+#model-k1{left:600px;top:450px;font-size:10px;}
+#model-c2{left:1060px;top:340px;font-size:10px;width:620px;height:520px;padding:44px;border:6px solid #0C831F;}
+#model-k2{left:1380px;top:480px;font-size:10px;}
+#model-src{left:240px;top:960px;font-size:28px;width:1400px;font-weight:500;}
+</style>
+<div id="root" data-composition-id="model" data-width="1920" data-height="1080">
+<div id="model-k" class="el clip kick q" data-start="0.1" data-duration="9.22" data-track-index="1" >JULY 2025: BLINKIT STARTS OWNING ITS STOCK</div>
+<div id="model-sm" class="el clip hero" data-start="4.35" data-duration="4.97" data-track-index="2" >like a supermarket</div>
+<div id="model-c1" class="el clip card" data-start="0.4" data-duration="8.92" data-track-index="3" ><div class="kick q" style="font-size:34px">BEFORE</div><div class="hero" style="font-size:64px;margin-top:10px">a cut of<br>each sale</div></div>
+<div id="model-k1" class="el clip " data-start="0.6" data-duration="8.72" data-track-index="4" ><svg width="220" height="360" viewBox="0 0 220 360"><g id="model-a-0"><ellipse cx="110" cy="300" rx="90" ry="26" fill="#F8CB46" stroke="#0F2A1A" stroke-width="8"/></g></svg></div>
+<div id="model-c2" class="el clip card" data-start="5.85" data-duration="3.47" data-track-index="5" ><div class="kick" style="font-size:34px;color:#0C831F">NOW</div><div class="hero" style="font-size:64px;margin-top:10px">the full<br>price</div></div>
+<div id="model-k2" class="el clip " data-start="5.85" data-duration="3.47" data-track-index="6" ><svg width="220" height="360" viewBox="0 0 220 360"><g id="model-b-0"><ellipse cx="110" cy="300" rx="90" ry="26" fill="#F8CB46" stroke="#0F2A1A" stroke-width="8"/></g><g id="model-b-1"><ellipse cx="110" cy="270" rx="90" ry="26" fill="#F8CB46" stroke="#0F2A1A" stroke-width="8"/></g><g id="model-b-2"><ellipse cx="110" cy="240" rx="90" ry="26" fill="#F8CB46" stroke="#0F2A1A" stroke-width="8"/></g><g id="model-b-3"><ellipse cx="110" cy="210" rx="90" ry="26" fill="#F8CB46" stroke="#0F2A1A" stroke-width="8"/></g><g id="model-b-4"><ellipse cx="110" cy="180" rx="90" ry="26" fill="#F8CB46" stroke="#0F2A1A" stroke-width="8"/></g><g id="model-b-5"><ellipse cx="110" cy="150" rx="90" ry="26" fill="#F8CB46" stroke="#0F2A1A" stroke-width="8"/></g><g id="model-b-6"><ellipse cx="110" cy="120" rx="90" ry="26" fill="#F8CB46" stroke="#0F2A1A" stroke-width="8"/></g></svg></div>
+<div id="model-src" class="el clip q" data-start="0.4" data-duration="8.92" data-track-index="7" >Source: Eternal investor call, 21 July 2025, via Informist</div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#model-k",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.1);
+tl.to("#model-k",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.1);
+tl.fromTo("#model-sm",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},4.35);
+tl.to("#model-sm",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.1);
+tl.fromTo("#model-c1",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.4);
+tl.to("#model-c1",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.1);
+tl.fromTo("#model-k1",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.6);
+tl.to("#model-k1",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.1);
+tl.fromTo("#model-c2",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},5.85);
+tl.to("#model-c2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.1);
+tl.fromTo("#model-k2",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},5.85);
+tl.to("#model-k2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.1);
+tl.fromTo("#model-src",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.4);
+tl.to("#model-src",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},9.1);
+tl.fromTo("#model-b-0",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"back.out(2)"},6.05);
+tl.fromTo("#model-b-1",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"back.out(2)"},6.15);
+tl.fromTo("#model-b-2",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"back.out(2)"},6.25);
+tl.fromTo("#model-b-3",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"back.out(2)"},6.35);
+tl.fromTo("#model-b-4",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"back.out(2)"},6.45);
+tl.fromTo("#model-b-5",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"back.out(2)"},6.55);
+tl.fromTo("#model-b-6",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"back.out(2)"},6.65);
+window.__timelines["model"] = tl;
+</script>
+</template>

@@ -1,0 +1,58 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:var(--body);font-weight:700;}
+.hero{font-family:var(--head);font-weight:800;letter-spacing:-0.02em;line-height:1.05;text-transform:none;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.img{display:block;}.card{background:var(--panel);border-radius:28px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#bet-ln{left:160px;top:520px;font-size:10px;}
+#bet-d1{left:170px;top:513px;font-size:10px;width:54px;height:54px;border-radius:50%;background:#0F2A1A;}
+#bet-a1{left:130px;top:600px;font-size:56px;width:300px;}
+#bet-b1{left:130px;top:670px;font-size:36px;width:420px;}
+#bet-d2{left:1690px;top:505px;font-size:10px;width:70px;height:70px;border-radius:50%;background:#0C831F;}
+#bet-a2{left:1380px;top:600px;font-size:56px;width:380px;text-align:right;}
+#bet-sw{left:1440px;top:150px;font-size:10px;}
+#bet-sp{left:640px;top:180px;font-size:110px;width:760px;}
+#bet-nm{left:640px;top:720px;font-size:48px;width:900px;}
+</style>
+<div id="root" data-composition-id="bet" data-width="1920" data-height="1080">
+<div id="bet-ln" class="el clip " data-start="0.1" data-duration="7.5" data-track-index="1" ><svg width="1600" height="40" viewBox="0 0 1600 40"><path id="bet-l" d="M20 20 H1580" stroke="#0F2A1A" stroke-width="10" stroke-linecap="round" pathLength="1" stroke-dasharray="1"/></svg></div>
+<div id="bet-d1" class="el clip " data-start="0.2" data-duration="7.4" data-track-index="2" ></div>
+<div id="bet-a1" class="el clip hero" data-start="0.25" data-duration="7.35" data-track-index="3" >2013</div>
+<div id="bet-b1" class="el clip q" data-start="0.4" data-duration="7.2" data-track-index="4" >a normal grocery app</div>
+<div id="bet-d2" class="el clip " data-start="2.11" data-duration="5.49" data-track-index="5" ></div>
+<div id="bet-a2" class="el clip hero up" data-start="2.11" data-duration="5.49" data-track-index="6" >2021</div>
+<div id="bet-sw" class="el clip " data-start="4.94" data-duration="2.66" data-track-index="7" ><svg width="300" height="330" viewBox="0 0 300 330"><rect x="125" y="0" width="50" height="34" rx="8" fill="#0F2A1A"/><circle cx="150" cy="190" r="132" fill="#ffffff" stroke="#0F2A1A" stroke-width="14"/><circle id="bet-sw-arc" cx="150" cy="190" r="104" fill="none" stroke="#0C831F" stroke-width="22" pathLength="1" stroke-dasharray="1" transform="rotate(-90 150 190)"/><text x="150" y="210" text-anchor="middle" font-family="Bricolage Grotesque" font-weight="800" font-size="76" fill="#0F2A1A">10</text><text x="150" y="255" text-anchor="middle" font-family="DM Sans" font-weight="700" font-size="30" fill="#0F2A1A">MIN</text></svg></div>
+<div id="bet-sp" class="el clip hero" data-start="3.65" data-duration="3.95" data-track-index="8" >bet everything<br>on <span class='up'>speed</span></div>
+<div id="bet-nm" class="el clip " data-start="6.22" data-duration="1.38" data-track-index="9" >new name: <span class='hero up' style='font-size:84px'>BLINKIT</span></div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#bet-ln",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.1);
+tl.to("#bet-ln",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.38);
+tl.fromTo("#bet-d1",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},0.2);
+tl.to("#bet-d1",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.38);
+tl.fromTo("#bet-a1",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.25);
+tl.to("#bet-a1",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.38);
+tl.fromTo("#bet-b1",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.4);
+tl.to("#bet-b1",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.38);
+tl.fromTo("#bet-d2",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},2.11);
+tl.to("#bet-d2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.38);
+tl.fromTo("#bet-a2",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},2.11);
+tl.to("#bet-a2",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.38);
+tl.fromTo("#bet-sw",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},4.94);
+tl.to("#bet-sw",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.38);
+tl.fromTo("#bet-sp",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},3.65);
+tl.to("#bet-sp",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.38);
+tl.fromTo("#bet-nm",{clipPath:"inset(0 100% 0 0)"},{clipPath:"inset(0 0% 0 0)",duration:0.5,ease:"power3.out"},6.22);
+tl.to("#bet-nm",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.38);
+tl.fromTo("#bet-l",{strokeDashoffset:1},{strokeDashoffset:0,duration:1.2,ease:"power2.inOut"},0.2);
+tl.fromTo("#bet-sw-arc",{strokeDashoffset:1},{strokeDashoffset:0,duration:1.2,ease:"power2.inOut"},4.94);
+window.__timelines["bet"] = tl;
+</script>
+</template>
