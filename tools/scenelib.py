@@ -6,7 +6,9 @@ Usage in a per-video build script:
     s = sl.Scene("intro", 0); s.E("t", "TITLE", sl.C(400, 120), 0.1, cls="hero"); ...
     sl.write_project("project", [s, ...])
 """
-import json, os
+import json, os, re
+
+EVENTS = []  # sound-effect cues: {t, kind, n} in absolute seconds, written to sfx_events.json
 
 MARKS, LEAD, TOTAL = [], 0.2, 0.0
 
@@ -59,10 +61,26 @@ class Scene:
 
     def E(self, eid, html, style, at, anim="blur", out=None, cls="", tag="div", attrs=""):
         self.els.append(dict(id=f"{self.name}-{eid}", html=html, style=style, at=round(at, 2), anim=anim, out=out, cls=cls, tag=tag, attrs=attrs))
+        txt = re.sub(r"<[^>]+>", "", html).strip()
+        kind = anim[0] if isinstance(anim, tuple) else anim
+        if txt.startswith("<svg") or "<svg" in html:
+            kind = "pop" if kind in ("pop", "blur") else ("draw" if kind == "fade" else kind)
+            txt = ""
+        if "src" in eid:
+            kind = None  # source lines stay silent
+        if kind:
+            ev = dict(t=round(self.start + at, 2), kind=kind, n=len(txt))
+            if kind == "count":
+                ev["dur"] = anim[3]
+            EVENTS.append(ev)
         return f"#{self.name}-{eid}"
 
     def J(self, code):
         self.js.append(code)
+        m = re.search(r",\s*([0-9.]+)\);\s*$", code)
+        if m and ("fromTo" in code) and "opacity:0}" not in code.replace(" ", "")[-40:]:
+            kind = "draw" if "strokeDashoffset" in code else "pop"
+            EVENTS.append(dict(t=round(self.start + float(m.group(1)), 2), kind=kind, n=0))
 
     def render(self):
         css = [
@@ -161,5 +179,7 @@ def write_project(out, scenes, first_host=None, audio="assets/vo.mp3", audio_dur
 </html>
 """
     open(f"{out}/index.html", "w").write(index)
+    cues = [dict(t=sc.start, kind="scene", n=0) for sc in scenes if sc.start > 0.3] + EVENTS
+    json.dump(sorted(cues, key=lambda e: e["t"]), open(f"{out}/../sfx_events.json", "w"), indent=0)
     for sc in scenes:
         print(f"{sc.name:10s} {sc.start:7.2f} {sc.dur:6.2f}")
