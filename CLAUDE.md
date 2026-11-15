@@ -1,7 +1,7 @@
 # Faceless YouTube channel: video pipeline
 
-This repo is the saved pipeline for Jagadish's faceless YouTube channel (Indian startup
-and business breakdowns). A session that opens this repo starts with no memory of earlier
+This repo is the saved pipeline for Jagadish's faceless YouTube channel (Indian business,
+explained: startups, business models, IPOs and founders; see CHANNEL.md). A session that opens this repo starts with no memory of earlier
 work, so everything needed is written here.
 
 ## What the pipeline makes
@@ -9,6 +9,11 @@ work, so everything needed is written here.
 Motion-graphics explainer videos: dark background, white Archivo Black headlines, purple
 (#8b3dff) for growth, red (#ff3b47) for drops, source lines on screen for every number.
 Voiceover is the open-source Kokoro voice `am_eric`. No stock footage, no faces.
+
+## Niche and topics
+
+Read `CHANNEL.md` before picking a topic. It sets the niche (Indian business, explained), the four
+pillars that rotate, the topic rules and the log. Every video run appends its row to that log.
 
 ## Steps for one video
 
