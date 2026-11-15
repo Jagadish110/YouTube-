@@ -41,11 +41,22 @@ what the numbers say and why it matters, without hype.
 - Every video uses images: flat illustrations drawn in SVG inside build.py (people only from behind or as
   silhouettes, no faces, no brand logos). See `videos/002-blinkit/sample/build.py` for phone, scooter, store,
   shelves and map examples. Real photos only if Jagadish supplies them or allows a free photo site.
-- Planned looks: 002 Blinkit = sunny yellow + deep green, Bricolage Grotesque / DM Sans.
-  003 Coca-Cola IPO = bold red + white with bottle and plant illustrations, condensed headline font.
-  004 Albinder Dhindsa = teal + coral, a timeline style with drawn city and store scenes.
+- Use the company's own brand colours for the video and its thumbnail (colours only, never the logo).
+  For a founder story, use the colours of the company they are known for.
+- Planned looks: 002 Blinkit = Blinkit yellow #F8CB46 + green #0C831F, Bricolage Grotesque / DM Sans.
+  003 Coca-Cola IPO = Coca-Cola red #E4002B + white, Anton headlines, plain bottles (never the contour bottle).
+  004 Albinder Dhindsa = Zomato red #E23744 + Blinkit yellow #F8CB46 on charcoal, Sora.
+
+## Thumbnails
+
+- Every video gets `videos/NNN-slug/thumbnail/thumb.html`, rendered with `python3 tools/thumbnail.py <thumb.html>`
+  into thumb.png (1280x720, under 2 MB) and thumb-small.png. Look at both; the small one must still read.
+- Company colours, 2 to 5 big words, one drawn image, no faces, no logos. Fonts from tools/fonts.
+- Upload thumb.png to the dashboard as an asset and put its `/_blob/<id>` in the `thumbnail` column of content/videos.csv.
 
 | Video | Look |
 |---|---|
 | 001 Zepto | dark + purple, Archivo Black / Inter |
-| 002 Blinkit | yellow + green, Bricolage Grotesque / DM Sans, drawn images |
+| 002 Blinkit | Blinkit yellow + green, Bricolage Grotesque / DM Sans, drawn images |
+| 003 Coca-Cola IPO | Coca-Cola red + white, Anton (planned) |
+| 004 Albinder Dhindsa | Zomato red + Blinkit yellow on charcoal, Sora (planned) |

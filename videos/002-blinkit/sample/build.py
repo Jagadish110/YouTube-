@@ -12,7 +12,7 @@ from scenelib import C, L, draw, fin
 HERE = os.path.dirname(os.path.abspath(__file__))
 sl.setup(os.path.join(HERE, "vo_marks.json"), 31.0)
 sl.theme(
-    ground="#FFD84D", ink="#12301F", quiet="#5E5A2E", up="#0F8A3C", down="#E5383B",
+    ground="#F8CB46", ink="#0F2A1A", quiet="#5A4F1E", up="#0C831F", down="#E5383B",
     panel="#FFF1A8", line="#E9C232",
     head="'Bricolage Grotesque', 'Inter', sans-serif", head_weight=800,
     body="'DM Sans', 'Inter', sans-serif",
@@ -21,7 +21,7 @@ sl.theme(
            ("DM Sans", 700, "assets/fonts/dm-sans-latin-700-normal.woff2")],
     bg="background-image: radial-gradient(circle at 88% 12%, #FFE98A 0, rgba(255,233,138,0) 38%), radial-gradient(circle at 6% 94%, #FFC83A 0, rgba(255,200,58,0) 42%);",
 )
-G, Y, INK, RED, CREAM = "#0F8A3C", "#FFD84D", "#12301F", "#E5383B", "#FFF8DC"
+G, Y, INK, RED, CREAM = "#0C831F", "#F8CB46", "#0F2A1A", "#E5383B", "#FFF8DC"
 TILE = ["#FF8A3D", "#3DB2FF", "#7BD389", "#FF5C8A", "#B48CFF", "#FFC23D"]
 
 S = []

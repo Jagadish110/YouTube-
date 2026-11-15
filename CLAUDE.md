@@ -29,7 +29,8 @@ pillars that rotate, the topic rules and the log. Every video run appends its ro
 6. `python3 build.py`, then `./render.sh videos/NNN-slug/project videos/NNN-slug/output/NNN-slug-v1.mp4`.
 7. Look at frames before calling it done: `npx hyperframes@0.9.45 snapshot --at t1,t2,...` inside the
    project and read the contact sheet. Fix overlaps, clipped text and anything off screen.
-8. Commit the video folder (script, marks, build.py, project, output mp4) and push.
+8. Make the thumbnail (see "Thumbnails" in CHANNEL.md) and add it to the dashboard.
+9. Commit the video folder (script, marks, build.py, project, output mp4, thumbnail) and push.
 
 ## The dashboard (keep it current after every run and every change)
 
@@ -91,4 +92,5 @@ Each daily run saves `posts/linkedin/YYYY-MM-DD/` (post.md, card.json, card.png)
 - `tests/` results of scheduled test runs (`runs.csv`)
 - `content/` dashboard data: videos.csv, linkedin.csv, changes.csv
 - `posts/linkedin/` daily AI news drafts and PAGE.md
-- `tools/linkedin_card.py`, `tools/fonts/` (Archivo Black, OFL) for the LinkedIn card
+- `tools/thumbnail.py` YouTube thumbnails; `tools/linkedin_card.py`, `tools/linkedin_preview.py` LinkedIn
+- `tools/fonts/` woff2 fonts (all OFL, from @fontsource) used by thumbnails and cards

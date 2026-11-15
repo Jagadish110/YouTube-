@@ -6,3 +6,6 @@ date,area,change,status
 2026-11-15,Videos,Every video gets its own colourful look (colours + fonts + layout) instead of one shared style,Done
 2026-11-15,Videos,Images added: drawn illustrations in every video (Blinkit sample: phone + scooter + dark store + shelves + map),Done
 2026-11-15,LinkedIn,Feed-style preview added before anything is scheduled (tools/linkedin_preview.py),Done
+2026-11-15,Videos,Each video uses its company's colours (Blinkit yellow + green; Coca-Cola red; Zomato red + Blinkit yellow),Done
+2026-11-15,Thumbnails,Thumbnail for every video (1280x720 in company colours) shown on the dashboard,Done
+2026-11-15,LinkedIn,On hold: company pages earn no direct money on LinkedIn; waiting for your decision,Pending
