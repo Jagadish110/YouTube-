@@ -31,24 +31,46 @@ pillars that rotate, the topic rules and the log. Every video run appends its ro
    project and read the contact sheet. Fix overlaps, clipped text and anything off screen.
 8. Commit the video folder (script, marks, build.py, project, output mp4) and push.
 
-## After every run: update the dashboard
+## The dashboard (keep it current after every run and every change)
 
-The dashboard "Video Pipeline Runs" is https://claude.ai/artifact/EQFeH3ubmGrYxGHoMNComG (a Claude
-Data dashboard). It reads one file: `tests/runs.csv`. Every run, pass or fail, does this:
+The dashboard "Content Pipeline" is https://claude.ai/artifact/EQFeH3ubmGrYxGHoMNComG (a Claude Data
+dashboard). It reads four CSV files from this repo. Each one is a dataset in the dashboard's store:
 
-1. Append one line to `tests/runs.csv` (keep the header). Columns:
-   `run_at_utc` (ISO, e.g. 2026-11-15T05:30:00Z), `kind` (`health` or `video`), `video` (folder slug),
-   `status` (`pass` or `fail`), `setup_s`, `voiceover_s`, `render_s`, `duration_s`, `size_kb`
-   (numbers, blank if the step never ran), `supabase` (`reachable`/`unreachable`/blank),
-   `commit` (short hash of the video commit), `notes` (short, no commas; put the exact error here on a fail).
-2. Commit and push it with the video.
-3. Upload the file to the dashboard: Artifact tool, `url` = the dashboard URL, `asset: true`,
-   `file_path` = tests/runs.csv. It returns a new `/_blob/<id>`.
-4. With the ArtifactData tool, `get` collection `datasets` doc `runs`, then `update` it (pass its
-   `version` as `if_version`) with `source.url` = the new `/_blob/<id>`,
-   `updated: {at: <now UTC ISO>, by: "Claude scheduled run"}`, `edit: {via: "claude", at: <now>}`.
-   Do not touch `files/index.html`. Then delete the previous blob with Artifact `action: "delete"`,
-   `url` = dashboard, `path` = the old blob id (only if no dataset still names it).
+| Repo file | Dataset id | Who updates it |
+|---|---|---|
+| `tests/runs.csv` | `runs` | every health check and video run (one row per run) |
+| `content/videos.csv` | `videos` | whenever a video changes status or a new week is planned |
+| `content/linkedin.csv` | `linkedin` | every LinkedIn drafting run, and when a post is approved/posted |
+| `content/changes.csv` | `changes` | every change Jagadish asks for (date, area, change, status) |
+
+Video status values, in order: `Script draft`, `Script approved`, `Preview ready`, `Preview approved`,
+`Rendered`, `Posted`. LinkedIn status values: `Draft`, `Approved`, `Posted`. Change status: `Done` or `Pending`.
+CSV notes fields must not contain commas.
+
+`tests/runs.csv` columns: `run_at_utc` (ISO, e.g. 2026-11-15T05:30:00Z), `kind` (`health` or `video`),
+`video` (folder slug), `status` (`pass`/`fail`), `setup_s`, `voiceover_s`, `render_s`, `duration_s`, `size_kb`
+(numbers, blank if the step never ran), `supabase` (`reachable`/`unreachable`/blank), `commit`, `notes`
+(short; the exact error on a fail).
+
+To push a changed CSV to the dashboard:
+1. Commit and push the CSV.
+2. Upload it: Artifact tool, `url` = the dashboard URL, `asset: true`, `file_path` = the CSV. It returns `/_blob/<id>`.
+3. ArtifactData: `get` collection `datasets`, doc = the dataset id, then `update` it with its `version` as
+   `if_version`: `source.url` = the new `/_blob/<id>`, `updated: {at: <now UTC ISO>, by: "Claude"}`,
+   `edit: {via: "claude", at: <now>}`. Do not touch `files/index.html`.
+4. Delete the old blob: Artifact `action: "delete"`, `url` = dashboard, `path` = old blob id (only if no dataset names it).
+
+## Changes Jagadish asks for
+
+When he asks for a change (voice, style, topic, schedule, LinkedIn tone), apply it in the repo so every future
+run follows it (CLAUDE.md, CHANNEL.md, posts/linkedin/PAGE.md, scripts or build.py), re-render the
+preview if it is affected, add a row to `content/changes.csv`, and push it to the dashboard.
+
+## LinkedIn: daily AI news page
+
+Rules, page copy and the card tool are in `posts/linkedin/PAGE.md` and `tools/linkedin_card.py`.
+Each daily run saves `posts/linkedin/YYYY-MM-DD/` (post.md, card.json, card.png), adds a `Draft` row to
+`content/linkedin.csv`, pushes it to the dashboard, and notifies Jagadish with the post text. Never post to LinkedIn.
 
 ## Rules
 
@@ -65,4 +87,7 @@ Data dashboard). It reads one file: `tests/runs.csv`. Every run, pass or fail, d
 
 - `tools/` scenelib.py (scene builder), voiceover.py, music_bed.py
 - `videos/001-zepto/` the first video: script, marks, build.py, project, output
-- `tests/` results of scheduled test runs
+- `tests/` results of scheduled test runs (`runs.csv`)
+- `content/` dashboard data: videos.csv, linkedin.csv, changes.csv
+- `posts/linkedin/` daily AI news drafts and PAGE.md
+- `tools/linkedin_card.py`, `tools/fonts/` (Archivo Black, OFL) for the LinkedIn card
