@@ -11,7 +11,7 @@ import numpy as np, soundfile as sf
 
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.join(HERE, "..", "..", "..", "..")
 M = json.load(open(os.path.join(HERE, "vo_marks.json")))
-TOTAL = round(M[-1]["end"] + 1.3, 2); FPS = 30
+TOTAL = round(M[-1]["end"] + 1.6, 2); FPS = 30
 G = "#76B900"
 
 
@@ -21,7 +21,7 @@ def font(name, fam, w):
 
 
 # ---- captions: chunks of about 3 words, timed by character share of each spoken line
-HI = {"quit.", "spy", "affair", "resigned.", "billion", "open."}
+HI = {"quit.", "spy", "affair", "resigned.", "billion", "open.", "denies", "without", "him?"}
 caps = []
 for m in M:
     w = m["text"].split(); n = sum(len(x) + 1 for x in w); t = m["start"]; d = m["end"] - m["start"]
@@ -99,6 +99,11 @@ html = f'''<!doctype html><html><head><meta charset="utf-8"><style>
  <div class="abs" id="pl" style="left:660px;top:580px;font:800 40px/1.25 Sora">−14% at<br>the open,<br>12 Nov</div>
  <div class="abs" id="cl" style="left:84px;top:1000px;font:800 38px Sora;color:{G};white-space:nowrap">Closed −4.3% that day</div>
 </div>
+<div class="sc" id="s5">
+ <div class="abs ctr an" id="e1" style="top:60px;font-size:150px">CAN NVIDIA<br>STAY NVIDIA</div>
+ <div class="abs ctr an" id="e2" style="top:410px;font-size:176px;white-space:nowrap;color:{G}">WITHOUT HIM?</div>
+ <div class="abs ctr" id="e3" style="top:670px;font:800 44px Sora">Comment your answer 👇</div>
+</div>
 <div id="at" style="position:absolute;left:0;top:1568px;width:1080px;text-align:center;font:800 44px Sora;color:{G};opacity:0">@trendsplain</div>
 <div id="caps">{cap_html}</div>
 <div id="src">Sources: Al Jazeera · Yahoo Finance</div>
@@ -107,9 +112,9 @@ html = f'''<!doctype html><html><head><meta charset="utf-8"><style>
 <script>
 const tl=gsap.timeline({{paused:true}}); window.tl=tl; const S={json.dumps(S)},E={json.dumps(E)},T={TOTAL};
 tl.fromTo("#grid",{{backgroundPosition:"0px 0px"}},{{backgroundPosition:"0px 400px",duration:T,ease:"none"}},0);
-[0,1,2,3,4].forEach(i=>{{const a=i?S[i]-.08:0,b=i<4?S[i+1]-.08:T;
+[0,1,2,3,4,5].forEach(i=>{{const a=i?S[i]-.08:0,b=i<5?S[i+1]-.08:T;
   tl.set("#s"+i,{{opacity:1}},a).fromTo("#s"+i,{{scale:1.12}},{{scale:1,duration:.28,ease:"power3.out"}},a);
-  if(i){{tl.fromTo("#flash",{{opacity:.5}},{{opacity:0,duration:.22,immediateRender:false}},a)}} if(i<4)tl.set("#s"+i,{{opacity:0}},b);}});
+  if(i){{tl.fromTo("#flash",{{opacity:.5}},{{opacity:0,duration:.22,immediateRender:false}},a)}} if(i<5)tl.set("#s"+i,{{opacity:0}},b);}});
 tl.from("#h1",{{y:-220,opacity:0,duration:.2,ease:"power4.out"}},.03).from("#h2",{{scale:3,opacity:0,duration:.18,ease:"power4.in"}},1.0)
   .fromTo("#s0",{{x:-14}},{{x:14,duration:.05,repeat:5,yoyo:true,ease:"none"}},1.18).set("#s0",{{x:0}},1.5).fromTo("#flash",{{opacity:.7}},{{opacity:0,duration:.3,immediateRender:false}},1.18);
 tl.from("#a1",{{y:-150,opacity:0,duration:.2}},S[1]+.05).from("#a2",{{scale:2.5,opacity:0,duration:.18,ease:"power4.in"}},S[1]+1.1).from("#a3",{{scale:0,duration:.25,ease:"back.out(2.5)"}},S[1]+.45).from("#a4",{{opacity:0,duration:.25}},S[1]+1.4);
@@ -118,8 +123,9 @@ tl.from("#d12",{{y:-300,opacity:0,duration:.25,ease:"back.out(1.6)"}},S[3]+.03).
   .fromTo("#s3",{{x:-12}},{{x:12,duration:.05,repeat:5,yoyo:true,ease:"none"}},E[3]-.54).set("#s3",{{x:0}},E[3]-.2);
 const o={{c:0}}; tl.to("#ln",{{strokeDashoffset:880,duration:.5,ease:"none"}},S[4]).to("#ln",{{strokeDashoffset:560,duration:.2,ease:"power2.in"}},S[4]+.5)
   .from("#bn",{{y:60,opacity:0,duration:.2}},S[4]+.4).to(o,{{c:546,duration:1.3,ease:"power2.out",onUpdate:()=>document.getElementById("n546").textContent=Math.round(o.c)}},S[4]+.4)
-  .from("#pl",{{opacity:0,duration:.25}},S[4]+2.4).to("#ln",{{strokeDashoffset:0,duration:.8,ease:"power1.out"}},E[4]-.2).from("#cl",{{opacity:0,x:40,duration:.25}},E[4]-.1)
-  .to("#at",{{opacity:1,duration:.25}},E[4]+.1);
+  .from("#pl",{{opacity:0,duration:.25}},S[4]+2.4).to("#ln",{{strokeDashoffset:0,duration:.8,ease:"power1.out"}},E[4]-.9).from("#cl",{{opacity:0,x:40,duration:.25}},E[4]-.7)
+  .from("#e1",{{y:-100,opacity:0,duration:.25}},S[5]+.1).from("#e2",{{scale:2.6,opacity:0,duration:.2,ease:"power4.in"}},E[5]-.9)
+  .fromTo("#flash",{{opacity:.6}},{{opacity:0,duration:.3,immediateRender:false}},E[5]-.7).from("#e3",{{y:40,opacity:0,duration:.3}},E[5]-.2).to("#at",{{opacity:1,duration:.25}},E[5]);
 {cap_js}
 </script></body></html>'''
 open(os.path.join(HERE, "reel.html"), "w").write(html)
@@ -162,12 +168,12 @@ for c in CUTS: put(whoosh(), c - 0.2, .7); put(hit(0.5), c - 0.06, .55)
 for a, _, _ in caps: put(tick(), a, .5)
 put(hit(0.8), S[1] + 1.28, .9); put(whoosh(), S[2] + .6); put(hit(0.9), E[3] - .54, 1.0)
 for i in range(17): put(tick(), S[4] + .4 + i * 0.075, .7)
-put(hit(0.9), S[4] + .7, .9)
+put(hit(0.9), S[4] + .7, .9); put(riser(0.7), E[5] - 1.4, .8); put(hit(1.0), E[5] - .7, 1.0)
 t = np.arange(n) / SR                                                    # dark pulse bed, 100 bpm
 bed = np.sin(2 * np.pi * 55 * t) * (0.5 + 0.5 * np.sin(2 * np.pi * (120 / 60) * t)) ** 4 * 0.10 + np.sin(2 * np.pi * 110.3 * t) * 0.02
 fade = np.minimum(1, np.minimum(t / 0.5, (t[-1] - t) / 0.6)); fx = np.tanh((fx * 0.55 + bed * fade) * 1.3) * 0.75
 sf.write(os.path.join(HERE, "output", "fx.wav"), np.stack([fx, fx], 1), SR)
-out = os.path.join(HERE, "output", "reel-nvidia-10s.mp4")
+out = os.path.join(HERE, "output", "reel-nvidia-short.mp4")
 subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", raw, "-i", os.path.join(HERE, "voiceover.wav"), "-i", os.path.join(HERE, "output", "fx.wav"),
                 "-filter_complex", "[1:a]aformat=sample_rates=48000:channel_layouts=stereo,volume=1.5,asplit=2[v][k];"
                 "[2:a][k]sidechaincompress=threshold=0.04:ratio=3:attack=10:release=220[f];[v][f]amix=inputs=2:duration=longest:normalize=0,alimiter=limit=0.9[a]",

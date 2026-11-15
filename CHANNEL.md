@@ -80,3 +80,11 @@ Jagadish supplies the song. Save it as `videos/NNN-slug/music/<file>` and run
 `python3 tools/add_music.py output/NNN-slug-v1.mp4 music/<file> output/NNN-slug-v1-music.mp4 0.16`.
 It loops/trims the song, fades it, and ducks it under the voice. Note the song's licence in sources.md.
 A copyrighted song without a licence will get a YouTube copyright claim; use royalty-free or licensed music.
+
+## Instagram Reels (@trendsplain)
+
+- Every Reel runs 15 to 45 seconds. Never shorter, never longer.
+- Built vertical (1080x1920) with `videos/reels/NNN-slug/build_reel.py` (see `videos/reels/001-nvidia-huang/ten/`), not cut from a YouTube video.
+- Own style, different from the Shorts: full-screen kinetic captions, bass hits / risers / ticks, colours of the subject.
+- No top label and no progress line. A small "@trendsplain" appears in the last second.
+- Every claim from an opened source. Reported but unproven claims are labelled "REPORTED · NOT PROVEN" on screen. No photos of real people, no logos.
