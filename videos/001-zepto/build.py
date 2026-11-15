@@ -517,3 +517,13 @@ s.E("bk", scooter_svg("endcard-sc", body="#0C831F", box="#F8CB46"), L(730, 760, 
 s.J(f'tl.fromTo("#endcard-bk",{{x:-700}},{{x:0,duration:0.9,ease:"power3.out"}},{s.P("I\'m doing")});')
 
 sl.write_project(os.path.join(HERE, "project"), S, first_host=("coldopen", "compositions/coldopen.html", sl.sstart(2)), audio_dur=232.87)
+
+# Sound cues for the hand-written cold open (its timeline lives in compositions/coldopen.html).
+import json as _json
+_cues = _json.load(open(os.path.join(HERE, "sfx_events.json")))
+_cues += [dict(t=0.3, kind="blur", n=10), dict(t=0.3, kind="pop", n=0), dict(t=1.05, kind="count", n=3, dur=1.2),
+          dict(t=2.7, kind="fade", n=26), dict(t=2.75, kind="pop", n=0), dict(t=3.75, kind="pop", n=6), dict(t=4.1, kind="stamp", n=0),
+          dict(t=4.8, kind="scene", n=0), dict(t=4.88, kind="fade", n=26), dict(t=6.45, kind="wipe", n=0), dict(t=6.85, kind="pop", n=5),
+          dict(t=6.95, kind="fade", n=5), dict(t=8.1, kind="scene", n=0), dict(t=8.2, kind="blur", n=20), dict(t=8.4, kind="wipe", n=0),
+          dict(t=8.9, kind="fade", n=40)]
+_json.dump(sorted(_cues, key=lambda e: e["t"]), open(os.path.join(HERE, "sfx_events.json"), "w"), indent=0)

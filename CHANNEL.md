@@ -63,7 +63,15 @@ what the numbers say and why it matters, without hype.
 | 003 Coca-Cola IPO | Coca-Cola red + white, Anton (planned) |
 | 004 Albinder Dhindsa | Zomato red + Blinkit yellow on charcoal, Sora (planned) |
 
-## Background music
+## Sound design (default) and background music
+
+Every video gets synthesised sound effects instead of a song: typing on text, rising ticks + ding on
+count-ups, pops on drawings, swooshes on wipes, thumps on stamps, whooshes between scenes.
+`python3 build.py` writes `sfx_events.json`; after rendering run
+`python3 tools/sfx.py sfx_events.json output/NNN-slug-v1.mp4 output/NNN-slug-v1-sfx.mp4`. The -sfx file is the one to post.
+For a hand-written composition, add its cues to sfx_events.json in build.py (see videos/001-zepto/build.py).
+
+Optional song (only if Jagadish asks):
 
 Jagadish supplies the song. Save it as `videos/NNN-slug/music/<file>` and run
 `python3 tools/add_music.py output/NNN-slug-v1.mp4 music/<file> output/NNN-slug-v1-music.mp4 0.16`.

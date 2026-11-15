@@ -29,7 +29,9 @@ pillars that rotate, the topic rules and the log. Every video run appends its ro
 6. `python3 build.py`, then `./render.sh videos/NNN-slug/project videos/NNN-slug/output/NNN-slug-v1.mp4`.
 7. Look at frames before calling it done: `npx hyperframes@0.9.45 snapshot --at t1,t2,...` inside the
    project and read the contact sheet. Fix overlaps, clipped text and anything off screen.
-8. Make the thumbnail (see "Thumbnails" in CHANNEL.md) and add it to the dashboard.
+8. Add sound effects: `python3 tools/sfx.py videos/NNN-slug/sfx_events.json output/NNN-slug-v1.mp4 output/NNN-slug-v1-sfx.mp4`
+   (see "Sound design" in CHANNEL.md). The -sfx file is the final video.
+   Then make the thumbnail (see "Thumbnails" in CHANNEL.md) and add it to the dashboard.
 9. Commit the video folder (script, marks, build.py, project, output mp4, thumbnail) and push.
 
 ## The dashboard (keep it current after every run and every change)
@@ -83,11 +85,11 @@ Each daily run saves `posts/linkedin/YYYY-MM-DD/` (post.md, card.json, card.png)
 - Set `HYPERFRAMES_NO_TELEMETRY=1`. Use HyperFrames CLI 0.9.45 and the installed Chrome
   (`HYPERFRAMES_BROWSER_PATH=/usr/bin/google-chrome`); the CLI cannot download its own.
 - A 4-minute video takes about 8 minutes to render. Run it in the background and wait.
-- Music: `python3 tools/music_bed.py <seconds> bed.wav` makes a plain placeholder; mix at volume 0.16 under the voice.
+- Sound: synthesised effects via tools/sfx.py on every video; no background song unless Jagadish asks (tools/add_music.py).
 
 ## Layout
 
-- `tools/` scenelib.py (scene builder), voiceover.py, music_bed.py
+- `tools/` scenelib.py (scene builder, also writes sfx_events.json), voiceover.py, sfx.py (sound effects), add_music.py, music_bed.py
 - `videos/001-zepto/` the first video: script, marks, build.py, project, output
 - `tests/` results of scheduled test runs (`runs.csv`)
 - `content/` dashboard data: videos.csv, linkedin.csv, changes.csv

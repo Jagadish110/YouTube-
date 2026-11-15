@@ -12,6 +12,6 @@ date,area,change,status
 2026-11-15,Thumbnails,Redesigned all thumbnails: light rays + outlined text + tilted stickers + bigger drawings; added Zepto thumbnail,Done
 2026-11-15,Videos,Zepto video redesigned in Zepto purple + pink with new fonts (v2),Done
 2026-11-15,Videos,Full Blinkit video built for Monday: 24 scenes in Blinkit colours with drawn images,Done
-2026-11-15,Music,Background song: tools/add_music.py ready (ducks under the voice); waiting for your song file,Pending
+2026-11-15,Music,No background song: replaced by sound effects (song tool kept in tools/add_music.py),Done
 2026-11-15,Videos,Zepto v3: drawn images added to every scene (teens + phone + house + shop + scooter + store + stopwatch + safe + scale and more),Done
-2026-11-15,Sound,Sound effects instead of a song: typing on text + ticks and ding on numbers + pops + whooshes (tools/sfx.py); 11.6 s sample waiting for your OK,Pending
+2026-11-15,Sound,Sound effects instead of a song: typing on text + ticks and ding on numbers + pops + whooshes (tools/sfx.py); approved and added to Blinkit + Zepto,Done

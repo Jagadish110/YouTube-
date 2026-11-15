@@ -82,7 +82,10 @@ def swoosh(dur=0.35, bright=0.0):
 
 
 def thump():
-    return tone(110, 45, 0.25, a=0.001, d=0.09) * 0.9 + swoosh(0.12) * 0.3
+    out = tone(110, 45, 0.25, a=0.001, d=0.09) * 0.9
+    sw = swoosh(0.12) * 0.3
+    out[:len(sw)] += sw
+    return out
 
 
 def shimmer(dur=0.6):
