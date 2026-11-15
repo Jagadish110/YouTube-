@@ -8,3 +8,8 @@
 - Not opened (blocked): CNBC, Axios, CNN.
 Left out on purpose: names of other people, the spy allegation as fact, anonymous-source quotes. Founded 1993 / CEO since then: general knowledge (33 years).
 No real photos or logos: drawn silhouette and Nvidia green only.
+
+## Final reel additions (same opened sources)
+- NYT October report and "US authorities reportedly concluded ... Chinese intelligence asset", China's "groundless accusation, slander, and a smear" quote: via Al Jazeera.
+- Reuters report (12 Nov) of a second relationship with an Nvidia employee: via Yahoo Finance / Moneywise.
+- No names of the other people; allegations shown as reported, not as fact.

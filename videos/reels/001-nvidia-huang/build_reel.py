@@ -22,7 +22,7 @@ def font(name, fam, w):
 
 # ---- captions: chunks of about 3 words, timed by character share of each spoken line
 HI = {"quit.", "thirty-three", "unfaithful", "investigation", "foreign", "intelligence", "no", "reason", "resigned.",
-      "fourteen", "percent", "billion", "without", "him?", "comments."}
+      "fourteen", "percent", "billion", "without", "him?", "comments.", "beijing.", "smear.", "employee.", "chinese", "secrets.", "second"}
 caps = []
 for m in M:
     w = m["text"].split(); n = sum(len(x) + 1 for x in w); t = m["start"]; d = m["end"] - m["start"]
@@ -65,14 +65,14 @@ html = f'''<!doctype html><html><head><meta charset="utf-8"><style>
 .card small{{display:block;font:800 30px Sora;letter-spacing:4px;color:{G};margin-bottom:10px}}
 .date{{position:absolute;left:340px;width:400px;border-radius:30px;overflow:hidden;background:#fff;color:#0a0d0a;text-align:center}}
 .date i{{display:block;font:800 44px Sora;font-style:normal;background:{G};padding:14px 0;letter-spacing:6px}} .date span{{display:block;font:400 230px/1.1 Anton;padding-bottom:14px}}
-#stamp{{position:absolute;left:150px;top:560px;width:780px;text-align:center;font:400 170px/1.15 Anton;color:#ff3b30;border:14px solid #ff3b30;border-radius:26px;transform:rotate(-9deg)}}
+#stamp{{position:absolute;left:150px;top:640px;width:780px;text-align:center;font:400 170px/1.15 Anton;color:#ff3b30;border:14px solid #ff3b30;border-radius:26px;transform:rotate(-9deg)}}
 #caps{{position:absolute;left:60px;top:1250px;width:960px;height:300px}}
 .cap{{position:absolute;left:0;top:0;width:960px;height:300px;display:flex;align-items:center;justify-content:center;text-align:center;opacity:0;font:400 104px/1.08 Anton;text-transform:uppercase;letter-spacing:1px;text-shadow:0 6px 0 #000,0 0 40px rgba(0,0,0,.9)}}
 .cap b{{font-weight:400;color:{G}}}
 #src{{position:absolute;left:60px;top:1568px;width:960px;text-align:center;font:600 28px Sora;color:#aab3aa}}
 </style></head><body>
 <div id="bg"></div><div id="grid"></div>
-<div id="bar"><div id="barf"></div></div><div id="tag">TRENDSPLAIN</div><div id="tag2">explained in 36 sec</div>
+<div id="bar"><div id="barf"></div></div><div id="tag">TRENDSPLAIN</div><div id="tag2">explained in 50 sec</div>
 
 <div class="sc" id="s0">
  <div class="abs" id="p0" style="left:240px;top:330px;opacity:.55">{person}</div>
@@ -87,20 +87,32 @@ html = f'''<!doctype html><html><head><meta charset="utf-8"><style>
  <div class="abs" id="since" style="left:620px;top:870px;font:600 36px Sora;color:#b9c2b9">Since 1993</div>
 </div>
 <div class="sc" id="s2">
- <div class="date" id="d8" style="top:10px"><i>NOVEMBER</i><span>8</span></div>
- <div class="card" id="k1" style="top:440px"><small>LETTER TO STAFF</small>Says he was not faithful to his wife</div>
- <div class="card" id="k2" style="top:680px"><small>SAME DAY · THE BOARD</small>Opens an investigation: was he the target of a foreign intelligence effort?</div>
+ <div class="abs an" id="r0" style="left:90px;top:10px;font-size:170px">THE <span style="color:{G}">REPORT</span></div>
+ <div class="abs" id="r1" style="left:94px;top:210px;font:800 34px Sora;letter-spacing:4px;color:#b9c2b9">OCTOBER · THE NEW YORK TIMES</div>
+ <div class="card" id="r2" style="top:310px"><small>REPORTED</small>He was close to an executive at an Nvidia partner company</div>
+ <div class="card" id="r3" style="top:590px;border-color:#ff3b30"><small style="color:#ff3b30">US AUTHORITIES · REPORTEDLY</small>Concluded she was a Chinese intelligence asset</div>
 </div>
 <div class="sc" id="s3">
+ <div class="card" id="x1" style="top:20px"><small>CHINA'S FOREIGN MINISTRY</small>“A groundless accusation, slander, and a smear”</div>
+ <div class="abs ctr an" id="x2" style="top:380px;font-size:230px;color:{G}">NO FINDING</div>
+ <div class="abs ctr" id="x3" style="top:660px;font:800 50px/1.25 Sora">that he passed on<br>any secrets</div>
+</div>
+<div class="sc" id="s4">
+ <div class="date" id="d8" style="top:10px"><i>NOVEMBER</i><span>8</span></div>
+ <div class="card" id="k1" style="top:440px"><small>LETTER TO STAFF</small>Says he was not faithful to his wife</div>
+ <div class="card" id="k2" style="top:680px"><small>SAME DAY · THE BOARD</small>Opens an investigation</div>
+</div>
+<div class="sc" id="s5">
  <div class="abs an" id="q0" style="left:90px;top:20px;font-size:260px;color:{G};line-height:.8">“</div>
  <div class="abs an" id="q1" style="left:90px;top:210px;width:900px;font-size:112px;line-height:1.08">No reason to believe <span style="color:{G}">Nvidia secrets</span> were compromised</div>
  <div class="abs" id="q2" style="left:90px;top:800px;font:800 38px Sora;letter-spacing:4px;color:#b9c2b9">— NVIDIA'S BOARD</div>
 </div>
-<div class="sc" id="s4">
- <div class="date" id="d12" style="top:10px"><i>NOVEMBER</i><span>12</span></div>
+<div class="sc" id="s6">
+ <div class="card" id="rr" style="top:0px"><small>THEN · REUTERS REPORT</small>A second relationship, with an Nvidia employee</div>
+ <div class="date" id="d12" style="top:270px;transform:scale(.8);transform-origin:50% 0"><i>NOVEMBER</i><span>12</span></div>
  <div id="stamp">RESIGNED</div>
 </div>
-<div class="sc" id="s5">
+<div class="sc" id="s7">
  <svg class="abs" style="left:60px;top:0" width="960" height="560" viewBox="0 0 960 560">
   <path d="M0 520 H960" stroke="rgba(255,255,255,.25)" stroke-width="3"/>
   <path id="ln" d="M20 150 L150 120 L280 160 L400 110 L500 130 L520 440 L640 380 L760 300 L940 215" fill="none" stroke="#ff3b30" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1900" stroke-dashoffset="1900"/>
@@ -111,7 +123,7 @@ html = f'''<!doctype html><html><head><meta charset="utf-8"><style>
  <div class="abs an" id="bn" style="left:80px;top:810px;font-size:120px">≈ $<span id="n546">0</span> BILLION</div>
  <div class="abs" id="cl" style="left:84px;top:945px;font:800 40px Sora;color:{G}">closed −4.3%</div>
 </div>
-<div class="sc" id="s6">
+<div class="sc" id="s8">
  <div class="abs" id="p6" style="display:none">{person}</div>
  <div class="abs ctr an" id="e1" style="top:40px;font-size:150px">CAN NVIDIA<br>STAY NVIDIA</div>
  <div class="abs ctr an" id="e2" style="top:390px;font-size:176px;white-space:nowrap;color:{G}">WITHOUT HIM?</div>
@@ -125,9 +137,9 @@ html = f'''<!doctype html><html><head><meta charset="utf-8"><style>
 <script>
 const tl=gsap.timeline({{paused:true}}); window.tl=tl; const S={json.dumps(S)},E={json.dumps(E)},T={TOTAL};
 tl.to("#barf",{{width:960,duration:T,ease:"none"}},0).fromTo("#grid",{{backgroundPosition:"0px 0px"}},{{backgroundPosition:"0px 900px",duration:T,ease:"none"}},0);
-[0,1,2,3,4,5,6].forEach(i=>{{const a=i?S[i]-.08:0,b=i<6?S[i+1]-.08:T;
+[0,1,2,3,4,5,6,7,8].forEach(i=>{{const a=i?S[i]-.08:0,b=i<8?S[i+1]-.08:T;
   tl.set("#s"+i,{{opacity:1}},a).fromTo("#s"+i,{{scale:1.12}},{{scale:1,duration:.28,ease:"power3.out"}},a);
-  if(i){{tl.fromTo("#flash",{{opacity:.5}},{{opacity:0,duration:.22,immediateRender:false}},a)}} if(i<6)tl.set("#s"+i,{{opacity:0}},b);}});
+  if(i){{tl.fromTo("#flash",{{opacity:.5}},{{opacity:0,duration:.22,immediateRender:false}},a)}} if(i<8)tl.set("#s"+i,{{opacity:0}},b);}});
 // 0 hook
 tl.from("#h1",{{y:-220,opacity:0,duration:.25,ease:"power4.out"}},.05).from("#h2",{{scale:3,opacity:0,duration:.22,ease:"power4.in"}},2.55)
   .fromTo("#s0",{{x:-14}},{{x:14,duration:.05,repeat:7,yoyo:true,ease:"none"}},2.77).set("#s0",{{x:0}},3.2).fromTo("#flash",{{opacity:.7}},{{opacity:0,duration:.3,immediateRender:false}},2.77);
@@ -136,23 +148,26 @@ tl.from("#p1",{{x:-300,opacity:0,duration:.4,ease:"power3.out"}},S[1]).from("#ch
 const o={{a:0,b:0,c:0}}; tl.to(o,{{a:33,duration:1.3,ease:"power2.out",onUpdate:()=>document.getElementById("n33").textContent=Math.round(o.a)}},S[1]+.9)
   .from("#yrs",{{x:80,opacity:0,duration:.25}},S[1]+1.5).from("#since",{{opacity:0,duration:.3}},S[1]+2.0);
 // 2 nov 8
-tl.from("#d8",{{y:-300,opacity:0,duration:.3,ease:"back.out(1.6)"}},S[2]+.05).from("#k1",{{x:-1000,duration:.35,ease:"power3.out"}},S[2]+1.3)
-  .from("#k2",{{x:1000,duration:.35,ease:"power3.out"}},S[2]+4.2);
+tl.from("#d8",{{y:-300,opacity:0,duration:.3,ease:"back.out(1.6)"}},S[4]+.05).from("#k1",{{x:-1000,duration:.35,ease:"power3.out"}},S[4]+1.3)
+  .from("#k2",{{x:1000,duration:.35,ease:"power3.out"}},S[4]+3.9);
 // 3 quote
-tl.from("#q0",{{scale:0,duration:.25,ease:"back.out(3)"}},S[3]).from("#q1",{{y:60,opacity:0,duration:.35}},S[3]+.9).from("#q2",{{opacity:0,duration:.3}},S[3]+.3);
-// 4 resigned
-tl.from("#d12",{{y:-300,opacity:0,duration:.25,ease:"back.out(1.6)"}},S[4]).from("#stamp",{{scale:4,opacity:0,duration:.16,ease:"power4.in"}},S[4]+1.15)
-  .fromTo("#s4",{{x:-12}},{{x:12,duration:.05,repeat:5,yoyo:true,ease:"none"}},S[4]+1.31).set("#s4",{{x:0}},S[4]+1.65);
+tl.from("#q0",{{scale:0,duration:.25,ease:"back.out(3)"}},S[5]).from("#q1",{{y:60,opacity:0,duration:.35}},S[5]+.9).from("#q2",{{opacity:0,duration:.3}},S[5]+.3);
+// resigned
+tl.from("#rr",{{x:-1000,duration:.35,ease:"power3.out"}},S[6]+.1).from("#d12",{{y:-200,opacity:0,duration:.25}},E[6]-1.9).from("#stamp",{{scale:4,opacity:0,duration:.16,ease:"power4.in"}},E[6]-.75)
+  .fromTo("#s6",{{x:-12}},{{x:12,duration:.05,repeat:5,yoyo:true,ease:"none"}},E[6]-.59).set("#s6",{{x:0}},E[6]-.25);
+// report + china
+tl.from("#r0",{{y:-200,opacity:0,duration:.3,ease:"power4.out"}},S[2]).from("#r1",{{opacity:0,duration:.3}},S[2]+.5).from("#r2",{{x:-1000,duration:.35,ease:"power3.out"}},S[2]+2.2).from("#r3",{{x:1000,duration:.35,ease:"power3.out"}},S[2]+5.4)
+  .from("#x1",{{y:-300,opacity:0,duration:.3}},S[3]+.1).from("#x2",{{scale:3,opacity:0,duration:.18,ease:"power4.in"}},S[3]+2.4).from("#x3",{{y:40,opacity:0,duration:.3}},S[3]+3.0);
 // 5 stock
-tl.to("#ln",{{strokeDashoffset:880,duration:.9,ease:"none"}},S[5]).to("#ln",{{strokeDashoffset:560,duration:.25,ease:"power2.in"}},S[5]+1.0)
-  .set("#dot",{{opacity:1}},S[5]+1.25).from("#pc",{{scale:.4,opacity:0,duration:.2}},S[5]+1.0)
-  .to(o,{{b:14,duration:1.2,ease:"power2.out",onUpdate:()=>document.getElementById("n14").textContent=Math.round(o.b)}},S[5]+1.0)
-  .from("#pl",{{opacity:0,duration:.3}},S[5]+1.8).from("#bn",{{y:60,opacity:0,duration:.25}},S[5]+3.3)
-  .to(o,{{c:546,duration:1.4,ease:"power2.out",onUpdate:()=>document.getElementById("n546").textContent=Math.round(o.c)}},S[5]+3.3)
-  .to("#ln",{{strokeDashoffset:0,duration:1.0,ease:"power1.out"}},S[5]+5.9).from("#cl",{{opacity:0,x:40,duration:.3}},S[5]+6.2);
+tl.to("#ln",{{strokeDashoffset:880,duration:.9,ease:"none"}},S[7]).to("#ln",{{strokeDashoffset:560,duration:.25,ease:"power2.in"}},S[7]+1.0)
+  .set("#dot",{{opacity:1}},S[7]+1.25).from("#pc",{{scale:.4,opacity:0,duration:.2}},S[7]+1.0)
+  .to(o,{{b:14,duration:1.2,ease:"power2.out",onUpdate:()=>document.getElementById("n14").textContent=Math.round(o.b)}},S[7]+1.0)
+  .from("#pl",{{opacity:0,duration:.3}},S[7]+1.8).from("#bn",{{y:60,opacity:0,duration:.25}},S[7]+3.3)
+  .to(o,{{c:546,duration:1.4,ease:"power2.out",onUpdate:()=>document.getElementById("n546").textContent=Math.round(o.c)}},S[7]+3.3)
+  .to("#ln",{{strokeDashoffset:0,duration:1.0,ease:"power1.out"}},S[7]+5.9).from("#cl",{{opacity:0,x:40,duration:.3}},S[7]+6.2);
 // 6 question
-tl.from("#e1",{{y:-100,opacity:0,duration:.3}},S[6]+1.5).from("#e2",{{scale:2.6,opacity:0,duration:.2,ease:"power4.in"}},S[6]+2.75)
-  .fromTo("#flash",{{opacity:.6}},{{opacity:0,duration:.3,immediateRender:false}},S[6]+2.95).from("#e3",{{y:40,opacity:0,duration:.3}},S[6]+3.6);
+tl.from("#e1",{{y:-100,opacity:0,duration:.3}},S[8]+1.5).from("#e2",{{scale:2.6,opacity:0,duration:.2,ease:"power4.in"}},S[8]+2.75)
+  .fromTo("#flash",{{opacity:.6}},{{opacity:0,duration:.3,immediateRender:false}},S[8]+2.95).from("#e3",{{y:40,opacity:0,duration:.3}},S[8]+3.6);
 {cap_js}
 </script></body></html>'''
 open(os.path.join(HERE, "reel.html"), "w").write(html)
@@ -193,15 +208,15 @@ def whoosh(d=0.3):
 put(hit(), 0.05, .8); put(riser(0.7), 1.95, .9); put(hit(0.9), 2.77, 1.0)
 for c in CUTS: put(whoosh(), c - 0.2, .7); put(hit(0.5), c - 0.06, .55)
 for a, _, _ in caps: put(tick(), a, .5)
-put(whoosh(), S[2] + 1.3); put(whoosh(), S[2] + 4.2); put(riser(0.6), S[4] + 0.6, .8); put(hit(0.9), S[4] + 1.31, 1.0)
-for i in range(16): put(tick(), S[5] + 1.0 + i * 0.075, .7)
-for i in range(18): put(tick(), S[5] + 3.3 + i * 0.075, .7)
-put(hit(0.8), S[5] + 1.25, .9); put(riser(0.9), S[6] + 1.9, .8); put(hit(1.0), S[6] + 2.95, 1.0)
+put(whoosh(), S[4] + 1.3); put(whoosh(), S[4] + 3.9); put(whoosh(), S[2] + 2.2); put(whoosh(), S[2] + 5.4); put(hit(0.8), S[3] + 2.55, .9); put(riser(0.6), E[6] - 1.35, .8); put(hit(0.9), E[6] - .59, 1.0)
+for i in range(16): put(tick(), S[7] + 1.0 + i * 0.075, .7)
+for i in range(18): put(tick(), S[7] + 3.3 + i * 0.075, .7)
+put(hit(0.8), S[7] + 1.25, .9); put(riser(0.9), S[8] + 1.9, .8); put(hit(1.0), S[8] + 2.95, 1.0)
 t = np.arange(n) / SR                                                    # dark pulse bed, 100 bpm
 bed = np.sin(2 * np.pi * 55 * t) * (0.5 + 0.5 * np.sin(2 * np.pi * (100 / 60) * t)) ** 4 * 0.10 + np.sin(2 * np.pi * 110.3 * t) * 0.02
 fade = np.minimum(1, np.minimum(t / 0.5, (t[-1] - t) / 1.2)); fx = np.tanh((fx * 0.55 + bed * fade) * 1.3) * 0.75
 sf.write(os.path.join(HERE, "output", "fx.wav"), np.stack([fx, fx], 1), SR)
-out = os.path.join(HERE, "output", "reel-nvidia-preview.mp4")
+out = os.path.join(HERE, "output", "reel-nvidia-final.mp4")
 subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", raw, "-i", os.path.join(HERE, "voiceover.wav"), "-i", os.path.join(HERE, "output", "fx.wav"),
                 "-filter_complex", "[1:a]aformat=sample_rates=48000:channel_layouts=stereo,volume=1.5,asplit=2[v][k];"
                 "[2:a][k]sidechaincompress=threshold=0.04:ratio=3:attack=10:release=220[f];[v][f]amix=inputs=2:duration=longest:normalize=0,alimiter=limit=0.9[a]",
