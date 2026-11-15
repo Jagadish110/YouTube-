@@ -1,0 +1,2 @@
+Vendored from https://github.com/Jakeschincariol/youtube-agent-skill (commit a2feb21, MIT).
+Reviewed 2026-11-15: text skills plus six local Python tools; no network access, no system commands.

@@ -1,0 +1,11 @@
+{
+  "video": "../../../output/002-blinkit-v1-sfx.mp4",
+  "captions": "../../captions.srt",
+  "start": 106.08, "end": 129.27, "replace_until": 115.26,
+  "hook": "You probably ordered from Blinkit this week. A year ago, it was losing one hundred and fifty-six crore rupees a quarter. Now it makes one hundred and eighty-four crore. Here is why.",
+  "hook_captions": [[0.0, 3.0, "You probably ordered from Blinkit this week."], [3.0, 6.6, "A year ago, it was losing ₹156 crore a quarter."], [6.6, 8.4, "Now it makes ₹184 crore."], [8.4, 9.18, "Here is why."]],
+  "kicker": "BLINKIT · EXPLAINED", "title": "HOW BLINKIT\\NTURNED A PROFIT",
+  "flash": "−₹156 CR → +₹184 CR",
+  "source": "Source: Eternal results via Indian Startup News",
+  "bg": "F8CB46", "ink": "0F2A1A", "accent": "0C831F"
+}

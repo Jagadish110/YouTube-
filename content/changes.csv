@@ -15,3 +15,6 @@ date,area,change,status
 2026-11-15,Music,No background song: replaced by sound effects (song tool kept in tools/add_music.py),Done
 2026-11-15,Videos,Zepto v3: drawn images added to every scene (teens + phone + house + shop + scooter + store + stopwatch + safe + scale and more),Done
 2026-11-15,Sound,Sound effects instead of a song: typing on text + ticks and ding on numbers + pops + whooshes (tools/sfx.py); approved and added to Blinkit + Zepto,Done
+2026-11-15,Skills,Added the YouTube agent skills (MIT) for everything after the video: packaging + SEO + chapters + Shorts + viral research; videos still made with our own pipeline,Done
+2026-11-15,Thumbnails,Blinkit thumbnail v2 says FINALLY PROFITABLE? so it no longer repeats the title (yt-package rule),Done
+2026-11-15,Shorts,First Short made from Blinkit (23 s vertical with new hook + captions); tools/make_short.py for more,Done

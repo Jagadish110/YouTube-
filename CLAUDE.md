@@ -34,6 +34,21 @@ pillars that rotate, the topic rules and the log. Every video run appends its ro
    Then make the thumbnail (see "Thumbnails" in CHANNEL.md) and add it to the dashboard.
 9. Commit the video folder (script, marks, build.py, project, output mp4, thumbnail) and push.
 
+## Two toolkits: who does what
+
+- **Making the video** (script, voiceover, scenes, drawings, sound effects, render, thumbnail art): ONLY this repo's
+  own pipeline above (tools/scenelib.py, voiceover.py, sfx.py, thumbnail.py), as used for 001 Zepto and 002 Blinkit.
+- **Everything after the video is made** uses the YouTube agent skills in `.claude/skills/yt-*` (MIT, vendored from
+  github.com/Jakeschincariol/youtube-agent-skill; voice profile in `.claude/youtube/voice.md`, copied by setup.sh):
+  - `/yt-package` title + thumbnail check (thumbnail words must differ from the title, 3 words max)
+  - `/yt-seo` description, tags, 3 target queries · `/yt-chapters` chapters from `publish/captions.srt`
+  - `/yt-shorts` picks Short spans and new first lines; render them with `tools/make_short.py short.json`
+  - `/yt-viral` niche research · `/yt-plan` weekly plan · `/yt-comment` replies · `/yt-retention` retention exports · `/yt-audit` channel audit
+  - `/yt-script` hook scoring only (`hookscore.py`): score the opening line of new scripts, but keep this channel's voice and research rules
+- After each video: `python3 tools/marks_to_srt.py videos/NNN-slug/vo_marks.json videos/NNN-slug/publish/captions.srt`,
+  then write `videos/NNN-slug/publish/PUBLISH.md` (titles, description, tags, chapters, Shorts table) and make Short #1.
+  See `videos/002-blinkit/publish/` for the reference pack.
+
 ## The dashboard (keep it current after every run and every change)
 
 The dashboard "Content Pipeline" is https://claude.ai/artifact/EQFeH3ubmGrYxGHoMNComG (a Claude Data
@@ -94,5 +109,7 @@ Each daily run saves `posts/linkedin/YYYY-MM-DD/` (post.md, card.json, card.png)
 - `tests/` results of scheduled test runs (`runs.csv`)
 - `content/` dashboard data: videos.csv, linkedin.csv, changes.csv
 - `posts/linkedin/` daily AI news drafts and PAGE.md
+- `tools/make_short.py` vertical Shorts from a long video; `tools/marks_to_srt.py` captions
+- `.claude/skills/yt-*` YouTube agent skills (packaging, SEO, chapters, Shorts, viral, plan, comments, retention, audit)
 - `tools/thumbnail.py` YouTube thumbnails; `tools/linkedin_card.py`, `tools/linkedin_preview.py` LinkedIn
 - `tools/fonts/` woff2 fonts (all OFL, from @fontsource) used by thumbnails and cards

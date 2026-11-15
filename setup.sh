@@ -10,4 +10,5 @@ done
 which ffmpeg >/dev/null || { echo "ffmpeg missing"; exit 1; }
 export HYPERFRAMES_NO_TELEMETRY=1 DO_NOT_TRACK=1
 npx -y hyperframes@0.9.45 --version >/dev/null 2>&1 || true
+mkdir -p ~/.claude/youtube && cp .claude/youtube/voice.md ~/.claude/youtube/voice.md  # voice profile for the yt-* skills
 echo "setup ok"
