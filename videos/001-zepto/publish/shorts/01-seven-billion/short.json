@@ -1,0 +1,37 @@
+{
+ "video": "../../../output/zepto-full-v3-sfx.mp4",
+ "captions": "../../captions.srt",
+ "start": 92.4,
+ "end": 119.24,
+ "replace_until": 98.2,
+ "hook": "Two teenagers. A failed grocery app. Now it is worth seven billion dollars. Here is how the money came in.",
+ "hook_captions": [
+  [
+   0,
+   1.3,
+   "Two teenagers."
+  ],
+  [
+   1.3,
+   2.6,
+   "A failed grocery app."
+  ],
+  [
+   2.6,
+   4.4,
+   "Now it is worth seven billion dollars."
+  ],
+  [
+   4.4,
+   6.0,
+   "Here is how the money came in."
+  ]
+ ],
+ "kicker": "ZEPTO · EXPLAINED",
+ "title": "HOW ZEPTO HIT\\N$7 BILLION",
+ "flash": "$7 BILLION",
+ "source": "Sources: Money9 · Business Standard",
+ "bg": "FF4F9A",
+ "ink": "2E0854",
+ "accent": "2E0854"
+}

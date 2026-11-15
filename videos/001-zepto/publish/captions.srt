@@ -1,0 +1,295 @@
+1
+00:00:00,000 --> 00:00:04,492
+Two teenagers built a seven billion dollar company out of a grocery app that failed.
+
+2
+00:00:04,492 --> 00:00:06,844
+Then the stock market looked at it and said:
+
+3
+00:00:06,844 --> 00:00:07,700
+four and a half.
+
+4
+00:00:08,150 --> 00:00:12,740
+This is how Zepto got so big, so fast, and why it still isn't on the stock market.
+
+5
+00:00:13,190 --> 00:00:14,256
+It starts in 2020.
+
+6
+00:00:14,256 --> 00:00:18,755
+Aadit Palicha and Kaivalya Vohra are childhood friends who grew up in Dubai.
+
+7
+00:00:18,755 --> 00:00:22,130
+They've just got into Stanford to study computer science.
+
+8
+00:00:22,580 --> 00:00:23,684
+Then the pandemic hits.
+
+9
+00:00:23,684 --> 00:00:27,140
+They're stuck at home in Mumbai, and they can't get groceries delivered.
+
+10
+00:00:27,590 --> 00:00:30,030
+So, still teenagers, they build Kirana Kart.
+
+11
+00:00:30,030 --> 00:00:31,084
+The idea is simple.
+
+12
+00:00:31,084 --> 00:00:34,910
+Partner with local kirana shops and deliver their stock to your door.
+
+13
+00:00:35,360 --> 00:00:36,346
+It doesn't take off.
+
+14
+00:00:36,346 --> 00:00:42,210
+Local shops run out of stock, they don't track inventory, and every order depends on a shopkeeper picking up the phone.
+
+15
+00:00:42,660 --> 00:00:44,985
+But the two of them don't go back to Stanford.
+
+16
+00:00:44,985 --> 00:00:48,270
+An investor called Contrary offers to back them if they drop out.
+
+17
+00:00:48,270 --> 00:00:49,230
+They take the deal.
+
+18
+00:00:49,680 --> 00:00:53,176
+In 2021 they shut Kirana Kart down and start again.
+
+19
+00:00:53,176 --> 00:00:53,793
+New name:
+
+20
+00:00:53,793 --> 00:00:54,204
+Zepto.
+
+21
+00:00:54,204 --> 00:00:55,026
+New promise:
+
+22
+00:00:55,026 --> 00:00:56,740
+groceries in ten minutes.
+
+23
+00:00:57,190 --> 00:00:58,095
+Here's the trick.
+
+24
+00:00:58,095 --> 00:00:59,374
+Zepto doesn't use shops.
+
+25
+00:00:59,374 --> 00:01:04,114
+It builds its own small warehouses, called dark stores, packed into dense neighbourhoods.
+
+26
+00:01:04,114 --> 00:01:05,233
+No customers walk in.
+
+27
+00:01:05,233 --> 00:01:07,150
+They only exist to pack orders fast.
+
+28
+00:01:07,600 --> 00:01:12,045
+Each dark store covers a small radius, so the rider only has a short distance to go.
+
+29
+00:01:12,045 --> 00:01:18,448
+Aadit Palicha once pointed out that covering 1.8 kilometres in ten minutes means riding under fifteen kilometres an hour.
+
+30
+00:01:18,448 --> 00:01:22,470
+The speed comes from where the store sits, not from how fast the rider goes.
+
+31
+00:01:22,920 --> 00:01:24,842
+And the stock is narrow on purpose.
+
+32
+00:01:24,842 --> 00:01:28,577
+Not everything, just the few thousand items people actually reorder.
+
+33
+00:01:28,577 --> 00:01:30,170
+Milk, bread, chips, chargers.
+
+34
+00:01:30,620 --> 00:01:31,862
+Investors loved it.
+
+35
+00:01:31,862 --> 00:01:38,200
+Zepto was backed by Y Combinator, and by August 2023 it became India's first unicorn of the year.
+
+36
+00:01:38,650 --> 00:01:40,297
+Then the money came in waves.
+
+37
+00:01:40,297 --> 00:01:45,465
+In 2024, six hundred and sixty-five million dollars at a three point six billion valuation.
+
+38
+00:01:45,465 --> 00:01:49,610
+A few months later, three hundred and fifty million more at five billion.
+
+39
+00:01:50,060 --> 00:01:56,525
+In October 2025, a US pension fund called Calpers led a four hundred and fifty million dollar round.
+
+40
+00:01:56,525 --> 00:01:59,240
+Zepto was now worth seven billion dollars.
+
+41
+00:01:59,690 --> 00:02:01,436
+On paper, the growth was insane.
+
+42
+00:02:01,436 --> 00:02:06,782
+In the year ending March 2026, Zepto made twenty-two thousand six hundred crore rupees in revenue.
+
+43
+00:02:06,782 --> 00:02:09,510
+It ran eleven hundred and thirty-nine dark stores.
+
+44
+00:02:09,510 --> 00:02:13,110
+Nearly forty-eight million people ordered at least once that year.
+
+45
+00:02:13,560 --> 00:02:17,570
+In the last quarter of that year, it was handling over twenty-three lakh orders a day.
+
+46
+00:02:18,020 --> 00:02:19,720
+So why isn't it public?
+
+47
+00:02:20,170 --> 00:02:21,713
+Because revenue isn't profit.
+
+48
+00:02:21,713 --> 00:02:23,469
+Ten minute delivery is expensive.
+
+49
+00:02:23,469 --> 00:02:30,600
+You pay rent for stores in prime locations, you pay riders, and you pay discounts to win customers from Blinkit, Instamart and Amazon.
+
+50
+00:02:31,050 --> 00:02:36,051
+In the year before, Zepto's losses widened to over three thousand three hundred crore rupees.
+
+51
+00:02:36,051 --> 00:02:37,880
+It was burning cash every quarter.
+
+52
+00:02:38,330 --> 00:02:45,031
+Zepto filed for its IPO in December 2025 and got approval from Sebi in May 2026.
+
+53
+00:02:45,031 --> 00:02:47,460
+The plan was to list in July.
+
+54
+00:02:47,910 --> 00:02:49,949
+But Indian fund managers pushed back.
+
+55
+00:02:49,949 --> 00:02:51,658
+Zepto only does quick commerce.
+
+56
+00:02:51,658 --> 00:02:57,060
+It doesn't have a food delivery business like Swiggy or Zomato's parent, Eternal, to fall back on.
+
+57
+00:02:57,510 --> 00:02:59,799
+So in July 2026, Zepto pulled the brakes.
+
+58
+00:02:59,799 --> 00:03:07,057
+Instead of listing, it raised around a thousand crore rupees privately, at a valuation of roughly four and a half billion dollars.
+
+59
+00:03:07,057 --> 00:03:09,290
+That's about a third less than its peak.
+
+60
+00:03:09,740 --> 00:03:12,620
+The IPO was pushed back by two to three quarters.
+
+61
+00:03:13,070 --> 00:03:14,790
+Here's the part most people miss.
+
+62
+00:03:14,790 --> 00:03:15,832
+Zepto isn't failing.
+
+63
+00:03:15,832 --> 00:03:20,940
+Its cash burn came down, it says it has no debt, and it still has thousands of crores in the bank.
+
+64
+00:03:21,390 --> 00:03:24,223
+What happened is the gap between two kinds of money.
+
+65
+00:03:24,223 --> 00:03:27,164
+Private investors pay for what a company could become.
+
+66
+00:03:27,164 --> 00:03:29,180
+Public markets pay for what it earns.
+
+67
+00:03:29,630 --> 00:03:32,634
+Zepto proved that Indians want groceries in ten minutes.
+
+68
+00:03:32,634 --> 00:03:35,960
+What it still has to prove is that ten minutes can make money.
+
+69
+00:03:36,410 --> 00:03:39,850
+And the two people who have to prove it are still in their mid-twenties.
+
+70
+00:03:40,300 --> 00:03:44,219
+If Zepto lists in 2027, this might be the cheapest it ever looks.
+
+71
+00:03:44,219 --> 00:03:45,546
+Or the most expensive.
+
+72
+00:03:45,546 --> 00:03:48,380
+Tell me in the comments which one you'd bet on.
+
+73
+00:03:48,830 --> 00:03:51,223
+And if you want the next breakdown, subscribe.
+
+74
+00:03:51,223 --> 00:03:52,420
+I'm doing Blinkit next.
