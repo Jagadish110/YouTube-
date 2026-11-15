@@ -1,5 +1,8 @@
 # Channel niche and topic plan
 
+**Channel name: Trendsplain** (@Trendsplain) — "Whatever's trending, explained." Branding and setup kit in `channel/`.
+The channel will widen to any viral topic over time; Indian business stays the core for now.
+
 **Niche:** Indian business, explained. One knowledgeable channel that makes Indian companies,
 founders and markets easy to understand, with real numbers and sources on screen.
 

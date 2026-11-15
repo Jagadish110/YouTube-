@@ -18,3 +18,4 @@ date,area,change,status
 2026-11-15,Skills,Added the YouTube agent skills (MIT) for everything after the video: packaging + SEO + chapters + Shorts + viral research; videos still made with our own pipeline,Done
 2026-11-15,Thumbnails,Blinkit thumbnail v2 says FINALLY PROFITABLE? so it no longer repeats the title (yt-package rule),Done
 2026-11-15,Shorts,First Short made from Blinkit (23 s vertical with new hook + captions); tools/make_short.py for more,Done
+2026-11-15,Channel,Channel name chosen: Trendsplain (@Trendsplain) with profile picture + banner + description in channel/,Done

@@ -1,4 +1,4 @@
-# voice.md — Jagadish's faceless channel (Indian business, explained)
+# voice.md — Trendsplain (Jagadish's faceless channel: whatever's trending, explained; core: Indian business)
 
 Inferred from the scripts of videos 001 (Zepto), 002 (Blinkit) and 003 (Coca-Cola IPO). setup.sh copies
 this file to ~/.claude/youtube/voice.md so the yt-* skills find it. Edit this copy in the repo, not that one.

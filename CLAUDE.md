@@ -1,6 +1,6 @@
 # Faceless YouTube channel: video pipeline
 
-This repo is the saved pipeline for Jagadish's faceless YouTube channel (Indian business,
+This repo is the saved pipeline for Jagadish's faceless YouTube channel **Trendsplain** (@Trendsplain; Indian business,
 explained: startups, business models, IPOs and founders; see CHANNEL.md). A session that opens this repo starts with no memory of earlier
 work, so everything needed is written here.
 
@@ -106,6 +106,7 @@ Each daily run saves `posts/linkedin/YYYY-MM-DD/` (post.md, card.json, card.png)
 
 - `tools/` scenelib.py (scene builder, also writes sfx_events.json), voiceover.py, sfx.py (sound effects), add_music.py, music_bed.py
 - `videos/001-zepto/` the first video: script, marks, build.py, project, output
+- `channel/` Trendsplain branding: profile.png, banner.png, logo.svg, SETUP.md (description, keywords)
 - `tests/` results of scheduled test runs (`runs.csv`)
 - `content/` dashboard data: videos.csv, linkedin.csv, changes.csv
 - `posts/linkedin/` daily AI news drafts and PAGE.md
