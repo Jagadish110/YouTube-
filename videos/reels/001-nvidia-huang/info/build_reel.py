@@ -20,6 +20,10 @@ def font(name, fam, w):
     return f"@font-face{{font-family:'{fam}';font-weight:{w};src:url(data:font/woff2;base64,{b}) format('woff2');}}"
 
 
+def img(name, mime):
+    return f"data:{mime};base64," + base64.b64encode(open(os.path.join(HERE, "assets", name), "rb").read()).decode()
+PHOTO, LOGO = img("photo.jpg", "image/jpeg"), img("logo.png", "image/png")   # both supplied by Jagadish
+
 # ---- captions: chunks of about 3 words, timed by character share of each spoken line
 HI = {"resigned", "trillion", "percent", "chinese", "intelligence", "denies", "faithful", "investigation.", "no", "reason", "fourteen", "twelfth."}
 def at(i, phrase):                       # when a phrase is spoken (by character share of the line)
@@ -74,18 +78,18 @@ html = f'''<!doctype html><html><head><meta charset="utf-8"><style>
 </style></head><body>
 <div id="bg"></div><div id="grid"></div>
 <div class="sc" id="s0">
- <div class="abs ctr an" id="h1" style="top:40px;font-size:170px">JENSEN HUANG</div>
- <div class="abs ctr an" id="h2" style="top:230px;font-size:300px;color:{G}">RESIGNS</div>
- <div class="abs ctr" id="h3" style="top:580px"><span style="display:inline-block;font:800 44px Sora;letter-spacing:4px;border:5px solid {G};border-radius:18px;padding:14px 30px">WHAT IS KNOWN SO FAR</span></div>
- <div class="abs" id="p0" style="left:240px;top:700px;opacity:.5;transform:scale(.42);transform-origin:50% 0">{person}</div>
+ <img class="abs" id="p0" src="{PHOTO}" style="left:290px;top:0;width:500px;height:500px;object-fit:cover;border-radius:44px;border:8px solid {G}">
+ <div class="abs ctr an" id="h1" style="top:525px;font-size:130px">JENSEN HUANG</div>
+ <div class="abs ctr an" id="h2" style="top:655px;font-size:215px;color:{G}">RESIGNS</div>
+ <div class="abs ctr" id="h3" style="top:890px"><span style="display:inline-block;font:800 38px Sora;letter-spacing:4px;border:5px solid {G};border-radius:16px;padding:10px 26px">WHAT IS KNOWN SO FAR</span></div>
 </div>
 <div class="sc" id="s1">
- <div class="abs" id="ch1" style="left:760px;top:560px">{chip}</div>
- <div class="abs" id="m0" style="left:94px;top:60px;font:800 38px Sora;letter-spacing:5px;color:#b9c2b9">NVIDIA · MARKET VALUE</div>
- <div class="abs an" id="m1" style="left:84px;top:130px;font-size:250px;color:{G};white-space:nowrap">$<span id="n45">0.0</span> <span style="font-size:120px;color:#fff">TRILLION</span></div>
- <div class="abs" id="m2" style="left:94px;top:520px;font:800 38px Sora;letter-spacing:5px;color:#b9c2b9">HUANG'S STAKE</div>
- <div class="abs an" id="m3" style="left:84px;top:590px;font-size:250px;white-space:nowrap"><span id="n36">0.0</span>%</div>
- <div class="abs" id="m4" style="left:94px;top:880px;font:600 40px Sora;color:#b9c2b9">Its fifth-largest shareholder</div>
+ <div class="abs" id="ch1" style="left:90px;top:0;background:#fff;border-radius:26px;padding:22px 34px"><img src="{LOGO}" style="display:block;height:110px"></div>
+ <div class="abs" id="m0" style="left:94px;top:215px;font:800 38px Sora;letter-spacing:5px;color:#b9c2b9">NVIDIA · MARKET VALUE</div>
+ <div class="abs an" id="m1" style="left:84px;top:265px;font-size:230px;color:{G};white-space:nowrap">$<span id="n45">0.0</span> <span style="font-size:120px;color:#fff">TRILLION</span></div>
+ <div class="abs" id="m2" style="left:94px;top:585px;font:800 38px Sora;letter-spacing:5px;color:#b9c2b9">HUANG'S STAKE</div>
+ <div class="abs an" id="m3" style="left:84px;top:635px;font-size:230px;white-space:nowrap"><span id="n36">0.0</span>%</div>
+ <div class="abs" id="m4" style="left:94px;top:905px;font:600 40px Sora;color:#b9c2b9">Its fifth-largest shareholder</div>
 </div>
 <div class="sc" id="s2">
  <div class="abs an" id="r0" style="left:90px;top:0;font-size:120px">THE <span style="color:{G}">REPORT</span> <span style="font:800 32px Sora;letter-spacing:3px;color:#b9c2b9">OCT · NEW YORK TIMES</span></div>
@@ -111,6 +115,7 @@ html = f'''<!doctype html><html><head><meta charset="utf-8"><style>
  <div class="abs an" id="f3" style="left:90px;top:740px;font-size:200px">−<span id="n43">0.0</span>%</div>
  <div class="abs" id="f4" style="left:720px;top:820px;font:800 44px/1.2 Sora;color:{G}">at the close</div>
 </div>
+<div id="zz" style="display:none"></div>
 <div id="at" style="position:absolute;left:0;top:1568px;width:1080px;text-align:center;font:800 44px Sora;color:{G};opacity:0">@trendsplain</div>
 <div id="caps">{cap_html}</div>
 <div id="src">Sources: Al Jazeera · Yahoo Finance</div>
@@ -124,8 +129,8 @@ tl.fromTo("#grid",{{backgroundPosition:"0px 0px"}},{{backgroundPosition:"0px 400
   if(i){{tl.fromTo("#flash",{{opacity:.5}},{{opacity:0,duration:.22,immediateRender:false}},a)}} if(i<5)tl.set("#s"+i,{{opacity:0}},b);}});
 const cnt=(id,v,dp,t,d)=>{{const o={{v:0}};tl.to(o,{{v:v,duration:d,ease:"power2.out",onUpdate:()=>document.getElementById(id).textContent=o.v.toFixed(dp)}},t)}};
 tl.from("#h1",{{y:-220,opacity:0,duration:.25,ease:"power4.out"}},.03).from("#h2",{{scale:3,opacity:0,duration:.18,ease:"power4.in"}},{at(0, 'resigned')})
-  .fromTo("#flash",{{opacity:.6}},{{opacity:0,duration:.3,immediateRender:false}},{at(0, 'resigned')}+.18).from("#h3",{{scale:0,duration:.3,ease:"back.out(2)"}},{at(0, 'Here')}).from("#p0",{{opacity:0,duration:.4}},{at(0, 'Here')}+.3);
-tl.from("#ch1",{{scale:0,rotation:-90,duration:.4,ease:"back.out(2)"}},S[1]+.1).from("#m0",{{opacity:0,duration:.25}},S[1]+.1).from("#m1",{{y:60,opacity:0,duration:.25}},{at(1, 'four')}-.2)
+  .fromTo("#flash",{{opacity:.6}},{{opacity:0,duration:.3,immediateRender:false}},{at(0, 'resigned')}+.18).from("#h3",{{scale:0,duration:.3,ease:"back.out(2)"}},{at(0, 'Here')}).from("#p0",{{scale:1.25,opacity:0,duration:.35,ease:"power3.out"}},0).from("#zz",{{opacity:0,duration:.4}},{at(0, 'Here')}+.3);
+tl.from("#ch1",{{y:-200,opacity:0,duration:.3,ease:"back.out(1.6)"}},S[1]+.05).from("#m0",{{opacity:0,duration:.25}},S[1]+.1).from("#m1",{{y:60,opacity:0,duration:.25}},{at(1, 'four')}-.2)
   .from("#m2",{{opacity:0,duration:.25}},{at(1, 'and Huang')}).from("#m3",{{y:60,opacity:0,duration:.25}},{at(1, 'three point')}-.2).from("#m4",{{opacity:0,duration:.3}},{at(1, 'three point')}+1.0);
 cnt("n45",4.5,1,{at(1, 'four')}-.2,1.2); cnt("n36",3.6,1,{at(1, 'three point')}-.2,1.2);
 tl.from("#r0",{{y:-150,opacity:0,duration:.3}},S[2]+.05).from("#r2",{{x:-1000,duration:.35,ease:"power3.out"}},{at(2, 'he was close')}).from("#r3",{{x:1000,duration:.35,ease:"power3.out"}},{at(2, 'U.S.')}).from("#r4",{{x:-1000,duration:.35,ease:"power3.out"}},{at(2, 'China denies')}-.1);
