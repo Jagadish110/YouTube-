@@ -26,6 +26,25 @@ Voiceover is the open-source Kokoro voice `am_eric`. No stock footage, no faces.
    project and read the contact sheet. Fix overlaps, clipped text and anything off screen.
 8. Commit the video folder (script, marks, build.py, project, output mp4) and push.
 
+## After every run: update the dashboard
+
+The dashboard "Video Pipeline Runs" is https://claude.ai/artifact/EQFeH3ubmGrYxGHoMNComG (a Claude
+Data dashboard). It reads one file: `tests/runs.csv`. Every run, pass or fail, does this:
+
+1. Append one line to `tests/runs.csv` (keep the header). Columns:
+   `run_at_utc` (ISO, e.g. 2026-11-15T05:30:00Z), `kind` (`health` or `video`), `video` (folder slug),
+   `status` (`pass` or `fail`), `setup_s`, `voiceover_s`, `render_s`, `duration_s`, `size_kb`
+   (numbers, blank if the step never ran), `supabase` (`reachable`/`unreachable`/blank),
+   `commit` (short hash of the video commit), `notes` (short, no commas; put the exact error here on a fail).
+2. Commit and push it with the video.
+3. Upload the file to the dashboard: Artifact tool, `url` = the dashboard URL, `asset: true`,
+   `file_path` = tests/runs.csv. It returns a new `/_blob/<id>`.
+4. With the ArtifactData tool, `get` collection `datasets` doc `runs`, then `update` it (pass its
+   `version` as `if_version`) with `source.url` = the new `/_blob/<id>`,
+   `updated: {at: <now UTC ISO>, by: "Claude scheduled run"}`, `edit: {via: "claude", at: <now>}`.
+   Do not touch `files/index.html`. Then delete the previous blob with Artifact `action: "delete"`,
+   `url` = dashboard, `path` = the old blob id (only if no dataset still names it).
+
 ## Rules
 
 - Text on screen is never smaller than 28 px. Keep content inside the middle 90% of the frame.
