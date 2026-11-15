@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      :root { --ground: #0b0a12; --ink: #ffffff; --quiet: #a7a3b8; --up: #8b3dff; --down: #ff3b47; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: var(--ground); }
+      #bg { position: absolute; inset: 0; background: var(--ground); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="14.2" data-width="1920" data-height="1080">
+      <div id="bg"></div>
+      <div id="intro" data-composition-id="intro" data-composition-src="compositions/intro.html" data-start="0.0" data-duration="5.22" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+<div id="steps" data-composition-id="steps" data-composition-src="compositions/steps.html" data-start="5.22" data-duration="4.82" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+<div id="works" data-composition-id="works" data-composition-src="compositions/works.html" data-start="10.04" data-duration="4.16" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+      <audio id="vo" class="clip" src="assets/vo.mp3" data-start="0" data-duration="13.8" data-track-index="2" data-volume="1"></audio>
+    </div>
+    <script>
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>

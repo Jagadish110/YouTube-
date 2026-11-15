@@ -1,0 +1,20 @@
+[
+ {
+  "i": 0,
+  "start": 0.0,
+  "end": 4.97,
+  "text": "This is an automated test of the channel pipeline, running on a schedule with nobody watching."
+ },
+ {
+  "i": 1,
+  "start": 5.42,
+  "end": 9.79,
+  "text": "It turns a short script into a voiceover, builds the motion graphics, and renders a video."
+ },
+ {
+  "i": 2,
+  "start": 10.24,
+  "end": 13.38,
+  "text": "If you can see and hear this, the pipeline works end to end."
+ }
+]

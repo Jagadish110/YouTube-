@@ -1,0 +1,3 @@
+This is an automated test of the channel pipeline, running on a schedule with nobody watching.
+It turns a short script into a voiceover, builds the motion graphics, and renders a video.
+If you can see and hear this, the pipeline works end to end.
