@@ -1,0 +1,9 @@
+# Sources (opened 17 Nov 2026)
+- Digest of the four stories: 10 Things Global News, 17 Nov 2026 — https://www.10things.news/p/10-things-global-news-17th-november-e83
+1. Trump in Asia: DD News — Quad leaders meet in Manila, "first meeting in two years"; members US, Japan, Australia, India; "Thursday's US-China-Russia talks" with Xi and Putin in Shenzhen. https://ddnews.gov.in/en/trump-to-kick-off-asia-trip-with-quad-talks-in-manila-ahead-of-china-visit/
+2. Bab al-Mandab: Al Jazeera, 15 Nov — government-allied Southern Armed Forces redeploy from Dhubab and areas around Bab al-Mandeb to secure Aden. https://www.aljazeera.com/news/2026/11/15/yemeni-government-forces-redeploy-from-bab-al-mandeb-to-defend-aden
+   NewsBytes, 17 Nov — "a vital route for 12% of global trade"; Houthis pushed government forces back from the Red Sea coast. https://www.newsbytesapp.com/news/world/houthi-advance-risks-bab-al-mandab-and-12-of-global-trade/tldr
+   The National, 15 Nov — pullback "could leave the Iran-backed Houthi rebels in control of territory near the vital waterway". (Script says "hold ground beside it", not full control.)
+3. Autonomous weapons: Tech Times, 16 Nov — CCW Seventh Review Conference, Geneva, 128 states parties, runs to Fri 20 Nov; US working paper recommends five more years toward a nonbinding instrument. https://www.techtimes.com/articles/330787/20261116/autonomous-weapons-treaty-stake-ccw-review-conference-opens-monday-us-wants-nonbinding-text.htm
+4. Wildberries: Meduza, 16 Nov — EU added founder Tatyana Kim; draft says Wildberries operates "as a supply network for the Russian military"; Wildberries says it has no assets and no operations in the EU. https://meduza.io/en/news/2026/11/16/eu-sanctions-tatyana-kim-founder-of-russian-e-commerce-giant-wildberries-over-alleged-military-supply-ties
+Not used (not confirmed on an opened page): "Russia's richest woman", asset freeze / travel ban details, who attends the Quad for India.
