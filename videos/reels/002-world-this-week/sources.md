@@ -7,3 +7,4 @@
 3. Autonomous weapons: Tech Times, 16 Nov — CCW Seventh Review Conference, Geneva, 128 states parties, runs to Fri 20 Nov; US working paper recommends five more years toward a nonbinding instrument. https://www.techtimes.com/articles/330787/20261116/autonomous-weapons-treaty-stake-ccw-review-conference-opens-monday-us-wants-nonbinding-text.htm
 4. Wildberries: Meduza, 16 Nov — EU added founder Tatyana Kim; draft says Wildberries operates "as a supply network for the Russian military"; Wildberries says it has no assets and no operations in the EU. https://meduza.io/en/news/2026/11/16/eu-sanctions-tatyana-kim-founder-of-russian-e-commerce-giant-wildberries-over-alleged-military-supply-ties
 Not used (not confirmed on an opened page): "Russia's richest woman", asset freeze / travel ban details, who attends the Quad for India.
+- Photos in assets/ were supplied by Jagadish (17 Nov). Ship, drone and warehouse photos are labelled on screen as file photo / illustration.

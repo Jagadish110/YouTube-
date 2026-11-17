@@ -23,12 +23,15 @@ def font(name, fam, w):
     return f"@font-face{{font-family:'{fam}';font-weight:{w};src:url(data:font/woff2;base64,{b}) format('woff2');}}"
 
 
-def photo(i):
+def photo(i, w, h, label="", pos="50% 50%"):
+    """User-supplied photo assets/s{i}.jpg|png as a framed box; None if missing."""
     for ext, mime in (("jpg", "image/jpeg"), ("png", "image/png")):
         p = os.path.join(HERE, "assets", f"s{i}.{ext}")
         if os.path.exists(p):
             b = base64.b64encode(open(p, "rb").read()).decode()
-            return f'<img src="data:{mime};base64,{b}" style="width:520px;height:520px;object-fit:cover;border-radius:40px;border:8px solid {Y}">'
+            tag = f'<div style="position:absolute;left:18px;bottom:16px;padding:6px 16px;border-radius:12px;background:rgba(0,0,0,.65);font:800 26px Sora;color:#fff">{label}</div>' if label else ""
+            return (f'<div style="position:relative;width:{w}px;height:{h}px;border-radius:30px;overflow:hidden;border:6px solid {Y}">'
+                    f'<img src="data:{mime};base64,{b}" style="width:100%;height:100%;object-fit:cover;object-position:{pos};display:block">{tag}</div>')
     return None
 
 
@@ -82,7 +85,8 @@ def chip(n):
     return f'<div class="num">0{n}<span>/04</span></div>'
 
 
-p = {i: photo(i) for i in range(1, 5)}
+p = {1: photo(1, 900, 420, pos="50% 35%"), 2: photo(2, 900, 560, "File photo · container ship"),
+     3: photo(3, 900, 260, "Illustration · a camera drone", "50% 45%"), 4: photo(4, 900, 300, "File photo · Wildberries warehouse fire", "50% 60%")}
 html = f'''<!doctype html><html><head><meta charset="utf-8"><style>
 {font("anton-latin-400-normal.woff2", "Anton", 400)}{font("sora-latin-800-normal.woff2", "Sora", 800)}{font("sora-latin-600-normal.woff2", "Sora", 600)}
 *{{box-sizing:border-box}} html,body{{margin:0;width:1080px;height:1920px;overflow:hidden;background:{NAVY};color:#fff;font-family:Sora}}
@@ -114,26 +118,28 @@ html = f'''<!doctype html><html><head><meta charset="utf-8"><style>
 
 <div class="sc" id="s1">{chip(1)}<div class="hd" id="t1">Trump in <span style="color:{Y}">Asia</span></div>
  <div class="card" id="m1" style="top:290px"><small>MANILA · FIRST IN 2 YEARS</small>Quad leaders meet<div style="margin-top:16px"><span class="pill">🇺🇸 US</span><span class="pill">🇯🇵 Japan</span><span class="pill">🇦🇺 Australia</span><span class="pill" style="background:{Y};color:{NAVY}">🇮🇳 India</span></div></div>
- <div class="card" id="m2" style="top:660px;border-color:{Y}"><small style="color:{Y}">THURSDAY · SHENZHEN, CHINA</small>Trump, Xi Jinping and Vladimir Putin meet together</div>
- <div class="abs" id="fl" style="left:150px;top:900px;display:flex;gap:90px">{flag_us}{flag_cn}{flag_ru}</div>
+ <div class="abs" id="ph1" style="left:90px;top:640px">{p[1] or ""}</div>
+ <div class="card" id="m2" style="top:{960 if p[1] else 660}px;border-color:{Y}"><small style="color:{Y}">THURSDAY · SHENZHEN, CHINA</small>Trump, Xi Jinping and Vladimir Putin meet together</div>
+ <div class="abs" id="fl" style="left:150px;top:900px;display:{"none" if p[1] else "flex"};gap:90px">{flag_us}{flag_cn}{flag_ru}</div>
 </div>
 
 <div class="sc" id="s2">{chip(2)}<div class="hd" id="t2">The <span style="color:{C}">Red Sea</span> gate</div>
  <div class="abs" id="map" style="left:90px;top:290px">{seamap}</div>
+ <div class="abs" id="ph2" style="left:90px;top:290px">{p[2] or ""}</div>
  <div class="abs an" id="pc" style="left:90px;top:870px;font-size:190px;color:{Y}"><span id="n12">0</span>%</div>
  <div class="abs" id="pt" style="left:500px;top:915px;font:800 44px/1.2 Sora">of world trade<br><span style="color:#9aa6d4;font-size:34px">goes through it</span></div>
 </div>
 
 <div class="sc" id="s3">{chip(3)}<div class="hd" id="t3">Killer <span style="color:{SKY}">robots</span></div>
- <div class="abs" id="dr" style="left:500px;top:240px;transform:scale(.8);transform-origin:0 0">{p[3] or drone}</div>
- <div class="abs an" id="n128w" style="left:90px;top:300px;font-size:230px;color:{Y}"><span id="n128">0</span></div>
- <div class="abs" id="ct" style="left:96px;top:540px;font:800 46px/1.2 Sora">countries<br><span style="color:#9aa6d4;font-size:34px">Geneva · 16 to 20 Nov</span></div>
- <div class="card" id="w1" style="top:720px"><small>THE TOPIC</small>Weapons that choose targets without a human</div>
- <div class="card" id="w2" style="top:930px;border-color:{C}"><small style="color:{C}">THE US POSITION</small>Non-binding guidelines, not a treaty</div>
+ <div class="abs" id="dr" style="left:{90 if p[3] else 500}px;top:{260 if p[3] else 240}px;{"" if p[3] else "transform:scale(.8);transform-origin:0 0"}">{p[3] or drone}</div>
+ <div class="abs an" id="n128w" style="left:90px;top:{540 if p[3] else 300}px;font-size:{170 if p[3] else 230}px;color:{Y}"><span id="n128">0</span></div>
+ <div class="abs" id="ct" style="left:{420 if p[3] else 96}px;top:{575 if p[3] else 540}px;font:800 46px/1.2 Sora">countries<br><span style="color:#9aa6d4;font-size:34px">Geneva · 16 to 20 Nov</span></div>
+ <div class="card" id="w1" style="top:{705 if p[3] else 720}px"><small>THE TOPIC</small>Weapons that choose targets without a human</div>
+ <div class="card" id="w2" style="top:{935 if p[3] else 930}px;border-color:{C}"><small style="color:{C}">THE US POSITION</small>Non-binding guidelines, not a treaty</div>
 </div>
 
 <div class="sc" id="s4">{chip(4)}<div class="hd" id="t4">EU hits <span style="color:{C}">Wildberries</span></div>
- <div class="abs" id="pk" style="left:280px;top:250px;transform:scale(.8);transform-origin:50% 0">{p[4] or parcel}</div>
+ <div class="abs" id="pk" style="left:{90 if p[4] else 280}px;top:250px;{"" if p[4] else "transform:scale(.8);transform-origin:50% 0"}">{p[4] or parcel}</div>
  <div class="card" id="u1" style="top:560px"><small>SANCTIONED · 16 NOV</small>Tatyana Kim, founder of Russia's online marketplace Wildberries</div>
  <div class="card" id="u2" style="top:790px;border-color:{C}"><small style="color:{C}">THE EU SAYS</small>The company helps supply the Russian military</div>
  <div class="card" id="u3" style="top:1000px"><small>WILDBERRIES SAYS</small>It has no business in the EU</div>
@@ -159,11 +165,11 @@ tl.from("#g0",{{scale:0,rotation:-120,duration:.5,ease:"back.out(1.6)"}},.05).to
  .from("#h1",{{scale:3,opacity:0,duration:.2,ease:"power4.in"}},.25).fromTo("#flash",{{opacity:.5}},{{opacity:0,duration:.3,immediateRender:false}},.45)
  .from("#h2",{{y:50,opacity:0,duration:.3}},{at(0, "watching")}).from("#h3",{{opacity:0,duration:.3}},{at(0, "watching")}+.3);
 tl.from("#m1",{{x:-1000,duration:.35,ease:"power3.out"}},{at(1, "Trump")}).from("#m1 .pill",{{scale:0,stagger:.12,duration:.2,ease:"back.out(2)"}},{at(1, "with Japan")})
- .from("#m2",{{x:1000,duration:.35,ease:"power3.out"}},{at(1, "On Thursday")}).from("#fl svg",{{y:60,opacity:0,stagger:.25,duration:.25,ease:"back.out(2)"}},{at(1, "Xi")}-.1);
+ .from("#ph1",{{opacity:0,scale:1.1,duration:.4}},{at(1, "On Thursday")}-.1).from("#m2",{{x:1000,duration:.35,ease:"power3.out"}},{at(1, "On Thursday")}).from("#fl svg",{{y:60,opacity:0,stagger:.25,duration:.25,ease:"back.out(2)"}},{at(1, "Xi")}-.1);
 tl.from("#map",{{opacity:0,scale:.9,duration:.35}},{at(2, "Yemen")}).fromTo("#pulse",{{attr:{{r:16}},opacity:1}},{{attr:{{r:60}},opacity:0,duration:.9,repeat:7,ease:"power1.out"}},{at(2, "Bab")})
- .from("#gov",{{opacity:0,duration:.3}},{at(2, "pulled")}).from("#pc",{{y:60,opacity:0,duration:.25}},{at(2, "twelve")}-.2).from("#pt",{{opacity:0,duration:.3}},{at(2, "of world")});
+ .from("#gov",{{opacity:0,duration:.3}},{at(2, "pulled")}).from("#ph2",{{opacity:0,duration:.4}},{at(2, "a route")}).from("#pc",{{y:60,opacity:0,duration:.25}},{at(2, "twelve")}-.2).from("#pt",{{opacity:0,duration:.3}},{at(2, "of world")});
 cnt("n12",12,{at(2, "twelve")}-.2,1.2);
-tl.from("#n128w",{{y:60,opacity:0,duration:.25}},{at(3, "A hundred")}).from("#ct",{{opacity:0,duration:.3}},{at(3, "countries")}).from("#dr",{{scale:0,duration:.4,ease:"back.out(2)"}},{at(3, "weapons")}-.4)
+tl.from("#n128w",{{y:60,opacity:0,duration:.25}},{at(3, "A hundred")}).from("#ct",{{opacity:0,duration:.3}},{at(3, "countries")}).from("#dr",{{scale:.6,opacity:0,duration:.4,ease:"back.out(2)"}},S[3]+.3)
  .from("#w1",{{x:-1000,duration:.35,ease:"power3.out"}},{at(3, "weapons")}).from("#w2",{{x:1000,duration:.35,ease:"power3.out"}},{at(3, "The US")});
 cnt("n128",128,{at(3, "A hundred")},1.4);
 tl.from("#pk",{{y:-300,opacity:0,duration:.4,ease:"bounce.out"}},{at(4, "The EU")}).from("#u1",{{x:-1000,duration:.35,ease:"power3.out"}},{at(4, "Tatyana")})
