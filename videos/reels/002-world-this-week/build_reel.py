@@ -219,9 +219,10 @@ for i, ph, k in ((2, "twelve", 16), (3, "A hundred", 19)):
 for a, _, _ in caps: put(tick(), a, .25)
 t = np.arange(n) / SR
 bed = np.sin(2 * np.pi * 65.4 * t) * (0.5 + 0.5 * np.sin(2 * np.pi * (110 / 60) * t)) ** 6 * .09 + np.sin(2 * np.pi * 130.8 * t) * .015
-fade = np.minimum(1, np.minimum(t / .5, (t[-1] - t) / 1.0)); fx = np.tanh((fx * .55 + bed * fade) * 1.3) * .75
+fade = np.minimum(1, np.minimum(t / .5, (t[-1] - t) / 1.0)); NOBED = os.environ.get("NOBED") == "1"   # NOBED=1: no pulse bed, for adding a song in the Instagram app
+fx = np.tanh((fx * .55 + (0 if NOBED else bed * fade)) * 1.3) * .75
 sf.write(os.path.join(HERE, "output", "fx.wav"), np.stack([fx, fx], 1), SR)
-out = os.path.join(HERE, "output", "reel-world-this-week.mp4")
+out = os.path.join(HERE, "output", "reel-world-this-week" + ("-for-music" if NOBED else "") + ".mp4")
 subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", raw, "-i", os.path.join(HERE, "voiceover.wav"), "-i", os.path.join(HERE, "output", "fx.wav"),
                 "-filter_complex", "[1:a]aformat=sample_rates=48000:channel_layouts=stereo,volume=1.5,asplit=2[v][k];"
                 "[2:a][k]sidechaincompress=threshold=0.04:ratio=3:attack=10:release=220[f];[v][f]amix=inputs=2:duration=longest:normalize=0,alimiter=limit=0.9[a]",
