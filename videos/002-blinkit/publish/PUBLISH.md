@@ -3,7 +3,7 @@
 Made with the yt-package, yt-seo, yt-chapters and yt-shorts skills (.claude/skills). Nothing is uploaded;
 copy each block into YouTube Studio yourself.
 
-Final video: `output/002-blinkit-v1-sfx.mp4` · Captions file: `publish/captions.srt` (upload as English captions)
+Final video: `output/blinkit-final-upload.mp4` (Trendsplain intro after the hook + subscribe/share outro) · Captions file: `publish/captions-final.srt` (upload as English captions)
 
 ## Title + thumbnail (yt-package)
 
@@ -25,13 +25,13 @@ Every number on screen has its source, listed below.
 
 Chapters
 00:00 ₹20,940 crore in three months
-00:12 From Grofers to Blinkit
-00:39 The dark store trick
-01:07 Blinkit now owns what it sells
-01:35 Revenue is not profit
-01:46 The scorecard: loss to profit
-02:14 The catch
-02:29 Grow faster or profit first?
+00:18 From Grofers to Blinkit
+00:45 The dark store trick
+01:13 Blinkit now owns what it sells
+01:41 Revenue is not profit
+01:52 The scorecard: loss to profit
+02:20 The catch
+02:35 Grow faster or profit first?
 
 Sources
 Eternal Q2 FY27 results: Business Standard, Indian Startup News (Oct 2026)
@@ -52,7 +52,7 @@ All three sets of words appear in the title or the first two description lines.
 
 ## Chapters (yt-chapters) — validated
 
-Starts at 00:00, 8 chapters, every chapter at least 10 seconds (shortest: 01:35 to 01:46, 11 s). Already in the description above.
+Starts at 00:00, 8 chapters, every chapter at least 10 seconds (shortest: 01:41 to 01:52, 11 s). Times are for the final upload file; the intro sits inside chapter 1. Already in the description above.
 
 ## Shorts (yt-shorts) — top 5 from this video
 
