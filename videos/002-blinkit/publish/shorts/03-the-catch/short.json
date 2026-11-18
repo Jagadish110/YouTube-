@@ -1,0 +1,10 @@
+{
+ "video": "../../../output/002-blinkit-v1-sfx.mp4", "captions": "../../captions.srt",
+ "start": 130.25, "end": 148.93, "replace_until": 134.55,
+ "hook": "Blinkit finally makes a profit. But one thing could wipe it out.",
+ "hook_captions": [[0.0, 1.7, "Blinkit finally makes a profit."], [1.7, 4.3, "But one thing could wipe it out."]],
+ "kicker": "BLINKIT · EXPLAINED", "title": "THE CATCH\\NIN BLINKIT'S PROFIT",
+ "flash": "NEW STORES LOSE",
+ "source": "Sources: Business Standard · Indian Startup News",
+ "bg": "F8CB46", "ink": "0F2A1A", "accent": "0C831F"
+}

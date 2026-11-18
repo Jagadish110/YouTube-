@@ -1,0 +1,10 @@
+{
+ "video": "../../../output/002-blinkit-v1-sfx.mp4", "captions": "../../captions.srt",
+ "start": 37.0, "end": 66.13, "replace_until": 41.85,
+ "hook": "Blinkit delivers in ten minutes. And it is not because the rider is fast. Here is the trick.",
+ "hook_captions": [[0.0, 1.7, "Blinkit delivers in ten minutes."], [1.7, 3.6, "And it is not because the rider is fast."], [3.6, 4.85, "Here is the trick."]],
+ "kicker": "BLINKIT · EXPLAINED", "title": "10 MINUTES.\\NNOT THE RIDER.",
+ "flash": "THE DARK STORE",
+ "source": "Source: Eternal Q2 FY27 results via Business Standard",
+ "bg": "F8CB46", "ink": "0F2A1A", "accent": "0C831F"
+}
