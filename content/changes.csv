@@ -35,3 +35,5 @@ date,area,change,status
 2026-11-18,Instagram,Reel 003 script drafted: Nvidia earnings + board rules out Huang return,Pending
 2026-11-18,Instagram,Reel 003 built: Nvidia earnings + board rules out Huang return (34s; earnings-terminal look),Done
 2026-11-19,Instagram,Top-10 world news carousel (12 slides) in videos/carousels/001-world-top10,Done
+2026-11-19,Voice,Default voice changed from am_eric to am_adam,Done
+2026-11-19,Sound,Six random background beds added (tools/bg_beds.py) and picked per video,Done

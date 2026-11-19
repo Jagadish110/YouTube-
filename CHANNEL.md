@@ -74,6 +74,12 @@ count-ups, pops on drawings, swooshes on wipes, thumps on stamps, whooshes betwe
 `python3 tools/sfx.py sfx_events.json output/NNN-slug-v1.mp4 output/NNN-slug-v1-sfx.mp4`. The -sfx file is the one to post.
 For a hand-written composition, add its cues to sfx_events.json in build.py (see videos/001-zepto/build.py).
 
+Voice: Kokoro `am_adam` (set by Jagadish, 19 Nov 2026). Default in tools/voiceover.py.
+
+Background bed (set by Jagadish, 19 Nov 2026): six designs in tools/bg_beds.py, one picked per video at random.
+Pick is stable per video slug: `python3 tools/bg_beds.py --pick <slug>`. Names: 1 ambient-pad, 2 soft-plucks,
+3 low-drone, 4 light-ticks, 5 warm-lofi, 6 room-air. Mix it under the voice at about 0.2 volume.
+
 Optional song (only if Jagadish asks):
 
 Jagadish supplies the song. Save it as `videos/NNN-slug/music/<file>` and run
