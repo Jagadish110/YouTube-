@@ -40,3 +40,4 @@ date,area,change,status
 2026-11-19,Look,One fixed Trendsplain signature design for all videos (navy + Anton + Sora + rotating accents),Done
 2026-11-19,Sound,No background bed; use existing tools/sfx.py effects only (bg_beds removed),Done
 2026-11-19,Schedule,Weekly news video now auto-posts to YouTube via Composio with description and thumbnail (gated; private if a check fails),Done
+2026-11-19,Schedule,News video task changed from weekly to daily (5:31 am IST),Done

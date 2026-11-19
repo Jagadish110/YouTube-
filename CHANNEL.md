@@ -53,7 +53,7 @@ and the drawn illustrations change from scene to scene. Do not invent a new them
 
 ## Auto-post to YouTube (set by Jagadish, 19 Nov 2026)
 
-The weekly scheduled run publishes the finished long video itself, through the Composio `youtube` toolkit.
+The daily scheduled run publishes the finished long video itself, through the Composio `youtube` toolkit.
 Channel: "Trends Plain" (@trendsplain69, id UCksdpsPnnRVG6aVF3x_Dikg). Composio has two YouTube accounts: ALWAYS pass
 the account `youtube_locust-fains` (the other one, `youtube_graff-calk`, has no channel). Shorts and Instagram stay manual.
 
