@@ -96,7 +96,7 @@ Each daily run saves `posts/linkedin/YYYY-MM-DD/` (post.md, card.json, card.png)
 - Text on screen is never smaller than 28 px. Keep content inside the middle 90% of the frame.
 - One number at a time; a count-up runs 1.2 to 1.6 s. No pie charts, no grids of KPI cards.
 - Nobody in the pipeline can hear audio. Flag names and Indian terms (crore, lakh) for a human listen.
-- YouTube auto-post (set by Jagadish, 19 Nov 2026): the daily scheduled run uploads the finished long video to the Trendsplain channel itself through Composio, with description, tags and thumbnail, following "Auto-post to YouTube" in CHANNEL.md. Never post to Instagram or LinkedIn or anywhere else; Jagadish posts those himself.
+- YouTube auto-post (set by Jagadish, 19 Nov 2026): the daily scheduled run uploads the finished long video to the Trendsplain channel itself through Composio, with description, tags and thumbnail, following "Auto-post to YouTube" in CHANNEL.md. The separate "Trendsplain Shorts poster" scheduled task uploads the queued Shorts (content/shorts_queue.csv) three times a day. Never post to Instagram or LinkedIn or anywhere else; Jagadish posts those himself.
 - Set `HYPERFRAMES_NO_TELEMETRY=1`. Use HyperFrames CLI 0.9.45 and the installed Chrome
   (`HYPERFRAMES_BROWSER_PATH=/usr/bin/google-chrome`); the CLI cannot download its own.
 - A 4-minute video takes about 8 minutes to render. Run it in the background and wait.

@@ -55,7 +55,7 @@ and the drawn illustrations change from scene to scene. Do not invent a new them
 
 The daily scheduled run publishes the finished long video itself, through the Composio `youtube` toolkit.
 Channel: "Trends Plain" (@trendsplain69, id UCksdpsPnnRVG6aVF3x_Dikg). Composio has two YouTube accounts: ALWAYS pass
-the account `youtube_locust-fains` (the other one, `youtube_graff-calk`, has no channel). Shorts and Instagram stay manual.
+the account `youtube_locust-fains` (the other one, `youtube_graff-calk`, has no channel). Shorts are posted by the separate Shorts poster task below; Instagram stays manual.
 
 Gate, all must be true to post public:
 - every fact in sources.md has an opened URL, and no claim was dropped as "unconfirmed" and then left in the script
@@ -69,6 +69,22 @@ Steps: get the mp4 to a Composio `s3key` (if it cannot be staged, upload nothing
 `YOUTUBE_UPDATE_THUMBNAIL` with a public image URL under 2 MB (if no public URL works or the channel is not phone-verified,
 leave the thumbnail and tell Jagadish to set it in Studio) -> `YOUTUBE_GET_VIDEO_DETAILS_BATCH` (snippet,status) to confirm ->
 record the video id and status `Posted` in content/videos.csv and PUBLISH.md. Never delete or edit older videos.
+
+## Shorts queue and poster (set by Jagadish, 19 Nov 2026)
+
+Each daily video makes 5 Shorts (`tools/make_short.py`, then `tools/add_short_outro.py`; post `short-final.mp4`).
+The daily run ranks them and adds one row per Short to `content/shorts_queue.csv`
+(date, video, short_file, title, description_file, status, youtube_id, notes). Status: `Queued` for the 3 best,
+`Spare` for the other 2. The best 3 must come from three different stories. Title up to 60 characters, description has
+the source, the video link when known, and `#Shorts`.
+
+The scheduled task "Trendsplain Shorts poster" runs at 11:34, 15:34 and 19:34 IST. Each run does `git pull`, takes the
+oldest `Queued` row, applies the same gate as the long video (facts opened, frames checked, 15 to 45 seconds,
+vertical), and uploads it with Composio account `youtube_locust-fains`, `YOUTUBE_MULTIPART_UPLOAD_VIDEO`, categoryId 25,
+public if the gate passes, private otherwise. No custom thumbnail. It confirms with `YOUTUBE_GET_VIDEO_DETAILS_BATCH`,
+sets the row to `Posted` with the youtube_id, commits and pushes. If no `Queued` row exists it posts the oldest `Spare`;
+if there is nothing, it stops without a notification. If the file cannot be staged for Composio, it posts nothing
+and notifies Jagadish once per day.
 
 ## Thumbnails
 
