@@ -34,21 +34,22 @@ what the numbers say and why it matters, without hype.
 |---|---|---|---|---|
 | 001 | 001-zepto | Zepto | 1 Startup rise & fall | 2026-11-14 |
 
-## Look and images: every video is different
+## Look and images: ONE fixed design for every video (set by Jagadish, 19 Nov 2026)
 
-- Never reuse a previous video's colours, fonts or layout. Each video sets its own theme with
-  `sl.theme(...)` in its build.py (ground, ink, accent colours, headline + body fonts, background CSS),
-  picked to fit the subject. Fonts come from npm `@fontsource/<font>` (Google Fonts cannot be downloaded here);
-  copy the .woff2 files into `project/assets/fonts/` and list them in `fonts=[...]`.
-- Colourful is the default. Light or bright grounds are fine; keep text contrast strong.
-- Every video uses images: flat illustrations drawn in SVG inside build.py (people only from behind or as
+The "Trendsplain signature" look. Same on every video so the channel is recognisable; only the accent colour
+and the drawn illustrations change from scene to scene. Do not invent a new theme per video.
+- Ground navy `#0B1026` (cards `#102046`), ink white `#FFFFFF`, muted text `#B8C1E6`, faint grid on the ground.
+- Fonts: Anton for headlines (uppercase, one word in the accent colour), Sora 800 for body and numbers
+  (woff2 in tools/fonts/, copy into `project/assets/fonts/`).
+- Accent palette, rotating by scene: red `#FF4A4F` (primary, channel colour), sky `#5CC8FF`, yellow `#FFD23F`,
+  mint `#2EC4B6`, violet `#C77DFF`, orange `#FF9F1C`. One accent per scene, never two competing ones.
+- Layout: big headline top, one visual in a rounded card (radius 26) in the middle, short caption or source line at the
+  bottom. A huge outlined "ghost" number or word sits behind the headline for depth. One number at a time.
+- Every video uses drawn images: flat SVG illustrations inside build.py (people only from behind or as
   silhouettes, no faces, no brand logos). See `videos/002-blinkit/sample/build.py` for phone, scooter, store,
   shelves and map examples. Real photos only if Jagadish supplies them or allows a free photo site.
-- Use the company's own brand colours for the video and its thumbnail (colours only, never the logo).
-  For a founder story, use the colours of the company they are known for.
-- Planned looks: 002 Blinkit = Blinkit yellow #F8CB46 + green #0C831F, Bricolage Grotesque / DM Sans.
-  003 Coca-Cola IPO = Coca-Cola red #E4002B + white, Anton headlines, plain bottles (never the contour bottle).
-  004 Albinder Dhindsa = Zomato red #E23744 + Blinkit yellow #F8CB46 on charcoal, Sora.
+- Use `sl.theme(...)` once with these values; copy it from the previous video's build.py and keep it unchanged.
+  The look of the Instagram carousel (videos/carousels/001-world-top10/build_carousel.py) is the reference.
 
 ## Thumbnails
 
@@ -76,9 +77,8 @@ For a hand-written composition, add its cues to sfx_events.json in build.py (see
 
 Voice: Kokoro `am_adam` (set by Jagadish, 19 Nov 2026). Default in tools/voiceover.py.
 
-Background bed (set by Jagadish, 19 Nov 2026): six designs in tools/bg_beds.py, one picked per video at random.
-Pick is stable per video slug: `python3 tools/bg_beds.py --pick <slug>`. Names: 1 ambient-pad, 2 soft-plucks,
-3 low-drone, 4 light-ticks, 5 warm-lofi, 6 room-air. Mix it under the voice at about 0.2 volume.
+No background bed and no song by default (Jagadish, 19 Nov 2026): the existing synthesised sound effects from
+`tools/sfx.py` are the only sound under the voice. Keep them soft.
 
 Optional song (only if Jagadish asks):
 

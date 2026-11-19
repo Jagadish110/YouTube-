@@ -37,3 +37,5 @@ date,area,change,status
 2026-11-19,Instagram,Top-10 world news carousel (12 slides) in videos/carousels/001-world-top10,Done
 2026-11-19,Voice,Default voice changed from am_eric to am_adam,Done
 2026-11-19,Sound,Six random background beds added (tools/bg_beds.py) and picked per video,Done
+2026-11-19,Look,One fixed Trendsplain signature design for all videos (navy + Anton + Sora + rotating accents),Done
+2026-11-19,Sound,No background bed; use existing tools/sfx.py effects only (bg_beds removed),Done
