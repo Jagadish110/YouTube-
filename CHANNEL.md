@@ -51,6 +51,25 @@ and the drawn illustrations change from scene to scene. Do not invent a new them
 - Use `sl.theme(...)` once with these values; copy it from the previous video's build.py and keep it unchanged.
   The look of the Instagram carousel (videos/carousels/001-world-top10/build_carousel.py) is the reference.
 
+## Auto-post to YouTube (set by Jagadish, 19 Nov 2026)
+
+The weekly scheduled run publishes the finished long video itself, through the Composio `youtube` toolkit.
+Channel: "Trends Plain" (@trendsplain69, id UCksdpsPnnRVG6aVF3x_Dikg). Composio has two YouTube accounts: ALWAYS pass
+the account `youtube_locust-fains` (the other one, `youtube_graff-calk`, has no channel). Shorts and Instagram stay manual.
+
+Gate, all must be true to post public:
+- every fact in sources.md has an opened URL, and no claim was dropped as "unconfirmed" and then left in the script
+- frames were checked after the last render, the final file is the `-sfx` mp4, length 8 to 12 minutes
+- thumbnail is 1280x720, under 2 MB, up to 3 words that differ from the title
+- description has the sources, chapters (checked with /yt-chapters rules) and "not investment advice" for finance stories
+If any item fails, upload as `private` instead and notify with exactly what failed.
+
+Steps: get the mp4 to a Composio `s3key` (if it cannot be staged, upload nothing, keep status `Rendered`, notify) ->
+`YOUTUBE_MULTIPART_UPLOAD_VIDEO` (title = best of the 3 options, description, tags, categoryId 25, privacyStatus per gate) ->
+`YOUTUBE_UPDATE_THUMBNAIL` with a public image URL under 2 MB (if no public URL works or the channel is not phone-verified,
+leave the thumbnail and tell Jagadish to set it in Studio) -> `YOUTUBE_GET_VIDEO_DETAILS_BATCH` (snippet,status) to confirm ->
+record the video id and status `Posted` in content/videos.csv and PUBLISH.md. Never delete or edit older videos.
+
 ## Thumbnails
 
 - Every video gets `videos/NNN-slug/thumbnail/thumb.html`, rendered with `python3 tools/thumbnail.py <thumb.html>`
