@@ -1,0 +1,54 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:var(--body);font-weight:700;}
+.hero{font-family:var(--head);font-weight:400;letter-spacing:-0.02em;line-height:1.05;text-transform:uppercase;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.img{display:block;}.card{background:var(--panel);border-radius:28px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#s70-ghost{left:0;width:1920px;text-align:center;top:40px;font-size:560px;font-family:'Anton';color:transparent;-webkit-text-stroke:4px #2EC4B6;opacity:0.07;line-height:1;}
+#s70-kick{left:0;width:1920px;text-align:center;top:52px;font-size:32px;color:#2EC4B6;letter-spacing:0.16em;font-weight:800;}
+#s70-head{left:0;width:1920px;text-align:center;top:118px;font-size:104px;color:#FFFFFF;padding:0 120px;}
+#s70-card{left:192px;top:340px;width:1536px;height:580px;border-radius:26px;background:#102046;border:3px solid #2EC4B655;}
+#s70-icon{left:232px;top:430px;width:400px;height:400px;}
+#s70-big{left:680px;width:1000px;text-align:center;top:500px;font-size:120px;color:#2EC4B6;white-space:nowrap;font-weight:800;}
+#s70-small{left:700px;width:960px;text-align:center;top:690px;font-size:40px;color:#B8C1E6;font-weight:600;}
+#s70-src{left:96px;bottom:60px;font-size:28px;font-weight:600;color:#B8C1E6;opacity:0.85;}
+</style>
+<div id="root" data-composition-id="s70" data-width="1920" data-height="1080">
+<div id="s70-ghost" class="el clip hero" data-start="0.0" data-duration="11.01" data-track-index="1" data-layout-allow-occlusion>+2</div>
+<div id="s70-kick" class="el clip " data-start="0.05" data-duration="10.96" data-track-index="2" >QUICK HIT · INDIA</div>
+<div id="s70-head" class="el clip hero" data-start="0.15" data-duration="10.86" data-track-index="3" >AMAZON: <span style="color:#2EC4B6">$7 BILLION</span> MORE</div>
+<div id="s70-card" class="el clip " data-start="0.3" data-duration="10.71" data-track-index="4" ></div>
+<div id="s70-icon" class="el clip " data-start="0.45" data-duration="10.56" data-track-index="5" ><svg width="400" height="400" viewBox="0 0 400 400"><circle cx="310" cy="80" r="50" fill="#FFD23F"/><path d="M60 330 L110 160 H350 L300 330 Z" fill="#1B3FA0" stroke="#FFFFFF" stroke-width="8" stroke-linejoin="round"/><path d="M80 245 H325 M200 160 L180 330 M270 160 L240 330 M135 160 L120 330" stroke="#FFFFFF" stroke-width="6"/><path d="M190 330 V380 M120 380 H270" stroke="#B8C1E6" stroke-width="12"/></svg></div>
+<div id="s70-big" class="el clip tnum" data-start="0.6" data-duration="10.41" data-track-index="6" >$0 billion</div>
+<div id="s70-small" class="el clip " data-start="1.2" data-duration="9.81" data-track-index="7" >by 2030, plus $4 billion contracted</div>
+<div id="s70-src" class="el clip src" data-start="0.3" data-duration="10.71" data-track-index="8" >Source: Amazon, ESG Today, YourStory · 17 Nov 2026</div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#s70-ghost",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.0);
+tl.to("#s70-ghost",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},10.79);
+tl.fromTo("#s70-kick",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},0.05);
+tl.to("#s70-kick",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},10.79);
+tl.fromTo("#s70-head",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},0.15);
+tl.to("#s70-head",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},10.79);
+tl.fromTo("#s70-card",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.3);
+tl.to("#s70-card",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},10.79);
+tl.fromTo("#s70-icon",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},0.45);
+tl.to("#s70-icon",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},10.79);
+const o5={v:0}, el5=document.querySelector("#s70-big"), f5=(v)=>"$"+Number(v.toFixed(0)).toLocaleString("en-US",{minimumFractionDigits:0,maximumFractionDigits:0})+" billion";
+tl.fromTo("#s70-big",{opacity:0,scale:0.94},{opacity:1,scale:1,duration:0.3,ease:"expo.out"},0.6);
+tl.fromTo(o5,{v:0},{v:7,duration:1.4,ease:"power3.out",onUpdate:()=>{el5.textContent=f5(o5.v);}},0.6);
+tl.to("#s70-big",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},10.79);
+tl.fromTo("#s70-small",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},1.2);
+tl.to("#s70-small",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},10.79);
+tl.fromTo("#s70-src",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.3);
+tl.to("#s70-src",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},10.79);
+window.__timelines["s70"] = tl;
+</script>
+</template>

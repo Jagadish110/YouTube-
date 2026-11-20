@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:'Anton';font-weight:400;src:url('../../../tools/fonts/anton-latin-400-normal.woff2')}
+@font-face{font-family:'Sora';font-weight:800;src:url('../../../tools/fonts/sora-latin-800-normal.woff2')}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1280px;height:720px;overflow:hidden;position:relative;background:#0B1026;font-family:'Anton',Impact,sans-serif;color:#fff}
+.abs{position:absolute}
+.grid{inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:64px 64px}
+.rays{inset:-300px;background:repeating-conic-gradient(from 0deg at 78% 50%,rgba(255,74,79,.16) 0 7deg,rgba(255,74,79,0) 7deg 20deg)}
+.l1{left:56px;top:40px;font-size:230px;line-height:1;letter-spacing:2px;-webkit-text-stroke:0;text-shadow:10px 10px 0 #000}
+.l2{left:56px;top:262px;font-size:96px;line-height:1;color:#FFD23F;text-shadow:6px 6px 0 #000;transform:rotate(-3deg)}
+.l3{left:48px;top:380px;font-size:250px;line-height:1;background:#FF4A4F;padding:0 30px 10px;border-radius:20px;box-shadow:12px 12px 0 #000;transform:rotate(-2deg)}
+.art{right:30px;top:60px}
+</style></head><body>
+<div class="abs rays" data-bleed></div><div class="abs grid"></div>
+<div class="abs l1">WORLD</div><div class="abs l2">TO</div><div class="abs l3">VILLAGE</div>
+<svg class="abs art" width="420" height="420" viewBox="0 0 400 400">
+ <circle cx="200" cy="200" r="170" fill="#1B2D63" stroke="#5CC8FF" stroke-width="14"/>
+ <path d="M30 200 H370 M200 30 C110 110 110 290 200 370 C290 290 290 110 200 30 M60 115 H340 M60 285 H340" stroke="#B8C1E6" stroke-width="8" fill="none"/>
+ <g fill="none" stroke="#FF4A4F" stroke-linecap="round" stroke-width="20"><path d="M290 150 m-70 0 a70 70 0 1 1 70 70"/><path d="M290 150 m-34 0 a34 34 0 1 1 34 34"/></g>
+ <circle cx="290" cy="150" r="10" fill="#fff"/>
+</svg>
+</body></html>

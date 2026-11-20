@@ -1,0 +1,52 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:var(--body);font-weight:700;}
+.hero{font-family:var(--head);font-weight:400;letter-spacing:-0.02em;line-height:1.05;text-transform:uppercase;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.img{display:block;}.card{background:var(--panel);border-radius:28px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#s05-ghost{left:0;width:1920px;text-align:center;top:40px;font-size:560px;font-family:'Anton';color:transparent;-webkit-text-stroke:4px #FF4A4F;opacity:0.07;line-height:1;}
+#s05-kick{left:0;width:1920px;text-align:center;top:52px;font-size:32px;color:#FF4A4F;letter-spacing:0.16em;font-weight:800;}
+#s05-head{left:0;width:1920px;text-align:center;top:118px;font-size:104px;color:#FFFFFF;padding:0 120px;}
+#s05-card{left:192px;top:340px;width:1536px;height:580px;border-radius:26px;background:#102046;border:3px solid #FF4A4F55;}
+#s05-icon{left:232px;top:430px;width:400px;height:400px;}
+#s05-big{left:680px;width:1000px;text-align:center;top:440px;font-size:100px;line-height:1.12;color:#FFFFFF;font-weight:800;}
+#s05-small{left:680px;width:1000px;text-align:center;top:720px;font-size:40px;color:#FF4A4F;font-weight:600;}
+#s05-src{left:96px;bottom:60px;font-size:28px;font-weight:600;color:#B8C1E6;opacity:0.85;}
+</style>
+<div id="root" data-composition-id="s05" data-width="1920" data-height="1080">
+<div id="s05-ghost" class="el clip hero" data-start="0.0" data-duration="3.99" data-track-index="1" data-layout-allow-occlusion>01</div>
+<div id="s05-kick" class="el clip " data-start="0.05" data-duration="3.94" data-track-index="2" >WORLD · 1 OF 10</div>
+<div id="s05-head" class="el clip hero" data-start="0.15" data-duration="3.84" data-track-index="3" >NOT <span style="color:#FF4A4F">MENTIONED</span></div>
+<div id="s05-card" class="el clip " data-start="0.3" data-duration="3.69" data-track-index="4" ></div>
+<div id="s05-icon" class="el clip " data-start="0.45" data-duration="3.54" data-track-index="5" ><svg width="400" height="400" viewBox="0 0 400 400"><circle cx="200" cy="200" r="150" fill="#1B2D63" stroke="#FF4A4F" stroke-width="12"/><path d="M50 200 H350 M200 50 C120 120 120 280 200 350 C280 280 280 120 200 50 M80 120 H320 M80 280 H320" stroke="#B8C1E6" stroke-width="8" fill="none"/><circle cx="270" cy="150" r="22" fill="#FF4A4F"/><circle cx="140" cy="250" r="16" fill="#FFFFFF"/></svg></div>
+<div id="s05-big" class="el clip " data-start="0.6" data-duration="3.39" data-track-index="6" >UKRAINE · IRAN</div>
+<div id="s05-small" class="el clip " data-start="1.1" data-duration="2.89" data-track-index="7" >left out of the declaration</div>
+<div id="s05-src" class="el clip src" data-start="0.3" data-duration="3.69" data-track-index="8" >Source: ABC News, Moscow Times, Daily Sabah · 19 Nov 2026</div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#s05-ghost",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.0);
+tl.to("#s05-ghost",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},3.77);
+tl.fromTo("#s05-kick",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},0.05);
+tl.to("#s05-kick",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},3.77);
+tl.fromTo("#s05-head",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},0.15);
+tl.to("#s05-head",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},3.77);
+tl.fromTo("#s05-card",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.3);
+tl.to("#s05-card",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},3.77);
+tl.fromTo("#s05-icon",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},0.45);
+tl.to("#s05-icon",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},3.77);
+tl.fromTo("#s05-big",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},0.6);
+tl.to("#s05-big",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},3.77);
+tl.fromTo("#s05-small",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},1.1);
+tl.to("#s05-small",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},3.77);
+tl.fromTo("#s05-src",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.3);
+tl.to("#s05-src",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},3.77);
+window.__timelines["s05"] = tl;
+</script>
+</template>

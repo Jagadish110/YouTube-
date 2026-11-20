@@ -1,0 +1,52 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:var(--body);font-weight:700;}
+.hero{font-family:var(--head);font-weight:400;letter-spacing:-0.02em;line-height:1.05;text-transform:uppercase;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.img{display:block;}.card{background:var(--panel);border-radius:28px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#s24-ghost{left:0;width:1920px;text-align:center;top:40px;font-size:560px;font-family:'Anton';color:transparent;-webkit-text-stroke:4px #FF9F1C;opacity:0.07;line-height:1;}
+#s24-kick{left:0;width:1920px;text-align:center;top:52px;font-size:32px;color:#FF9F1C;letter-spacing:0.16em;font-weight:800;}
+#s24-head{left:0;width:1920px;text-align:center;top:118px;font-size:104px;color:#FFFFFF;padding:0 120px;}
+#s24-card{left:192px;top:340px;width:1536px;height:580px;border-radius:26px;background:#102046;border:3px solid #FF9F1C55;}
+#s24-icon{left:232px;top:430px;width:400px;height:400px;}
+#s24-big{left:680px;width:1000px;text-align:center;top:440px;font-size:82px;line-height:1.12;color:#FFFFFF;font-weight:800;}
+#s24-small{left:680px;width:1000px;text-align:center;top:720px;font-size:40px;color:#FF9F1C;font-weight:600;}
+#s24-src{left:96px;bottom:60px;font-size:28px;font-weight:600;color:#B8C1E6;opacity:0.85;}
+</style>
+<div id="root" data-composition-id="s24" data-width="1920" data-height="1080">
+<div id="s24-ghost" class="el clip hero" data-start="0.0" data-duration="6.15" data-track-index="1" data-layout-allow-occlusion>04</div>
+<div id="s24-kick" class="el clip " data-start="0.05" data-duration="6.1" data-track-index="2" >INDIA · 4 OF 10</div>
+<div id="s24-head" class="el clip hero" data-start="0.15" data-duration="6.0" data-track-index="3" >THE SHIP</div>
+<div id="s24-card" class="el clip " data-start="0.3" data-duration="5.85" data-track-index="4" ></div>
+<div id="s24-icon" class="el clip " data-start="0.45" data-duration="5.7" data-track-index="5" ><svg width="400" height="400" viewBox="0 0 400 400"><path d="M0 290 C60 310 140 270 200 290 C260 310 340 270 400 290 V400 H0 Z" fill="#1B2D63"/><path d="M40 230 H360 L320 290 H80 Z" fill="#FF9F1C"/><rect x="90" y="180" width="60" height="50" fill="#FFFFFF"/><ellipse cx="230" cy="215" rx="110" ry="30" fill="#B8C1E6"/><rect x="300" y="150" width="30" height="80" fill="#FFFFFF"/><path d="M200 90 q30 -40 0 -70 q-30 30 0 70" fill="#FF9F1C"/></svg></div>
+<div id="s24-big" class="el clip " data-start="0.6" data-duration="5.55" data-track-index="6" >PANAMA-FLAGGED LPG TANKER</div>
+<div id="s24-small" class="el clip " data-start="1.1" data-duration="5.05" data-track-index="7" >carries cooking gas</div>
+<div id="s24-src" class="el clip src" data-start="0.3" data-duration="5.85" data-track-index="8" >Source: Khaleej Times, Gulf News, News On AIR · 16-18 Nov 2026</div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#s24-ghost",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.0);
+tl.to("#s24-ghost",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},5.93);
+tl.fromTo("#s24-kick",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},0.05);
+tl.to("#s24-kick",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},5.93);
+tl.fromTo("#s24-head",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},0.15);
+tl.to("#s24-head",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},5.93);
+tl.fromTo("#s24-card",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.3);
+tl.to("#s24-card",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},5.93);
+tl.fromTo("#s24-icon",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:0.35,ease:"expo.out"},0.45);
+tl.to("#s24-icon",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},5.93);
+tl.fromTo("#s24-big",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},0.6);
+tl.to("#s24-big",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},5.93);
+tl.fromTo("#s24-small",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},1.1);
+tl.to("#s24-small",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},5.93);
+tl.fromTo("#s24-src",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.3);
+tl.to("#s24-src",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},5.93);
+window.__timelines["s24"] = tl;
+</script>
+</template>
