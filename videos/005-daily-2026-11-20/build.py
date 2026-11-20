@@ -110,33 +110,45 @@ ghost_idx.update({"q1": "+1", "q2": "+2", "q3": "+3", "q4": "+4"})
 for n, k in enumerate(["summit", "icj", "quad", "tara", "mahanadi", "akvan", "uproll", "ladakh", "maha", "khet"], 1):
     ghost_idx[k] = str(n).zfill(2)
 
+import scenes as sc_art
+
+def big_size2(text):
+    n = len(text)
+    return 110 if n <= 12 else (92 if n <= 18 else (76 if n <= 26 else 62))
+
+
 for i, (key, spoken, head, card) in enumerate(ct.LINES):
     a = ct.ACCENTS[key]
     label, ic, src = STORY[key]
     s = sl.Scene(f"s{i:02d}", i)
-    s.E("ghost", ghost_idx[key], sl.C(40, 560, f"font-family:'Anton';color:transparent;-webkit-text-stroke:4px {a};opacity:0.07;line-height:1;"), 0.0, anim="fade", cls="hero", attrs="data-layout-allow-occlusion")
-    s.E("kick", label, sl.C(52, 32, f"color:{a};letter-spacing:0.16em;font-weight:800;"), 0.05, anim="blur")
-    s.E("head", headline_html(head, a), sl.C(118, 104, f"color:{W};padding:0 120px;"), 0.15, anim="blur", cls="hero")
-    s.E("card", "", f"left:192px;top:340px;width:1536px;height:580px;border-radius:26px;background:{PANEL};border:3px solid {a}55;", 0.3, anim="fade")
+    # full-screen drawn backdrop with a slow camera move (zoom + drift), alternating direction per scene
+    s.els.append(dict(id=f"{s.name}-art", html=sc_art.scene(key, a), style="left:0;top:0;width:1920px;height:1080px;transform-origin:50% 50%;", at=0.0,
+                      anim=("none" if i == 0 else "fade"), out=None, cls="", tag="div", attrs="data-layout-allow-occlusion data-layout-allow-overflow"))
+    z0, z1, dx = (1.0, 1.1, -36) if i % 2 == 0 else (1.1, 1.0, 36)
+    s.js.append(f'tl.fromTo("#{s.name}-art",{{scale:{z0},x:0}},{{scale:{z1},x:{dx},duration:{s.dur},ease:"none"}},0);')
+    # darkening for legibility: top (headline) and bottom (card band)
+    s.E("shade", "", "left:0;top:0;width:1920px;height:1080px;background:linear-gradient(180deg,rgba(11,16,38,.88) 0%,rgba(11,16,38,.55) 24%,rgba(11,16,38,0) 40%,rgba(11,16,38,0) 58%,rgba(11,16,38,.55) 100%);", 0.0, anim=("none" if i == 0 else "fade"), attrs="data-layout-allow-occlusion")
+    s.E("kick", label, sl.C(44, 32, f"color:{a};letter-spacing:0.16em;font-weight:800;"), 0.05, anim="blur")
+    s.E("head", headline_html(head, a), sl.C(100, 104, f"color:{W};padding:0 120px;text-shadow:0 4px 24px rgba(0,0,0,.6);"), 0.15, anim="blur", cls="hero")
+    s.E("card", "", f"left:192px;top:700px;width:1536px;height:250px;border-radius:26px;background:rgba(11,16,38,.80);border:3px solid {a}99;", 0.3, anim="fade", attrs="data-layout-allow-occlusion")
     kind = card[0]
     if kind == "title":
-        s.E("big", card[1], sl.C(430, 260, f"color:{a};"), 0.5, anim="pop", cls="hero")
-        s.E("small", card[2], sl.C(760, 44, f"color:{MUTED};font-weight:600;"), 1.0, anim="blur")
+        s.E("big", card[1], sl.C(715, 130, f"color:{a};"), 0.5, anim="pop", cls="hero")
+        s.E("small", card[2], sl.C(868, 40, f"color:{MUTED};font-weight:600;"), 1.0, anim="blur")
+    elif kind == "num":
+        _, to, pre, suf, dec, small = card
+        ln = len(f"{pre}{to:,.{dec}f}{suf}")
+        nsz = 120 if ln <= 7 else (104 if ln <= 10 else (88 if ln <= 14 else 74))
+        s.E("big", f"{pre}0{suf}", f"left:232px;width:1456px;text-align:center;top:{722 + (120 - nsz) // 3}px;font-size:{nsz}px;line-height:1.1;color:{a};white-space:nowrap;font-weight:800;text-shadow:0 3px 18px rgba(0,0,0,.5);",
+            0.6, anim=("count", to, numfmt(pre, suf, dec), 1.4), cls="tnum")
+        s.E("small", small, "left:232px;width:1456px;text-align:center;top:868px;font-size:38px;color:#B8C1E6;font-weight:600;", 1.2, anim="blur")
     else:
-        s.E("icon", icon(ic, a), "left:232px;top:430px;width:400px;height:400px;", 0.45, anim="pop")
-        if kind == "num":
-            _, to, pre, suf, dec, small = card
-            ln = len(f"{pre}{to:,.{dec}f}{suf}")
-            nsz = 150 if ln <= 7 else (120 if ln <= 10 else (98 if ln <= 14 else 80))
-            s.E("big", f"{pre}0{suf}", f"left:680px;width:1000px;text-align:center;top:{500 if nsz > 100 else 520}px;font-size:{nsz}px;color:{a};white-space:nowrap;font-weight:800;",
-                0.6, anim=("count", to, numfmt(pre, suf, dec), 1.4), cls="tnum")
-            s.E("small", small, f"left:700px;width:960px;text-align:center;top:690px;font-size:40px;color:{MUTED};font-weight:600;", 1.2, anim="blur")
-        else:
-            _, big, small = card
-            sz = big_size(big)
-            s.E("big", big, f"left:680px;width:1000px;text-align:center;top:{470 if sz > 100 else 440}px;font-size:{sz}px;line-height:1.12;color:{W};font-weight:800;", 0.6, anim="blur")
-            s.E("small", small, f"left:680px;width:1000px;text-align:center;top:720px;font-size:40px;color:{a};font-weight:600;", 1.1, anim="blur")
-    s.E("src", src, "left:96px;bottom:60px;font-size:28px;font-weight:600;color:#B8C1E6;opacity:0.85;", 0.3, anim="fade", cls="src")
+        _, big, small = card
+        sz = big_size2(big)
+        two = sz <= 62 or len(big) * sz * 0.64 > 1440
+        s.E("big", big, f"left:232px;width:1456px;text-align:center;top:{722 if two else 740}px;font-size:{sz if not two else min(sz, 62)}px;line-height:1.12;color:{W};font-weight:800;text-shadow:0 3px 18px rgba(0,0,0,.5);", 0.6, anim="blur")
+        s.E("small", small, f"left:232px;width:1456px;text-align:center;top:868px;font-size:38px;color:{a};font-weight:600;", 1.1, anim="blur")
+    s.E("src", src, "left:96px;bottom:44px;font-size:28px;font-weight:600;color:#B8C1E6;opacity:0.9;text-shadow:0 2px 10px rgba(0,0,0,.7);", 0.3, anim="fade", cls="src")
     S.append(s)
 
 sl.write_project(os.path.join(HERE, "project"), S)
