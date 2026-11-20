@@ -54,3 +54,15 @@ This video explains the news. The Mahanadi Coalfields IPO segment is information
 
 ## Tags
 Trendsplain, daily news explained, India news today, world news today, Cyclone Akvan, Myanmar genocide ICJ, Rohingya ruling, Trump Xi Putin summit, Quad summit Manila, Mahanadi Coalfields IPO, Ladakh hill council election, Maharashtra drought relief, Khet Bachao Abhiyan, news in plain English, 20 November 2026
+
+## Upload status (2026-11-20)
+NOT uploaded. Composio YouTube upload returned 429: "Quota exceeded for quota metric 'Video Uploads' and limit 'Video Uploads per day'" (project 1068312718386). Daily quota; not retried. Thumbnail not set. Final file: videos/005-daily-2026-11-20/output/005-daily-2026-11-20-v1-sfx.mp4 (raw: https://raw.githubusercontent.com/Jagadish110/YouTube-/main/videos/005-daily-2026-11-20/output/005-daily-2026-11-20-v1-sfx.mp4).
+
+## Shorts
+| Order | Folder | Title | Status |
+|---|---|---|---|
+| 1 | 02-akvan | Cyclone Akvan nears Andhra coast | Queued |
+| 2 | 01-icj | World court rules Myanmar committed genocide | Queued |
+| 3 | 03-summit | Trump, Xi, Putin met. What they left out | Queued |
+| 4 | 04-tara | Tanker with 24 Indians hit in Hormuz | Spare |
+| 5 | 05-maha | Maharashtra's Rs 5,000 drought payout | Spare |
