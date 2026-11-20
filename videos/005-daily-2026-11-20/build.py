@@ -122,10 +122,10 @@ for i, (key, spoken, head, card) in enumerate(ct.LINES):
     label, ic, src = STORY[key]
     s = sl.Scene(f"s{i:02d}", i)
     # full-screen drawn backdrop with a slow camera move (zoom + drift), alternating direction per scene
-    s.els.append(dict(id=f"{s.name}-art", html=sc_art.scene(key, a), style="left:0;top:0;width:1920px;height:1080px;transform-origin:50% 50%;", at=0.0,
+    s.els.append(dict(id=f"{s.name}-art", html=f'<img src="assets/scenes/{key}.jpg" width="1920" height="1080" style="display:block">', style="left:0;top:0;width:1920px;height:1080px;transform-origin:50% 50%;", at=0.0,
                       anim=("none" if i == 0 else "fade"), out=None, cls="", tag="div", attrs="data-layout-allow-occlusion data-layout-allow-overflow"))
     z0, z1, dx = (1.0, 1.1, -36) if i % 2 == 0 else (1.1, 1.0, 36)
-    s.js.append(f'tl.fromTo("#{s.name}-art",{{scale:{z0},x:0}},{{scale:{z1},x:{dx},duration:{s.dur},ease:"none"}},0);')
+    # CAMERA_OFF s.js.append(f'tl.fromTo("#{s.name}-art",{{scale:{z0},x:0}},{{scale:{z1},x:{dx},duration:{s.dur},ease:"none"}},0);')
     # darkening for legibility: top (headline) and bottom (card band)
     s.E("shade", "", "left:0;top:0;width:1920px;height:1080px;background:linear-gradient(180deg,rgba(11,16,38,.88) 0%,rgba(11,16,38,.55) 24%,rgba(11,16,38,0) 40%,rgba(11,16,38,0) 58%,rgba(11,16,38,.55) 100%);", 0.0, anim=("none" if i == 0 else "fade"), attrs="data-layout-allow-occlusion")
     s.E("kick", label, sl.C(44, 32, f"color:{a};letter-spacing:0.16em;font-weight:800;"), 0.05, anim="blur")

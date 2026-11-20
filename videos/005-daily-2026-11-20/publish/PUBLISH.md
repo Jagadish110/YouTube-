@@ -66,3 +66,6 @@ NOT uploaded. Composio YouTube upload returned 429: "Quota exceeded for quota me
 | 3 | 03-summit | Trump, Xi, Putin met. What they left out | Queued |
 | 4 | 04-tara | Tanker with 24 Indians hit in Hormuz | Spare |
 | 5 | 05-maha | Maharashtra's Rs 5,000 drought payout | Spare |
+
+## Final file (remade look)
+Use output/005-daily-2026-11-20-v2-sfx.mp4 (full drawn scenes + camera zoom, 623.8 s). The v1-sfx file is the old card look.
