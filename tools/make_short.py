@@ -13,7 +13,7 @@ short.json (one per Short, kept in videos/NNN-slug/publish/shorts/NN-name/):
   "kicker": "BLINKIT · EXPLAINED", "title": "HOW BLINKIT\\NTURNED A PROFIT",
   "flash": "−₹156 CR → +₹184 CR",                        # big on-screen text for the first 2 s (different words)
   "source": "Source: Eternal results via Indian Startup News",
-  "bg": "F8CB46", "ink": "0F2A1A", "accent": "0C831F"    # company colours (hex RGB)
+  "bg": "F8CB46", "ink": "0F2A1A", "accent": "0C831F"    # company colours (hex RGB); optional "flash_box" (default ink)
 }
 Writes short.mp4 beside the JSON. Fonts: Inter (system). Captions keep text >= 44 px.
 """
@@ -52,6 +52,7 @@ for b in open(c["captions"]).read().strip().split("\n\n"):
     if s0 >= rep - 0.05 and s1 <= end + 0.2:
         cues.append((s0 - start, min(s1, end) - start, " ".join(l[2:])))
 ink, acc, bg = c.get("ink", "0F2A1A"), c.get("accent", "0C831F"), c.get("bg", "F8CB46")
+fbox = c.get("flash_box", ink)  # colour of the box behind the flash text (set when ink is white)
 ass = f"""[Script Info]
 ScriptType: v4.00+
 PlayResX: 1080
@@ -61,7 +62,7 @@ PlayResY: 1920
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
 Style: Title,Inter Black,84,{bgr(ink)},{bgr(ink)},&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,8,60,60,190,1
 Style: Kick,Inter ExtraBold,44,{bgr(acc)},{bgr(acc)},&H00000000,&H00000000,-1,0,0,0,100,100,2,0,1,0,0,8,60,60,130,1
-Style: Big,Inter Black,96,&H00FFFFFF,&H00FFFFFF,{bgr(ink)},{bgr(ink)},-1,0,0,0,100,100,0,0,3,18,0,5,60,60,0,1
+Style: Big,Inter Black,96,&H00FFFFFF,&H00FFFFFF,{bgr(fbox)},{bgr(fbox)},-1,0,0,0,100,100,0,0,3,18,0,5,60,60,0,1
 Style: Cap,Inter ExtraBold,62,{bgr(ink)},{bgr(ink)},&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,8,70,70,1290,1
 Style: Foot,Inter Bold,32,{bgr(ink)},{bgr(ink)},&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,2,60,60,120,1
 
