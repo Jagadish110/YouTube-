@@ -127,27 +127,28 @@ for i, (key, spoken, head, card) in enumerate(ct.LINES):
     z0, z1, dx = (1.0, 1.1, -36) if i % 2 == 0 else (1.1, 1.0, 36)
     # CAMERA_OFF s.js.append(f'tl.fromTo("#{s.name}-art",{{scale:{z0},x:0}},{{scale:{z1},x:{dx},duration:{s.dur},ease:"none"}},0);')
     # darkening for legibility: top (headline) and bottom (card band)
-    s.E("shade", "", "left:0;top:0;width:1920px;height:1080px;background:linear-gradient(180deg,rgba(11,16,38,.88) 0%,rgba(11,16,38,.55) 24%,rgba(11,16,38,0) 40%,rgba(11,16,38,0) 58%,rgba(11,16,38,.55) 100%);", 0.0, anim=("none" if i == 0 else "fade"), attrs="data-layout-allow-occlusion")
-    s.E("kick", label, sl.C(44, 32, f"color:{a};letter-spacing:0.16em;font-weight:800;"), 0.05, anim="blur")
-    s.E("head", headline_html(head, a), sl.C(100, 104, f"color:{W};padding:0 120px;text-shadow:0 4px 24px rgba(0,0,0,.6);"), 0.15, anim="blur", cls="hero")
-    s.E("card", "", f"left:192px;top:700px;width:1536px;height:250px;border-radius:26px;background:rgba(11,16,38,.80);border:3px solid {a}99;", 0.3, anim="fade", attrs="data-layout-allow-occlusion")
+    s.E("shade", "", "left:0;top:0;width:1920px;height:1080px;background:linear-gradient(180deg,rgba(11,16,38,.72) 0%,rgba(11,16,38,.30) 20%,rgba(11,16,38,0) 34%,rgba(11,16,38,0) 70%,rgba(11,16,38,.42) 100%);", 0.0, anim=("none" if i == 0 else "fade"), attrs="data-layout-allow-occlusion")
+    s.E("kick", label, sl.C(44, 32, f"color:{a};letter-spacing:0.16em;font-weight:800;text-shadow:0 2px 12px rgba(0,0,0,.8);"), 0.05, anim="blur")
+    s.E("head", headline_html(head, a), sl.C(100, 96, f"color:{W};padding:0 120px;text-shadow:0 4px 24px rgba(0,0,0,.75);"), 0.15, anim="blur", cls="hero")
+    s.E("card", "", f"left:292px;top:772px;width:1336px;height:186px;border-radius:22px;background:rgba(11,16,38,.62);border:3px solid {a}88;", 0.3, anim="fade", attrs="data-layout-allow-occlusion")
     kind = card[0]
     if kind == "title":
-        s.E("big", card[1], sl.C(715, 130, f"color:{a};"), 0.5, anim="pop", cls="hero")
-        s.E("small", card[2], sl.C(868, 40, f"color:{MUTED};font-weight:600;"), 1.0, anim="blur")
+        s.E("big", card[1], sl.C(778, 92, f"color:{a};"), 0.5, anim="pop", cls="hero")
+        s.E("small", card[2], sl.C(900, 34, f"color:{MUTED};font-weight:600;"), 1.0, anim="blur")
     elif kind == "num":
         _, to, pre, suf, dec, small = card
         ln = len(f"{pre}{to:,.{dec}f}{suf}")
-        nsz = 120 if ln <= 7 else (104 if ln <= 10 else (88 if ln <= 14 else 74))
-        s.E("big", f"{pre}0{suf}", f"left:232px;width:1456px;text-align:center;top:{722 + (120 - nsz) // 3}px;font-size:{nsz}px;line-height:1.1;color:{a};white-space:nowrap;font-weight:800;text-shadow:0 3px 18px rgba(0,0,0,.5);",
+        nsz = 92 if ln <= 10 else (80 if ln <= 14 else 66)
+        s.E("big", f"{pre}0{suf}", f"left:312px;width:1296px;text-align:center;top:{790 + (92 - nsz) // 3}px;font-size:{nsz}px;line-height:1.1;color:{a};white-space:nowrap;font-weight:800;text-shadow:0 3px 18px rgba(0,0,0,.5);",
             0.6, anim=("count", to, numfmt(pre, suf, dec), 1.4), cls="tnum")
-        s.E("small", small, "left:232px;width:1456px;text-align:center;top:868px;font-size:38px;color:#B8C1E6;font-weight:600;", 1.2, anim="blur")
+        s.E("small", small, "left:312px;width:1296px;text-align:center;top:900px;font-size:34px;color:#B8C1E6;font-weight:600;", 1.2, anim="blur")
     else:
         _, big, small = card
-        sz = big_size2(big)
-        two = sz <= 62 or len(big) * sz * 0.64 > 1440
-        s.E("big", big, f"left:232px;width:1456px;text-align:center;top:{722 if two else 740}px;font-size:{sz if not two else min(sz, 62)}px;line-height:1.12;color:{W};font-weight:800;text-shadow:0 3px 18px rgba(0,0,0,.5);", 0.6, anim="blur")
-        s.E("small", small, f"left:232px;width:1456px;text-align:center;top:868px;font-size:38px;color:{a};font-weight:600;", 1.1, anim="blur")
+        sz = int(min(88, 1230 / (len(big) * 0.84)))
+        two = sz < 46
+        sz = 46 if two else sz
+        s.E("big", big, f"left:312px;width:1296px;text-align:center;top:{780 if two else 786 + (88 - sz) // 4}px;font-size:{sz}px;line-height:1.1;color:{W};font-weight:800;text-shadow:0 3px 18px rgba(0,0,0,.5);", 0.6, anim="blur")
+        s.E("small", small, f"left:312px;width:1296px;text-align:center;top:900px;font-size:34px;color:{a};font-weight:600;", 1.1, anim="blur")
     s.E("src", src, "left:96px;bottom:44px;font-size:28px;font-weight:600;color:#B8C1E6;opacity:0.9;text-shadow:0 2px 10px rgba(0,0,0,.7);", 0.3, anim="fade", cls="src")
     S.append(s)
 

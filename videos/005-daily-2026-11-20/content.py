@@ -33,7 +33,7 @@ STORIES = [  # key, label, icon, source line
 LINES = [
     # ---------------- intro
     ("intro", "Before you scroll today, here are the fourteen stories that matter, from the world to your village, in plain words.",
-     "TODAY'S *14* STORIES", ("title", "20 NOV", "Trendsplain Daily · world to village")),
+     "TODAY'S *14* STORIES", ("title", "20 NOV", "Trendsplain Daily · news, explained simply")),
     ("intro", "Ten stories in depth first, then four quick hits. Let's begin.",
      "10 IN DEPTH · *4* QUICK", ("txt", "10 + 4", "in depth, then quick hits")),
 
