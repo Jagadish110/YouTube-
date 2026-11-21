@@ -7,4 +7,4 @@ run_at_utc,kind,video,status,setup_s,voiceover_s,render_s,duration_s,size_kb,sup
 2026-11-18T05:13:15Z,health,test-run,pass,32,15,41,14.2,716,reachable,7159c48,Scheduled health check. Check ok (1 info: works-b overflow at 11.8s); frames fine.
 2026-11-19T05:12:33Z,health,test-run,pass,31,9,26,14.2,720,reachable,28392e0,Scheduled health check. Check ok (1 info: works-b overflow at 11.8s); frames fine.
 2026-11-20T00:50:00Z,video,005-daily-2026-11-20,pass,,467,900,623.8,43578,,02854f5,Built and rendered; YouTube upload blocked: 429 quota exceeded (Video Uploads per day). 5 Shorts queued.
-2026-11-21T01:35:00Z,video,006-daily-2026-11-21,pass,,600,1100,618.1,61157,,,Built and rendered twice (v2 fixes 2027 comma). Upload pending: YouTube API quotaExceeded at 00:02Z.
+2026-11-21T01:35:00Z,video,006-daily-2026-11-21,pass,,600,1100,618.1,61157,,,Built and rendered (v2 fixes 2027 comma). Uploaded public: kghZet6WpJg. Thumbnail and status check blocked by API quotaExceeded; retry scheduled 08:10Z.

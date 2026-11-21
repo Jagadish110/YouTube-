@@ -54,3 +54,16 @@ New video every day. Subscribe to Trendsplain.
 
 ## Tags
 ["Trendsplain", "daily news explained", "India news today", "world news today", "Kyiv bridges attack", "Poland airspace Russia", "delimitation explained", "India bullet train 2027", "Rajasthan panchayat election results", "Bombay High Court firecracker ban", "Parandur airport Madras High Court", "rabi sowing wheat 2026", "Chhattisgarh paddy procurement", "Estonia Russia border", "news in plain English", "21 November 2026"]
+
+## Upload status (2026-11-21)
+Uploaded PUBLIC via Composio (account youtube_locust-fains) at 01:08Z: https://www.youtube.com/watch?v=kghZet6WpJg (video id kghZet6WpJg). Upload response confirmed privacyStatus public, uploadStatus uploaded.
+Thumbnail: NOT set yet. YOUTUBE_UPDATE_THUMBNAIL and the status check returned 403 quotaExceeded (YouTube Data API daily quota). Retry scheduled for 08:10Z; otherwise set videos/006-daily-2026-11-21/thumbnail/thumb.png in YouTube Studio.
+
+## Shorts
+| Order | Folder | Title | Status |
+|---|---|---|---|
+| 1 | 01-bullettrain | Bullet train: first service in 2027 | Queued |
+| 2 | 02-kyiv | Russia hits three bridges in Kyiv | Queued |
+| 3 | 03-wheat | India's wheat sowing is down 15% | Queued |
+| 4 | 04-rajasthan | Rajasthan village polls: Congress leads | Spare |
+| 5 | 05-mumbai | Mumbai may ban firecrackers | Spare |
