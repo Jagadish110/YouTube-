@@ -1,0 +1,54 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;color:var(--ink);font-family:var(--body);font-weight:700;}
+.hero{font-family:var(--head);font-weight:400;letter-spacing:-0.02em;line-height:1.05;text-transform:uppercase;}
+.q{color:var(--quiet);}.up{color:var(--up);}.down{color:var(--down);}
+.kick{letter-spacing:0.14em;font-weight:900;}
+.el{position:absolute;}
+.pill{display:inline-block;padding:20px 40px;border:4px solid var(--up);border-radius:999px;}
+.img{display:block;}.card{background:var(--panel);border-radius:28px;}
+.box{border:4px solid var(--quiet);border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.src{left:96px;bottom:64px;font-size:28px;font-weight:400;color:var(--quiet);opacity:0.75;}
+.tnum{font-variant-numeric:tabular-nums;}
+#s67-art{left:0;top:0;width:1920px;height:1080px;transform-origin:50% 50%;}
+#s67-shade{left:0;top:0;width:1920px;height:1080px;background:linear-gradient(180deg,rgba(11,16,38,.72) 0%,rgba(11,16,38,.30) 20%,rgba(11,16,38,0) 34%,rgba(11,16,38,0) 70%,rgba(11,16,38,.42) 100%);}
+#s67-kick{left:0;width:1920px;text-align:center;top:44px;font-size:32px;color:#2EC4B6;letter-spacing:0.16em;font-weight:800;text-shadow:0 2px 12px rgba(0,0,0,.8);}
+#s67-head{left:0;width:1920px;text-align:center;top:100px;font-size:96px;color:#FFFFFF;padding:0 120px;text-shadow:0 4px 24px rgba(0,0,0,.75);}
+#s67-card{left:292px;top:772px;width:1336px;height:186px;border-radius:22px;background:rgba(11,16,38,.62);border:3px solid #2EC4B688;}
+#s67-big{left:312px;width:1296px;text-align:center;top:794px;font-size:80px;line-height:1.1;color:#2EC4B6;white-space:nowrap;font-weight:800;text-shadow:0 3px 18px rgba(0,0,0,.5);}
+#s67-small{left:312px;width:1296px;text-align:center;top:900px;font-size:34px;color:#B8C1E6;font-weight:600;}
+#s67-src{left:96px;bottom:44px;font-size:28px;font-weight:600;color:#B8C1E6;opacity:0.9;text-shadow:0 2px 10px rgba(0,0,0,.7);}
+</style>
+<div id="root" data-composition-id="s67" data-width="1920" data-height="1080">
+<div id="s67-art" class="el clip " data-start="0.0" data-duration="7.83" data-track-index="1" data-layout-allow-occlusion data-layout-allow-overflow><img src="assets/scenes/v2.jpg" width="1920" height="1080" style="display:block"></div>
+<div id="s67-shade" class="el clip " data-start="0.0" data-duration="7.83" data-track-index="2" data-layout-allow-occlusion></div>
+<div id="s67-kick" class="el clip " data-start="0.05" data-duration="7.78" data-track-index="3" >VILLAGE · 10 OF 10</div>
+<div id="s67-head" class="el clip hero" data-start="0.15" data-duration="7.68" data-track-index="4" >HOW IT <span style="color:#2EC4B6">ADDS UP</span></div>
+<div id="s67-card" class="el clip " data-start="0.3" data-duration="7.53" data-track-index="5" data-layout-allow-occlusion></div>
+<div id="s67-big" class="el clip tnum" data-start="0.6" data-duration="7.23" data-track-index="6" >₹0 + bonus</div>
+<div id="s67-small" class="el clip " data-start="1.2" data-duration="6.63" data-track-index="7" >support price + state bonus</div>
+<div id="s67-src" class="el clip src" data-start="0.3" data-duration="7.53" data-track-index="8" >Source: Navbharat Live, Indian Masterminds, UNI · 12-15 Nov 2026</div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#s67-art",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.0);
+tl.to("#s67-art",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.61);
+tl.fromTo("#s67-shade",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.0);
+tl.to("#s67-shade",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.61);
+tl.fromTo("#s67-kick",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},0.05);
+tl.to("#s67-kick",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.61);
+tl.fromTo("#s67-head",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},0.15);
+tl.to("#s67-head",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.61);
+tl.fromTo("#s67-card",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.3);
+tl.to("#s67-card",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.61);
+const o5={v:0}, el5=document.querySelector("#s67-big"), f5=(v)=>"₹"+Number(v.toFixed(0)).toLocaleString("en-US",{minimumFractionDigits:0,maximumFractionDigits:0})+" + bonus";
+tl.fromTo("#s67-big",{opacity:0,scale:0.94},{opacity:1,scale:1,duration:0.3,ease:"expo.out"},0.6);
+tl.fromTo(o5,{v:0},{v:2441,duration:1.4,ease:"power3.out",onUpdate:()=>{el5.textContent=f5(o5.v);}},0.6);
+tl.to("#s67-big",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.61);
+tl.fromTo("#s67-small",{opacity:0,filter:"blur(10px)"},{opacity:1,filter:"blur(0px)",duration:0.22,ease:"power4.out"},1.2);
+tl.to("#s67-small",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.61);
+tl.fromTo("#s67-src",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},0.3);
+tl.to("#s67-src",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power3.in"},7.61);
+window.__timelines["s67"] = tl;
+</script>
+</template>

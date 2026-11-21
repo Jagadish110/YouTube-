@@ -1,0 +1,26 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Title,Inter Black,84,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,8,60,60,190,1
+Style: Kick,Inter ExtraBold,44,&H004F4AFF,&H004F4AFF,&H00000000,&H00000000,-1,0,0,0,100,100,2,0,1,0,0,8,60,60,130,1
+Style: Big,Inter Black,96,&H00FFFFFF,&H00FFFFFF,&H004F4AFF,&H004F4AFF,-1,0,0,0,100,100,0,0,3,18,0,5,60,60,0,1
+Style: Cap,Inter ExtraBold,62,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,8,70,70,1290,1
+Style: Foot,Inter Bold,32,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,2,60,60,120,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:33.24,Kick,,0,0,0,,WORLD · EXPLAINED
+Dialogue: 0,0:00:00.00,0:00:33.24,Title,,0,0,0,,RUSSIA HITS\N3 KYIV BRIDGES
+Dialogue: 0,0:00:00.00,0:00:33.24,Foot,,0,0,0,,Source: Kyiv Independent · The National\NFull video on the channel
+Dialogue: 1,0:00:00.15,0:00:02.40,Big,,0,0,0,,{\pos(540,1640)\fad(120,150)}84 MISSILES · 404 DRONES
+Dialogue: 0,0:00:00.00,0:00:14.06,Cap,,0,0,0,,{\fad(60,60)}Russia hit three bridges in the Ukrainian capital overnight, using eighty four cruise missiles and more than four hundred drones.
+Dialogue: 0,0:00:14.51,0:00:19.23,Cap,,0,0,0,,{\fad(60,60)}The three bridges are the Podilsko Voskresenskyi, the Southern, and the Darnytskyi.
+Dialogue: 0,0:00:19.23,0:00:21.79,Cap,,0,0,0,,{\fad(60,60)}One reopened by about three in the afternoon.
+Dialogue: 0,0:00:21.79,0:00:25.20,Cap,,0,0,0,,{\fad(60,60)}One was still being assessed, and one was partly restricted.
+Dialogue: 0,0:00:25.65,0:00:26.56,Cap,,0,0,0,,{\fad(60,60)}Who is affected?
+Dialogue: 0,0:00:26.56,0:00:28.39,Cap,,0,0,0,,{\fad(60,60)}People in Keev and other cities.
+Dialogue: 0,0:00:28.39,0:00:33.24,Cap,,0,0,0,,{\fad(60,60)}Water, power and heating were cut in places, and the mayor asked people not to drive.

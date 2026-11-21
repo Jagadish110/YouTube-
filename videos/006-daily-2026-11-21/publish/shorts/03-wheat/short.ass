@@ -1,0 +1,28 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Title,Inter Black,84,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,8,60,60,190,1
+Style: Kick,Inter ExtraBold,44,&H003FD2FF,&H003FD2FF,&H00000000,&H00000000,-1,0,0,0,100,100,2,0,1,0,0,8,60,60,130,1
+Style: Big,Inter Black,96,&H00FFFFFF,&H00FFFFFF,&H003FD2FF,&H003FD2FF,-1,0,0,0,100,100,0,0,3,18,0,5,60,60,0,1
+Style: Cap,Inter ExtraBold,62,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,8,70,70,1290,1
+Style: Foot,Inter Bold,32,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,2,60,60,120,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:34.21,Kick,,0,0,0,,VILLAGE · EXPLAINED
+Dialogue: 0,0:00:00.00,0:00:34.21,Title,,0,0,0,,WHEAT SOWING\NFALLS 15%
+Dialogue: 0,0:00:00.00,0:00:34.21,Foot,,0,0,0,,Source: Rural Voice · ETV Bharat (PTI)\NFull video on the channel
+Dialogue: 1,0:00:00.15,0:00:02.40,Big,,0,0,0,,{\pos(540,1640)\fad(120,150)}50 VS 59 LAKH HA
+Dialogue: 0,0:00:00.00,0:00:06.06,Cap,,0,0,0,,{\fad(60,60)}Farmers in India have sown about fifteen percent less wheat than at this time last year.
+Dialogue: 0,0:00:06.51,0:00:08.47,Cap,,0,0,0,,{\fad(60,60)}Winter crops are called rabi crops.
+Dialogue: 0,0:00:08.47,0:00:13.74,Cap,,0,0,0,,{\fad(60,60)}By the thirteenth of November, they covered about one hundred and seventy eight lakh hectares.
+Dialogue: 0,0:00:13.74,0:00:16.54,Cap,,0,0,0,,{\fad(60,60)}A year ago, it was about two hundred and one lakh.
+Dialogue: 0,0:00:16.99,0:00:21.03,Cap,,0,0,0,,{\fad(60,60)}Wheat covered fifty lakh hectares, against fifty nine lakh last year.
+Dialogue: 0,0:00:21.03,0:00:23.90,Cap,,0,0,0,,{\fad(60,60)}Gram, or chana, is down more than twenty percent.
+Dialogue: 0,0:00:24.35,0:00:24.59,Cap,,0,0,0,,{\fad(60,60)}Why?
+Dialogue: 0,0:00:24.59,0:00:28.56,Cap,,0,0,0,,{\fad(60,60)}The monsoon was thirteen percent below normal, so the soil is dry.
+Dialogue: 0,0:00:28.56,0:00:34.21,Cap,,0,0,0,,{\fad(60,60)}Reservoirs and canals are below normal in key wheat states, and wheat needs several waterings.

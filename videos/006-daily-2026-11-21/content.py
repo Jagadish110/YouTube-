@@ -1,0 +1,230 @@
+"""Trendsplain Daily 2026-11-21: story content. One entry in LINES = one spoken line = one scene.
+
+Each line: (story_key, spoken, headline, card)
+ headline: '*word*' is the accent-coloured word.
+ card: ("txt", big, small) | ("num", to, prefix, suffix, decimals, small) | ("title", big, small)
+Spoken text: numbers as words, hard names respelled for the voice (see sources.md for the real spellings).
+"""
+
+ACCENTS = {"intro": "#FF4A4F", "w1": "#FF4A4F", "w2": "#5CC8FF", "n1": "#FFD23F", "n2": "#2EC4B6", "n3": "#FF9F1C",
+           "s1": "#C77DFF", "s2": "#FF9F1C", "s3": "#5CC8FF", "v1": "#FFD23F", "v2": "#2EC4B6",
+           "q1": "#5CC8FF", "q2": "#FF4A4F", "q3": "#C77DFF", "q4": "#2EC4B6", "q5": "#FFD23F", "outro": "#FF4A4F"}
+
+STORIES = [  # key, label, icon, source line
+    ("intro", "TRENDSPLAIN DAILY", "globe", "Trendsplain Daily · 21 November 2026"),
+    ("w1", "WORLD · 1 OF 10", "globe", "Source: Kyiv Independent, The National · 20 Nov 2026"),
+    ("w2", "WORLD · 2 OF 10", "globe", "Source: RTE, Moscow Times · 20 Nov 2026"),
+    ("n1", "INDIA · 3 OF 10", "ballot", "Source: Daily Jagran (PTI), IANS, Tribune · 15-20 Nov 2026"),
+    ("n2", "INDIA · 4 OF 10", "train", "Source: PTI via Telangana Today, Business Today · 20-21 Nov 2026"),
+    ("n3", "INDIA · 5 OF 10", "gavel", "Source: LiveLaw, The News Minute · 20 Nov 2026"),
+    ("s1", "STATE · 6 OF 10", "ballot", "Source: India TV, ThePrint (PTI), The Week · 20 Nov 2026"),
+    ("s2", "STATE · 7 OF 10", "cracker", "Source: LiveLaw, Republic, Free Press Journal · 19-20 Nov 2026"),
+    ("s3", "STATE · 8 OF 10", "plane", "Source: DT Next, LiveLaw · 20 Nov 2026"),
+    ("v1", "VILLAGE · 9 OF 10", "field", "Source: Rural Voice, ETV Bharat (PTI) · 14-17 Nov 2026"),
+    ("v2", "VILLAGE · 10 OF 10", "paddy", "Source: Navbharat Live, Indian Masterminds, UNI · 12-15 Nov 2026"),
+    ("q1", "QUICK HIT · WORLD", "border", "Source: ERR, Moscow Times (Reuters) · 20 Nov 2026"),
+    ("q2", "QUICK HIT · INDIA", "handshake", "Source: Defense Mirror, Nationpath · 19-20 Nov 2026"),
+    ("q3", "QUICK HIT · SPACE", "capsule", "Source: NASA, Space.com · 20 Nov 2026"),
+    ("q4", "QUICK HIT · SPORT", "cricket", "Source: Arab News, Geo · 20 Nov 2026"),
+    ("q5", "QUICK HIT · BUSINESS", "bars", "Source: The Indian Eye, Newsbytes · 20 Nov 2026 · Not investment advice"),
+    ("outro", "SEE YOU TOMORROW", "globe", "Sources are listed in the description"),
+]
+
+LINES = [
+    # ---------------- intro
+    ("intro", "Fifteen stories, one video: from three bridges in Keev to the wheat fields in your village, in plain words.",
+     "TODAY'S *15* STORIES", ("title", "21 NOV", "Trendsplain Daily · news, explained simply")),
+    ("intro", "Ten stories in depth first, then five quick hits. Let's begin.",
+     "10 IN DEPTH · *5* QUICK", ("txt", "10 + 5", "in depth, then quick hits")),
+
+    # ---------------- 1 Kyiv bridges
+    ("w1", "Story one. Russia hit three bridges in the Ukrainian capital, Keev, in a huge overnight attack on Friday.",
+     "THREE *BRIDGES* HIT", ("txt", "KYIV · FRIDAY 20 NOV", "overnight, about 1:25 to 6:30 am")),
+    ("w1", "Ukraine's air force counted eighty four cruise missiles and four hundred and four attack drones. Twenty three places were hit.",
+     "THE *ATTACK*", ("num", 404, "", " drones", 0, "plus 84 cruise missiles · 23 places hit")),
+    ("w1", "The three bridges are the Podilsko Voskresenskyi, the Southern, and the Darnytskyi. One reopened by about three in the afternoon. One was still being assessed, and one was partly restricted.",
+     "THE *BRIDGES*", ("num", 3, "", " bridges", 0, "one reopened · others checked")),
+    ("w1", "Who is affected? People in Keev and other cities. Water, power and heating were cut in places, and the mayor asked people not to drive.",
+     "WHO IS *AFFECTED*", ("txt", "WATER · POWER · HEATING CUT", "Kyiv's mayor: do not drive")),
+    ("w1", "The number of dead is not settled. Early reports said at least three people were killed, and later reports said at least nine. Counts differ by source.",
+     "THE *COUNT* DIFFERS", ("txt", "AT LEAST 3 → AT LEAST 9", "reports differ · still changing")),
+    ("w1", "Why now? President Putin had promised a much more painful response after a strike on the Crimean Bridge earlier this week.",
+     "WHY *NOW*", ("txt", "REVENGE FOR CRIMEAN BRIDGE", "Putin's promise, 19 Nov")),
+    ("w1", "What happens next? No ceasefire has been agreed. European leaders meeting in Berlin on Thursday asked for a winter truce on energy attacks.",
+     "WHAT *NEXT*", ("txt", "NO CEASEFIRE YET", "Berlin summit asked for a winter energy truce")),
+
+    # ---------------- 2 Poland airspace
+    ("w2", "Story two. Poland says Russian missiles and a drone entered its airspace overnight into Friday.",
+     "RUSSIAN *OBJECTS* IN POLAND", ("num", 3, "", " objects", 0, "likely 2 missiles + 1 drone")),
+    ("w2", "The defence minister said it was probably two missiles and a drone. One was a Kh one oh one cruise missile. He called it a provocation.",
+     "A *PROVOCATION*", ("txt", "KH-101 MISSILE", "Poland's defence minister")),
+    ("w2", "Prime Minister Donald Tusk said the objects were Russian and it looked deliberate.",
+     "LOOKS *DELIBERATE*", ("txt", "TUSK: RUSSIAN · INTENTIONAL", "Poland's prime minister")),
+    ("w2", "Debris was found on farmland near the village of Molodych. A loud bang was heard near a railway site in Rudnik nad Sanem. No damage or deaths were reported.",
+     "WHERE IT *LANDED*", ("txt", "MOLODYCH · RUDNIK NAD SANEM", "no casualties reported")),
+    ("w2", "Air traffic controllers at Rzeszow airport were moved out for safety.",
+     "RZESZOW *AIRPORT*", ("txt", "CONTROLLERS EVACUATED", "airport in south-east Poland")),
+    ("w2", "Why it matters: Poland is a member of NATO, the military alliance of Western countries, and it borders Ukraine.",
+     "WHY IT *MATTERS*", ("txt", "POLAND IS IN NATO", "borders Ukraine")),
+    ("w2", "What happens next? Investigations are under way at three locations.",
+     "WHAT *NEXT*", ("num", 3, "", " sites", 0, "under investigation")),
+
+    # ---------------- 3 delimitation
+    ("n1", "Story three. The Congress party is asking the government for an all party talk on delimitation.",
+     "DELIMITATION *TALKS*", ("txt", "CONGRESS WANTS ALL-PARTY TALK", "Jairam Ramesh, 20 Nov")),
+    ("n1", "Delimitation means redrawing constituency borders and seat counts after a census. It decides how many members of Parliament each state sends.",
+     "WHAT IS *DELIMITATION*", ("txt", "SEATS PER STATE", "redrawn after the census")),
+    ("n1", "The opposition's four point plan: keep the Lok Sabha at five hundred and forty three seats, keep each state's share, give women one third of existing seats now, and freeze this for twenty five years.",
+     "THE *4-POINT* PLAN", ("num", 543, "", " seats", 0, "keep Lok Sabha at 543 · freeze 25 years")),
+    ("n1", "Who is affected? Every state, because each state's share of seats depends on it.",
+     "WHO IS *AFFECTED*", ("txt", "EVERY STATE", "each state's seat share is at stake")),
+    ("n1", "Earlier this year a constitution change bill linking women's reservation to delimitation failed in the Lok Sabha. It got two hundred and ninety eight votes, but needed three hundred and fifty two.",
+     "THE BILL *FAILED*", ("num", 298, "", " votes", 0, "352 were needed")),
+    ("n1", "A change like this needs two thirds of members present and voting, so the government needs opposition votes.",
+     "WHY IT *MATTERS*", ("txt", "TWO-THIRDS MAJORITY", "the government needs the opposition")),
+    ("n1", "What happens next? The Monsoon Session has stayed open since August, a record. A winter session is expected in December, but no date is confirmed.",
+     "WHAT *NEXT*", ("txt", "WINTER SESSION: DECEMBER", "date not confirmed")),
+
+    # ---------------- 4 bullet train
+    ("n2", "Story four. The Railway Minister says India's first bullet train service will start in two thousand twenty seven.",
+     "BULLET TRAIN IN *2027*", ("txt", "2027", "first service starts")),
+    ("n2", "Ashwini Vaish nau said it will begin between Surat and Vaapi in Gujarat. The rest of the Mumbai to Ahmedabad line opens in phases.",
+     "SURAT TO *VAPI* FIRST", ("txt", "SURAT → VAPI", "then Mumbai–Ahmedabad in phases")),
+    ("n2", "The project was announced in two thousand seventeen. Delays over land and permissions in Maharashtra, and Covid, pushed it back.",
+     "ANNOUNCED IN *2017*", ("txt", "DELAYED BY LAND + COVID", "full construction began 2021")),
+    ("n2", "As of September, concrete piers stand along four hundred and fifty six kilometres, and viaduct is built for three hundred and seventy one.",
+     "THE *PROGRESS*", ("num", 456, "", " km", 0, "of piers built · 371 km of viaduct")),
+    ("n2", "In Maharashtra, a twenty one kilometre tunnel is being dug, including seven kilometres under Thane Creek, the country's first undersea rail tunnel.",
+     "THE *SEA* TUNNEL", ("num", 21, "", " km tunnel", 0, "7 km under Thane Creek")),
+    ("n2", "The train will be India made. The first body frame of the two hundred and eighty kilometre an hour train is in structural testing.",
+     "MADE IN *INDIA*", ("num", 280, "", " km/h", 0, "design speed of the B28 train")),
+    ("n2", "What happens next? Track trials are expected by the middle of two thousand twenty seven, and then the first service.",
+     "WHAT *NEXT*", ("txt", "TRACK TRIALS: MID-2027", "then the Surat–Vapi service")),
+
+    # ---------------- 5 Thiruparankundram
+    ("n3", "Story five. The Supreme Court has allowed a lamp to be lit on a hill in Madurai, Tamil Nadu, on the twenty fourth of November.",
+     "SUPREME COURT: *ONE-TIME* LIGHTING", ("txt", "THIRUPARANKUNDRAM HILL · MADURAI", "lamp lighting on 24 Nov")),
+    ("n3", "It is the day of Kar tee guy Dee pam, a festival of lamps. The lamp is to be lit on a stone pillar on the hill, near a dargah.",
+     "KARTHIGAI *DEEPAM*", ("txt", "24 NOV · FESTIVAL OF LAMPS", "stone pillar on the hill")),
+    ("n3", "The Court paused an order of the Madras High Court, and said this is a one time arrangement. It cannot be used as a basis to claim the same in later years.",
+     "ONE-TIME *ONLY*", ("txt", "HIGH COURT ORDER PAUSED", "not a basis for later years")),
+    ("n3", "Only authorised temple officials and government officers may go to the site. The public may not.",
+     "WHO CAN *GO*", ("txt", "OFFICIALS ONLY", "no public access")),
+    ("n3", "The conditions: no procession, no crowd, no slogans, no new structures, and no interference with the dargah or the mosque. Security must be adequate.",
+     "THE *CONDITIONS*", ("txt", "NO PROCESSION · NO SLOGANS", "dargah and mosque not to be disturbed")),
+    ("n3", "The Madurai Collector will arrange the lighting, and send a report to the Court within three days of the festival.",
+     "THE *COLLECTOR*", ("num", 3, "", " days", 0, "to file a report after the festival")),
+    ("n3", "What happens next? The larger questions of religious rights are kept for a later stage of the case.",
+     "WHAT *NEXT*", ("txt", "BIGGER QUESTIONS LATER", "Articles 25 and 26 reserved")),
+
+    # ---------------- 6 Rajasthan panchayat
+    ("s1", "Story six. In Rajasthan, the Congress party is ahead of the B J P in village and district council elections.",
+     "RAJASTHAN: *CONGRESS* AHEAD", ("txt", "PANCHAYAT RESULTS", "counted on Friday 20 Nov")),
+    ("s1", "These are the panchayat samiti, or block councils, and the zila parishad, or district councils.",
+     "TWO *LEVELS*", ("txt", "BLOCK + DISTRICT COUNCILS", "panchayat samiti · zila parishad")),
+    ("s1", "In block councils, Congress won about three thousand seven hundred seats, and the B J P about two thousand one hundred and eighty.",
+     "BLOCK *SEATS*", ("num", 3701, "", " seats", 0, "Congress · BJP about 2,181")),
+    ("s1", "In district councils, Congress won five hundred and ninety nine seats, the B J P three hundred and one.",
+     "DISTRICT *SEATS*", ("num", 599, "", " seats", 0, "Congress · BJP 301")),
+    ("s1", "Counting took place in thirty seven of forty one districts. Tallies were still moving, and a later count showed slightly higher numbers for both.",
+     "37 OF *41* DISTRICTS", ("num", 37, "", " districts", 0, "counted so far · tallies still moving")),
+    ("s1", "Why it matters: these councils run village development work. The Congress state chief asked the chief minister to resign, and the B J P said it will review the results.",
+     "WHY IT *MATTERS*", ("txt", "RURAL MANDATE", "Congress: CM should resign · BJP: will review")),
+    ("s1", "What happens next? Counting in four districts, including Kota and Baran, is set for the seventeenth of December.",
+     "WHAT *NEXT*", ("txt", "4 DISTRICTS ON 17 DEC", "Kota · Baran · Karauli · Sri Ganganagar")),
+
+    # ---------------- 7 Mumbai firecrackers
+    ("s2", "Story seven. The Bombay High Court is thinking about a full ban on selling and making firecrackers in Mumbai.",
+     "MUMBAI: *FIREWORKS* BAN?", ("txt", "BOMBAY HIGH COURT", "heard on Thursday 19 Nov")),
+    ("s2", "The two judges said the police are helpless against illegal bursting. They kept their order for later, so this is not yet a ban.",
+     "NOT YET A *BAN*", ("txt", "ORDER RESERVED", "no date given")),
+    ("s2", "The court may allow only community displays at fixed grounds. Reports say the order could cover all of Maharashtra.",
+     "ONLY *COMMUNITY* DISPLAYS", ("txt", "FIXED GROUNDS ONLY", "could reach all of Maharashtra")),
+    ("s2", "Why now? Reports say there were more than three hundred fires linked to crackers in Mumbai during Diwali.",
+     "WHY *NOW*", ("num", 300, "", "+ fires", 0, "during Diwali · reports differ on the count")),
+    ("s2", "A petitioner also says some so called green crackers carry fake codes and banned chemicals. The court asked about licences and green cracker claims.",
+     "GREEN CRACKERS *QUESTIONED*", ("txt", "FAKE QR CODES ALLEGED", "court asked about licences")),
+    ("s2", "Who is affected? Mumbai residents, who breathe the smoke, and the sellers and makers of crackers.",
+     "WHO IS *AFFECTED*", ("txt", "RESIDENTS · SELLERS · MAKERS", "Mumbai first")),
+    ("s2", "What happens next? We wait for the court's order. No date has been given.",
+     "WHAT *NEXT*", ("txt", "WAIT FOR THE ORDER", "no date given")),
+
+    # ---------------- 8 Parandur airport
+    ("s3", "Story eight. The Madras High Court has asked Tamil Nadu how it can drop a twenty seven thousand four hundred crore rupee airport halfway.",
+     "COURT QUESTIONS *AIRPORT* U-TURN", ("num", 27400, "₹", " crore", 0, "Parandur airport project")),
+    ("s3", "The planned airport is at Pah ran door, near Chennai. It was meant to be Chennai's second airport.",
+     "CHENNAI'S *2ND* AIRPORT", ("txt", "PARANDUR · KANCHEEPURAM", "planned second airport")),
+    ("s3", "The state government said in August it would drop the project. Land of more than seventeen hundred acres has already been acquired, and over six hundred and eighty crore rupees spent.",
+     "ALREADY *SPENT*", ("num", 680, "₹", " crore+", 0, "spent · 1,700+ acres acquired")),
+    ("s3", "The judges said an airport cannot be built, or dropped, on whims and fancies. They said studies must have been done before land was taken.",
+     "THE *JUDGES* SAID", ("txt", "NOT ON WHIMS AND FANCIES", "oral remarks, not a final ruling")),
+    ("s3", "The state's lawyer said much of the land is water body or farm land, so green clearance would be hard.",
+     "THE STATE'S *ANSWER*", ("txt", "WATER BODIES + FARMLAND", "green clearance would be hard")),
+    ("s3", "A citizen filed the case. He says the decision is arbitrary and no expert report was shown.",
+     "THE *PETITION*", ("txt", "DECISION CALLED ARBITRARY", "petition by a Chennai citizen")),
+    ("s3", "What happens next? The court sent notices to the state, the Centre and the Airports Authority. The next hearing date was not stated.",
+     "WHAT *NEXT*", ("txt", "NOTICES ISSUED", "next hearing date not stated")),
+
+    # ---------------- 9 rabi sowing
+    ("v1", "Story nine. Farmers have sown less winter crop this year. Wheat sowing is down by about fifteen percent.",
+     "WHEAT SOWING *DOWN* 15%", ("num", 15, "", "%", 0, "less wheat sown than last year")),
+    ("v1", "Winter crops are called rabi crops. By the thirteenth of November, they covered about one hundred and seventy eight lakh hectares. A year ago, it was about two hundred and one lakh.",
+     "RABI AREA *DOWN*", ("num", 178.25, "", " lakh ha", 2, "vs 201.04 lakh ha a year ago")),
+    ("v1", "Wheat covered fifty lakh hectares, against fifty nine lakh last year. Gram, or chana, is down more than twenty percent.",
+     "WHEAT AND *CHANA*", ("num", 50.07, "", " lakh ha", 2, "wheat · last year 59.10")),
+    ("v1", "Why? The monsoon was thirteen percent below normal, so the soil is dry. Reservoirs and canals are below normal in key wheat states, and wheat needs several waterings.",
+     "WHY *DRY* SOIL", ("num", 13, "", "%", 0, "monsoon rain below normal")),
+    ("v1", "Late rain also damaged some paddy and sugarcane, and delayed sowing of wheat and mustard. Some farmers had to sow mustard again.",
+     "LATE *RAIN* TOO", ("txt", "RAIN DELAYED SOWING", "some farmers re-sowed mustard")),
+    ("v1", "The gap is shrinking, though. Two weeks earlier, total sowing was down forty six percent.",
+     "THE GAP IS *SHRINKING*", ("num", 46, "-", "% → -11%", 0, "gap at end October → mid November")),
+    ("v1", "What happens next? The agriculture minister told officials to speed up sowing and urged crops that need less water, like chana, mustard and millets. The ministry says fertiliser and seed stocks are adequate.",
+     "WHAT *NEXT*", ("txt", "SPEED UP · LESS-WATER CROPS", "ministry: fertiliser and seed adequate")),
+
+    # ---------------- 10 Chhattisgarh paddy
+    ("v2", "Story ten. In Chhattisgarh, the government began buying paddy from farmers on the fifteenth of November.",
+     "CHHATTISGARH *PADDY* BUYING", ("txt", "STARTED 15 NOV", "runs to 15 January 2027")),
+    ("v2", "Farmers are paid up to three thousand one hundred rupees a quintal. A quintal is one hundred kilograms.",
+     "₹3,100 A *QUINTAL*", ("num", 3100, "₹", " / quintal", 0, "up to · 1 quintal = 100 kg")),
+    ("v2", "That is the support price of two thousand four hundred and forty one rupees, plus a state bonus under the Krishak Unnati Yojana.",
+     "HOW IT *ADDS UP*", ("num", 2441, "₹", " + bonus", 0, "support price + state bonus")),
+    ("v2", "More than twenty seven lakh farmers are registered, and about three thousand one hundred buying centres are open.",
+     "WHO CAN *SELL*", ("num", 27.5, "", " lakh farmers", 1, "registered · about 3,100 centres")),
+    ("v2", "Each farmer can sell up to twenty one quintals per acre. Slots are booked through the Tuhar Token app.",
+     "THE *LIMIT*", ("num", 21, "", " quintals/acre", 0, "booked via the Tuhar Token app")),
+    ("v2", "The state aims to buy about one hundred and sixty lakh tonnes this season.",
+     "THE *TARGET*", ("num", 160, "", " lakh tonnes", 0, "target for this season")),
+    ("v2", "What happens next? Buying goes on until the fifteenth of January. We did not find an official payment date for this season.",
+     "WHAT *NEXT*", ("txt", "BUYING TILL 15 JAN 2027", "payment date not found")),
+
+    # ---------------- quick hits
+    ("q1", "Quick hit one. Estonia will close its road border crossings with Russia from the first of December, for six months.",
+     "ESTONIA *CLOSES* RUSSIA BORDER", ("num", 6, "", " months", 0, "from 1 Dec · then a review")),
+    ("q1", "Russia called it a new Iron Curtain, and said it will take political and diplomatic measures.",
+     "RUSSIA *REACTS*", ("txt", "\"NEW IRON CURTAIN\"", "Russian foreign ministry")),
+    ("q2", "Quick hit two. India and Japan signed a letter of intent for Japan's forces to train with live fire on Indian ranges.",
+     "JAPAN TO TRAIN IN *INDIA*", ("txt", "LETTER OF INTENT SIGNED", "India-Japan 2+2 talks, Tokyo")),
+    ("q2", "It is a first, and the training is due to begin in two thousand twenty seven.",
+     "A *FIRST*", ("txt", "2027", "training due to begin")),
+    ("q3", "Quick hit three. A SpaceX Dragon cargo capsule left the space station on Friday, carrying science and supplies back to Earth.",
+     "DRAGON *LEAVES* THE STATION", ("txt", "SPACEX CARGO DRAGON", "undocked Friday 20 Nov")),
+    ("q3", "It is due to splash down off California on Saturday afternoon, Eastern time.",
+     "SPLASHDOWN *SATURDAY*", ("txt", "OFF CALIFORNIA", "planned 4:55 pm US Eastern, 21 Nov")),
+    ("q4", "Quick hit four. Pakistan beat Sri Lanka by eight wickets in the second Test at Raa wal pin dee, and won the series one nil.",
+     "PAKISTAN *WIN* THE SERIES", ("txt", "8 WICKETS · SERIES 1-0", "second Test, Rawalpindi")),
+    ("q4", "Sri Lanka scored ninety eight and three hundred and sixteen. Pakistan scored three hundred and twenty five, and then chased ninety.",
+     "THE *SCORES*", ("num", 325, "", " runs", 0, "Pakistan 1st innings · SL 98 and 316")),
+    ("q5", "Quick hit five. India's National Stock Exchange is now the world's fifth biggest listed exchange by market value, at about sixty billion dollars.",
+     "NSE: WORLD'S *5TH* BIGGEST", ("num", 59.7, "$", " billion", 1, "market value · not investment advice")),
+    ("q5", "It moved past the Nasdaq and the Hong Kong exchange. This is information, not investment advice.",
+     "PAST *NASDAQ* AND HKEX", ("txt", "NOT INVESTMENT ADVICE", "ranking depends on date and data source")),
+
+    # ---------------- outro
+    ("outro", "That was Trendsplain Daily for the twenty first of November. Every source is listed in the description. Subscribe, and we will see you tomorrow.",
+     "SEE YOU *TOMORROW*", ("title", "TRENDSPLAIN", "subscribe · new video every day")),
+]
+
+if __name__ == "__main__":
+    import sys
+    open(sys.argv[1], "w").write("\n".join(l[1] for l in LINES) + "\n")
+    print(len(LINES), "lines,", sum(len(l[1].split()) for l in LINES), "words")

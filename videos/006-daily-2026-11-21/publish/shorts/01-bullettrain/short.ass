@@ -1,0 +1,24 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Title,Inter Black,84,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,8,60,60,190,1
+Style: Kick,Inter ExtraBold,44,&H00B6C42E,&H00B6C42E,&H00000000,&H00000000,-1,0,0,0,100,100,2,0,1,0,0,8,60,60,130,1
+Style: Big,Inter Black,96,&H00FFFFFF,&H00FFFFFF,&H00B6C42E,&H00B6C42E,-1,0,0,0,100,100,0,0,3,18,0,5,60,60,0,1
+Style: Cap,Inter ExtraBold,62,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,8,70,70,1290,1
+Style: Foot,Inter Bold,32,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,2,60,60,120,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:40.64,Kick,,0,0,0,,INDIA · EXPLAINED
+Dialogue: 0,0:00:00.00,0:00:40.64,Title,,0,0,0,,INDIA'S FIRST\NBULLET TRAIN
+Dialogue: 0,0:00:00.00,0:00:40.64,Foot,,0,0,0,,Source: PTI via Telangana Today · Business Today\NFull video on the channel
+Dialogue: 1,0:00:00.15,0:00:02.40,Big,,0,0,0,,{\pos(540,1640)\fad(120,150)}2027 · SURAT TO VAPI
+Dialogue: 0,0:00:00.00,0:00:15.21,Cap,,0,0,0,,{\fad(60,60)}India's first bullet train will start running in two thousand twenty seven, between Surat and Vaapi in Gujarat. The rest of the line opens in phases.
+Dialogue: 0,0:00:15.66,0:00:18.75,Cap,,0,0,0,,{\fad(60,60)}The project was announced in two thousand seventeen.
+Dialogue: 0,0:00:18.75,0:00:23.21,Cap,,0,0,0,,{\fad(60,60)}Delays over land and permissions in Maharashtra, and Covid, pushed it back.
+Dialogue: 0,0:00:23.66,0:00:31.43,Cap,,0,0,0,,{\fad(60,60)}As of September, concrete piers stand along four hundred and fifty six kilometres, and viaduct is built for three hundred and seventy one.
+Dialogue: 0,0:00:31.88,0:00:40.64,Cap,,0,0,0,,{\fad(60,60)}In Maharashtra, a twenty one kilometre tunnel is being dug, including seven kilometres under Thane Creek, the country's first undersea rail tunnel.
